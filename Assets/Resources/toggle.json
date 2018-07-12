@@ -1,0 +1,21 @@
+[
+   {
+		"name": "Toggle_pop",
+		"key": "ppop"
+	}, {
+		"name": "Toggle_pus",
+		"key": "ppus"
+	},{
+	  "name": "Toggle_zaixian",
+		"key": "zaixiankefu"
+	}, {
+		"name": "Toggle_weixin",
+		"key": "weixinkefu"
+	},{
+		"name": "Toggle_today",
+		"key": "Toggle_today"
+	},{
+		"name": "Toggle_yesterday",
+		"key": "Toggle_yesterday"
+	}
+]

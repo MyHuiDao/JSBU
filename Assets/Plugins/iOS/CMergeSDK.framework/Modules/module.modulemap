@@ -1,0 +1,6 @@
+framework module CMergeSDK {
+  umbrella header "CMergeSDK.h"
+
+  export *
+  module * { export * }
+}
