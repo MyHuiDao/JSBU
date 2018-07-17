@@ -22,6 +22,7 @@ public class UIManager : MonoBehaviour
     {
         textView.sizeDelta = new Vector2(scrollView.rect.width, textView.rect.height);
         glg.cellSize = new Vector2(textView.rect.width, textView.rect.height + 100);
+
     }
 
     // Update is called once per frame

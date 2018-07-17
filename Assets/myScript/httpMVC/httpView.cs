@@ -230,38 +230,76 @@ public class httpView : MonoBehaviour {
             //if (GameObject.Find("Toggle_huoyue").GetComponent<Toggle>().isOn == true)//区分活跃榜与排行榜
             //{
                 if (Time_Rank(number).ToString().Length > 3)
-                {                
+                {
+                  if(Time_Rank(number)<10)
+                {
                     if (int.Parse(Time_Rank(number).ToString().Substring(3, 1)) > 5)//五入
-                    {           
+                    {
                         string timess = (double.Parse(Time_Rank(number).ToString()) + (10 - int.Parse(Time_Rank(number).ToString().Substring(3, 1))) * 0.01).ToString();
-                        if (timess.Length <4)
+                        if (timess.Length < 4)
                         {
                             obj.transform.GetChild(5).GetComponent<Text>().text = timess + "小时";
                         }
                         else
                         {
-                            string timesss = timess.Remove(3);
-                            obj.transform.GetChild(5).GetComponent<Text>().text = timesss + "小时";
+                            if (float.Parse(timess) < 10)
+                            {
+                                string timesss = timess.Remove(3);
+                                obj.transform.GetChild(5).GetComponent<Text>().text = timesss + "小时";
+                            }
+                            else
+                            {
+                                string timesss = timess.Remove(2);
+                                obj.transform.GetChild(5).GetComponent<Text>().text = timesss + "小时";
+                            }
+
                         }
-                      
+
                     }
                     else//四舍
                     {
                         string times = Time_Rank(number).ToString().Remove(3);
                         obj.transform.GetChild(5).GetComponent<Text>().text = times + "小时";
                     }
+
                 }
-                else
+                else//大于10
+                {
+                    if (int.Parse(Time_Rank(number).ToString().Substring(4, 1)) > 5)//五入
+                    {
+                        string timess = (double.Parse(Time_Rank(number).ToString()) + (10 - int.Parse(Time_Rank(number).ToString().Substring(4, 1))) * 0.01).ToString();
+                        if (timess.Length < 5)
+                        {
+                            obj.transform.GetChild(5).GetComponent<Text>().text = timess + "小时";
+                        }
+                        else
+                        {
+                            string timesss = timess.Remove(4);
+                            obj.transform.GetChild(5).GetComponent<Text>().text = timesss + "小时";
+                        }
+
+                    }
+                    else//四舍
+                    {
+                        string times = Time_Rank(number).ToString().Remove(4);
+                        obj.transform.GetChild(5).GetComponent<Text>().text = times + "小时";
+                    }
+
+                }
+
+            }
+            else
                 {
                     obj.transform.GetChild(5).GetComponent<Text>().text = Time_Rank(number).ToString() + "小时";//60的整数倍
                 }
+         
            // }
-            //else//土豪排行榜
-            //{
-            //    obj.transform.GetChild(5).GetComponent<Text>().text = number;
-            //}
+           //else//土豪排行榜
+           //{
+           //    obj.transform.GetChild(5).GetComponent<Text>().text = number;
+           //}
 
-            if (a < 3)
+                if (a < 3)
             {
                 obj.transform.GetChild(0).GetComponent<Image>().sprite = Ranks[a];
                 obj.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "";
@@ -286,6 +324,8 @@ public class httpView : MonoBehaviour {
         }
         #endregion
     }
+    
+   
 
     /// <summary>
     /// 游戏规则

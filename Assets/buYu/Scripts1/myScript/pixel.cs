@@ -74,6 +74,7 @@ public class pixel : MonoBehaviour
 
 		ParsePath _path = new ParsePath();
         List<Vector2[]> pathes = _path.JieXiPath();
+        Debug.Log("轨迹："+pathes.Count);
         if (pathes == null)
             return;
         for (int k = 0; k < pathes.Count; ++k)

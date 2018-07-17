@@ -30,7 +30,7 @@ public class BulletAttr : MonoBehaviour
     List<GameObject> list = new List<GameObject>();
     private void Start()
     {
-        Invoke("bulletSelfDestroy", 20);
+        //Invoke("bulletSelfDestroy", 20);
         boomHoderParent = GameObject.Find("boomHoder");
         FishMaker.SaveNet.Add(id, colliderFish);
     }
@@ -39,22 +39,12 @@ public class BulletAttr : MonoBehaviour
         //网消失掉
         if (i == 1 && web == null)
         {
-            Debug.Log("发送子弹信息" + id);
-            WebButtonSendMessege.instant().bulletDie("20009", id, x.ToString(), y.ToString(), FishMaker.SaveNet[id]);
-            //if (FishMaker.SaveNet.ContainsKey(id))
-            //{
-            //    WebButtonSendMessege.instant().bulletDie("20009", id, x.ToString(), y.ToString(), FishMaker.SaveNet[id]);
-            //}
+            if (belongTarget == meiRenYuThreadDeal.gosWeiZhi)
+            {
+                WebButtonSendMessege.instant().bulletDie("20009", id, x.ToString(), y.ToString(), FishMaker.SaveNet[id]);
+                i = 0;
+            }
 
-            //try
-            //{
-            //    WebButtonSendMessege.instant().bulletDie("20009", id, x.ToString(), y.ToString(), FishMaker.SaveNet[id]);
-            //}
-            //catch (Exception ex)
-            //{
-            //    //Debug.Log(ex);
-            //}
-            i = 0;
 
         }
     }
@@ -181,7 +171,7 @@ public class BulletAttr : MonoBehaviour
 
 
     }
-    void skillFish(string _skillFishTag,Vector3 pos)
+    void skillFish(string _skillFishTag, Vector3 pos)
     {
         //GameObject g= Instantiate(boomEffetc,boomHoderParent.transform);
         //g.transform.position = this.transform.position;

@@ -18,8 +18,8 @@ public class Music_Control : MonoBehaviour
     public static bool effect_mute=true;
     public static float yinYueDaoXiao = 0.5f;
     public static float yinXiaoDaoXiao = 0.5f;
-    public static float saveYinYue = 0;
-    public static float saveYinXiao = 0;
+    public static float saveYinYue = 0.5f;
+    public static float saveYinXiao = 0.5f;
     Switch yinyueswitch;
     Switch yinxiaoswitch;
    public static Button[] button;

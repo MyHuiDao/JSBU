@@ -260,8 +260,12 @@ public class EnhanceScrollView : MonoBehaviour
         curCenterItem = listEnhanceItems[closestIndex];
         LerpTweenToTarget(originHorizontalValue, target, true);
         canChangeItem = false;
-        if(this.name!= "areaScrollView"){
+        if(this.name!= "areaScrollView")
+        {
             Music_Control.effect_music.Play();
+
+        }else{
+            buYuMusicContral.instant.allYinXiao[23].Play();
         }
       
     }

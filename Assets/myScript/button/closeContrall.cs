@@ -20,7 +20,8 @@ public class closeContrall : MonoBehaviour {
     /// 按钮方法
     /// </summary>
     /// <param name="g"></param>
-    public void close(GameObject g) {
+    public void close(GameObject g)
+    {
 
         g.transform.parent.gameObject.transform.localScale = Vector3.zero;
        RootCanvas.find("backGround").transform.localScale=Vector3.zero;//把阴影背景缩放为零

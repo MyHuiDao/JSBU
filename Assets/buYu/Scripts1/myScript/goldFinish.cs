@@ -24,4 +24,9 @@ public class goldFinish : MonoBehaviour
         this.GetComponent<Animator>().enabled = false;
     }
 
+    public void destroySelf()
+    {
+        Destroy(gameObject);
+    }
+
 }

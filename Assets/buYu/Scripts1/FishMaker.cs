@@ -51,6 +51,8 @@ public class FishMaker : MonoBehaviour
     public  static List<string> moveFish = new List<string>();//保存需要游动的鱼
     public static List<int> do20004Order = new List<int>();//保存需要游动的鱼
     public int listGroupOrder = 0;
+
+    int fishOrderLay;
     void Start()
     {
         fishPrefabsDict.Add("1", fishPrefabs[0]);
@@ -81,6 +83,7 @@ public class FishMaker : MonoBehaviour
         is20012Scencod = true;
         is20010Scencod = true;
         is20011Scencod = true;
+        fishOrderLay = 1;
     }
  
     private void Update()
@@ -326,7 +329,12 @@ public class FishMaker : MonoBehaviour
         }
         //生成鱼的种类
         GameObject fishObj = Instantiate(fishPrefabsDict[_fishType]);
-
+        fishObj.transform.GetChild(0).GetComponent<SpriteRenderer>().sortingOrder = fishOrderLay;
+        fishOrderLay++;
+        if (fishOrderLay >= 90)
+        {
+            fishOrderLay = 0;
+        }
 
         if (_isHalfGoGame)//如果是中途进入房间的
         {

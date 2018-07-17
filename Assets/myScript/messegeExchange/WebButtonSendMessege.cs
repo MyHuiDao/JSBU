@@ -29,7 +29,7 @@ public class WebButtonSendMessege
     /// <param name="_data">分区ID</param>
     public void selectGameArea(string _id)
     {
-        //Debug.Log("发送进入房间信息20001"+_id);
+        Debug.Log("发送进入房间信息20001"+_id);
         ClientSocket.instant().send("20001", _id);//跟获取游戏分区结合
 
 
@@ -106,9 +106,7 @@ public class WebButtonSendMessege
                 if (GameController.Instance.bulletDict[i].ContainsKey(bulletID))
                 {
                     Debug.Log("发送20009" + bulletID);
-                    ClientSocket.instant().send("20009", (object)("{\"fireId\":\"" + bulletID + "\",\"x\":" + bulletX + ",\"y\":" + bulletY + ",\"fishList\":\"\"}"));
-                    //GameController.Instance.bulletDict[i][bulletID].GetComponent<BulletAttr>().destroyBullet();
-                    //GameController.Instance.bulletDict[i].Remove(bulletID);
+                    ClientSocket.instant().send("20009", (object)("{\"fireId\":\"" + bulletID + "\",\"x\":" + bulletX + ",\"y\":" + bulletY + ",\"fishList\":\"\"}"));                  
 
                     break;
                 }
@@ -116,8 +114,20 @@ public class WebButtonSendMessege
             return;
         }
         fishID.Remove(fishID.Length - 1, 1);//删除，号
-        Debug.Log("发送20009"+bulletID);
-        ClientSocket.instant().send("20009", (object)("{\"fireId\":\"" + bulletID + "\",\"x\":" + bulletX + ",\"y\":" + bulletY + ",\"fishList\":\"" + fishID + "\"}"));
+       
+
+        for (int i = 0; i < 4; i++)
+        {
+            if (GameController.Instance.bulletDict[i].ContainsKey(bulletID))
+            {
+                Debug.Log(i);
+                Debug.Log("发送20009" + bulletID);
+                ClientSocket.instant().send("20009", (object)("{\"fireId\":\"" + bulletID + "\",\"x\":" + bulletX + ",\"y\":" + bulletY + ",\"fishList\":\"" + fishID + "\"}"));
+
+                break;
+            }
+        }
+       
 
     }
     /// <summary>

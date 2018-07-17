@@ -78,6 +78,7 @@ public class yuerContrall : MonoBehaviour
     void returnToHall()
     {
         //otherContral.instant.returnGameScene = true;
+
         CClient.ClientSocket.instant().ws.Close();
         SceneManager.LoadSceneAsync("gameScene");
     }

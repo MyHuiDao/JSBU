@@ -131,7 +131,7 @@ MonoBehaviour:
   id: 
   runPoint: 
   isBelongYuZhen: 0
-  diePrefab: {fileID: 0}
+  diePrefab: {fileID: 1231347320140800, guid: cda4e34ca35cf6347b1b4ac7a7742efe, type: 2}
   goldPrefab: {fileID: 1240878384639114, guid: c579cc6fab448714a9ea8d2a43072aca, type: 2}
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}

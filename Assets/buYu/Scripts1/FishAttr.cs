@@ -214,7 +214,7 @@ public class FishAttr : MonoBehaviour
         }
         //3.鱼死亡后会有获得金币的效果
 
-        //int goldCount = _gold / ((int.Parse(GameController.Instance.oneShootCostText[target].text.ToString())/ int.Parse(contrall.instance.addFileGoldNum) * ((int.Parse(contrall.instance.addFileGoldNum)/10)) * 10));
+       
         int goldCount = _gold / (int.Parse(GameController.Instance.oneShootCostText[target].text.ToString()));
         GameObject goldGo = null;
         if (goldCount <= 0)
@@ -227,10 +227,11 @@ public class FishAttr : MonoBehaviour
             goldGo.transform.position = this.transform.position;
 
         }
-        else if (goldCount < 10)//小金币
+        else if (goldCount <= 20)//小金币
         {
             goldGo = Instantiate(goldPrefab);
-            for (int i = 0; i < goldCount; i++)
+          
+            for (int i = 0; i < goldCount/2; i++)
             {
                 GameObject g = goldGo.transform.Find("gold" + i).gameObject;
                 g.SetActive(true);
@@ -247,32 +248,32 @@ public class FishAttr : MonoBehaviour
                 goldGo.transform.position = v1;
             }
         }
-        else if (goldCount <= 20)//大金币
-        {
-            for (int i = 0; i < goldCount / 2; i++)
-            {
-                GameObject g;
-                g = Instantiate(goldPrefab3);
-                g.transform.SetParent(goldGroup.transform, false);
-                g.transform.position = this.transform.position;
-                if (g.transform.position.y < -1)
-                {
-                    Vector3 v1 = g.transform.position;
-                    v1.y = 1;
-                    g.transform.position = v1;
-                }
-                 Vector3 v = g.transform.position;
-                v.x -= 1.1f * i;
-                v.y -= 1.1f * i;
-                g.transform.position = v;
-                if (g.GetComponent<Ef_MoveTo>() != null)
-                {
-                    g.GetComponent<Ef_MoveTo>().target = target;//确定金币飞到哪个对象
-                }
-            }
+        //else if (goldCount <= 20)//大金币
+        //{
+        //    for (int i = 0; i < goldCount / 2; i++)
+        //    {
+        //        GameObject g;
+        //        g = Instantiate(goldPrefab3);
+        //        g.transform.SetParent(goldGroup.transform, false);
+        //        g.transform.position = this.transform.position;
+        //        if (g.transform.position.y < -1)
+        //        {
+        //            Vector3 v1 = g.transform.position;
+        //            v1.y = 1;
+        //            g.transform.position = v1;
+        //        }
+        //         Vector3 v = g.transform.position;
+        //        v.x -= 1.1f * i;
+        //        v.y -= 1.1f * i;
+        //        g.transform.position = v;
+        //        if (g.GetComponent<Ef_MoveTo>() != null)
+        //        {
+        //            g.GetComponent<Ef_MoveTo>().target = target;//确定金币飞到哪个对象
+        //        }
+        //    }
 
 
-        }
+        //}
         else if (goldCount < 25)
         {
             GameObject g;
@@ -305,11 +306,11 @@ public class FishAttr : MonoBehaviour
             g.transform.Find("goldFly2Text").GetComponent<Text>().text = _gold.ToString();
             g.transform.SetParent(GameObject.Find("specialEffect").transform, false);
             g.transform.position = this.transform.position;
-            if (g.transform.position.y < -1)
-            {
+            //if (g.transform.position.y < -1)
+            //{
                
-                g.transform.position = GameObject.Find("GunPanel" + target).transform.Find("goldPosition").transform.position;
-            }         
+            //    g.transform.position = GameObject.Find("GunPanel" + target).transform.Find("goldPosition").transform.position;
+            //}         
            
         }
         else//最大特效

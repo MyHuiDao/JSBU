@@ -78,6 +78,8 @@ public class GameController : MonoBehaviour
     public GameObject autoLockEffect = null;//自动锁定标记
     public static List<returnBulletMsg> returnBullet = new List<returnBulletMsg>();
     public static bool lastBulletFire = true;
+    public GameObject waveFinger;
+    public GameObject waveFingerParent;
 
     public GameObject g;
     //public GameObject g1;
@@ -86,10 +88,12 @@ public class GameController : MonoBehaviour
     {
 
         _instance = this;
+        Music_Control.music_effect(buYuMusicContral.instant.allYinXiao[23]);
     }
 
     void Start()
     {
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;//防止手机黑屏
         g = new GameObject();
         //g1 = new GameObject();
         bulletMsgToDict();
@@ -272,7 +276,13 @@ public class GameController : MonoBehaviour
 
                     else
 
-                    {
+                    {                    
+                        //Debug.Log("实例化波纹");
+                        //GameObject g = Instantiate(waveFinger, waveFingerParent.transform);
+                        //g.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                        //Vector3 v = g.transform.position;
+                        //v.z = 0;
+                        //g.transform.position = v;
                         ziDanFireTime = 0;
                         lastBulletFire = false;//上一个子弹发射没接收到服务器消息，禁止发射下一个子弹
                         fireTimeJiShi.isCanFire = true;
@@ -280,7 +290,7 @@ public class GameController : MonoBehaviour
 
                     }
                 }
-            
+
             }
 
         }
@@ -337,7 +347,7 @@ public class GameController : MonoBehaviour
         GameObject bullet = Instantiate(bulletGos[_bulletLevel]);//实例化子弹
         bullet.transform.SetParent(bulletHolder, false);
         bullet.transform.position = GosTarget[target][_gunShape].transform.Find("FirePos1").transform.position; //子弹的位置为每种炮中子弹的生成位置
-                                                                                                               //在此处设置炮的回弹效果
+                                                                                                                //在此处设置炮的回弹效果
         GosTarget[target][_gunShape].GetComponent<Animator>().speed = 1;
 
         if (gosWeiZhi == target)//自己的子弹
@@ -566,10 +576,7 @@ public class GameController : MonoBehaviour
                 {
                     if (lockFish == null || lockFish.transform.parent.transform.position.x > 9)
                     {
-                        if (lockFish != null)
-                        {
-                            //Debug.Log(lockFish.transform.parent.transform.position.x + "锁定鱼的世界坐标。。。。。。。。。。。。");
-                        }
+
                         mainMeiRenYuContrall.instant.automaticFire.transform.localScale = Vector3.one;
                         mainMeiRenYuContrall.instant.automaticFireMask.transform.localScale = Vector3.zero;
                         isXuanZhongFish = false;

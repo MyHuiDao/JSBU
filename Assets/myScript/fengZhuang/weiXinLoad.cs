@@ -162,8 +162,10 @@ public class weiXinLoad : MonoBehaviour
     //加载版本更新界面
     void showVersionUpdate()
     {
+        
         GameObject versionObj = (GameObject)Resources.Load("myPrefabs/Fish/LoadRes/VersionUpdateUI");
         obj = Instantiate(versionObj, GameObject.Find("Canvas").transform) as GameObject;
+
         for (int i = 0; i < 2; ++i)
         {
             transforms[i] = obj.transform.GetChild(i);

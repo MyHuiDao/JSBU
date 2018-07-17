@@ -46,11 +46,11 @@ public class gameContrall : MonoBehaviour
 #if UNITY_IOS
         if(weiXinLoad.instance.AndroidFunction)
         {
-            bottomParent.transform.Find("duiHuan").GetComponent<Button>().onClick.AddListener(() => shop("Withdraw"));//兑换
+            bottomParent.transform.Find("duiHuan").GetComponent<Button>().onClick.AddListener(() => shop());//兑换
         }else{
             if (weiXinLoad.instance.ServerIdentifyStr.Equals("0")/*weiXinLoad.instance.AndroidFunction*/)
             {
-                bottomParent.transform.Find("duiHuan").GetComponent<Button>().onClick.AddListener(() => shop("Withdraw"));//兑换
+                bottomParent.transform.Find("duiHuan").GetComponent<Button>().onClick.AddListener(() => shop());//兑换
             }
             else
             {
@@ -58,9 +58,8 @@ public class gameContrall : MonoBehaviour
             } 
         }
 
-
 #elif UNITY_ANDROID
-        bottomParent.transform.Find("duiHuan").GetComponent<Button>().onClick.AddListener(() => shop("Withdraw"));//兑换
+        bottomParent.transform.Find("duiHuan").GetComponent<Button>().onClick.AddListener(() => shop());//兑换
 #endif
         //string time = System.DateTime.Now.ToString().Split(' ')[0];//06/02/2018
         //string[] strTime = time.Split('/');
@@ -74,13 +73,14 @@ public class gameContrall : MonoBehaviour
         rect = GameObject.Find("chat_Content").GetComponent<RectTransform>();
         GameObject.Find("send_web").GetComponent<Button>().onClick.AddListener(send);//发送聊天消息
         GameObject IDTexObj = GameObject.Find("IDtex").gameObject;
-//#if UNITY_IOS
-//        //没有安装微信 && 安卓端
-//        if(UnitySendMessageToiOS.Instante().checkInstallWeChat() != 0 && !weiXinLoad.instance.AndroidFunction)
-//        {
-//            IDTexObj.transform.localScale = Vector3.zero;
-//        }s
-//#endif
+        //#if UNITY_IOS
+        //        //没有安装微信 && 安卓端
+        //        if(UnitySendMessageToiOS.Instante().checkInstallWeChat() != 0 && !weiXinLoad.instance.AndroidFunction)
+        //        {
+        //            IDTexObj.transform.localScale = Vector3.zero;
+        //        }s
+        //#endifGet
+        GameObject.Find("Free_Button").GetComponent<Button>().onClick.AddListener(() => Close_FreeMoney(GameObject.Find("Free_Button")));
         GameObject.Find("backGround").GetComponent<Button>().onClick.AddListener(close_);
         IDTexObj.GetComponent<Button>().onClick.AddListener(() => Android_copy("IDtext"));//同上
         GameObject.Find("gold_player_pay").GetComponent<Button>().onClick.AddListener(() => player_chongzhi("gameChongZhis"));
@@ -158,10 +158,10 @@ public class gameContrall : MonoBehaviour
         }
         if (ee == true)
         {
-            netConnect.instance.Ani(16);
+            //netConnect.instance.Ani(16);
             ee = false;
         }
-        Rotate_light("free_light");
+     
     }
     void Cus_kefu(string name)
     {
@@ -180,15 +180,9 @@ public class gameContrall : MonoBehaviour
     }
     void tishi()
     {
-        netConnect.instance.Ani(12);
+        //netConnect.instance.Ani(12);
     }
-    /// <summary>
-    /// 旋转特效
-    /// </summary>
-    public void Rotate_light(string name)
-    {
-        GameObject.Find(name).transform.Rotate(0, 0, 1);
-    }
+    
     /// <summary>
     /// 从推广员跳到客服
     /// </summary>
@@ -215,7 +209,7 @@ public class gameContrall : MonoBehaviour
         }
         else
         {
-            netConnect.instance.Ani(13);
+            //netConnect.instance.Ani(13);
             return;
         }
         chat.text = null;
@@ -298,6 +292,8 @@ public class gameContrall : MonoBehaviour
     void quitGame(GameObject g)
     {
         buttonBehind.transform.Find("quitGame").localScale = Vector3.one;
+        //buttonBehind.transform.Find("quitGame").GetChild(1).localScale = Vector3.one;
+
     }
     //======================================================================
     /// <summary>
@@ -314,7 +310,7 @@ public class gameContrall : MonoBehaviour
         }
         else
         {
-            netConnect.instance.Ani(15);
+            //netConnect.instance.Ani(15);
         }
     }
     /// <summary>
@@ -328,30 +324,27 @@ public class gameContrall : MonoBehaviour
         if(weiXinLoad.instance.AndroidFunction)
         {
             buttonBehind.transform.Find("tuiGuangyuan").GetChild(6).localScale = Vector3.one;
-            buttonBehind.transform.Find("tuiGuangyuan").GetChild(7).localScale = Vector3.one;
         }else{
             if (weiXinLoad.instance.ServerIdentifyStr.Equals("1"))
             {
                 buttonBehind.transform.Find("tuiGuangyuan").GetChild(6).localScale = Vector3.zero;
-                buttonBehind.transform.Find("tuiGuangyuan").GetChild(7).localScale = Vector3.zero;
             }else{
                 buttonBehind.transform.Find("tuiGuangyuan").GetChild(6).localScale = Vector3.one;
-                buttonBehind.transform.Find("tuiGuangyuan").GetChild(7).localScale = Vector3.one;
             }
         }
  
 #endif
-        string filename = "/huidao.png";
-        string destination = Application.persistentDataPath;
-        string path = destination + filename;
-        if (Directory.Exists(path))   //判断目录是否存在，不存在则会创建目录 
-        {
-            Directory.Delete(path);
-        }
-        else
-        {
-            return;
-        }
+        //string filename = "/huidao.png";
+        //string destination = Application.persistentDataPath;
+        //string path = destination + filename;
+        //if (Directory.Exists(path))   //判断目录是否存在，不存在则会创建目录 
+        //{
+        //    Directory.Delete(path);
+        //}
+        //else
+        //{
+        //    return;
+        //}
     }
     bool isOpenChongZhiNum = false;
     /// <summary>
@@ -419,30 +412,10 @@ public class gameContrall : MonoBehaviour
     /// 商城
     /// </summary>
     /// <param name="name"></param>
-    void shop(string name)
-    {
-       
-
-        //if (!open)
-        //{
-        //    httpSend.instant.btnGetGoods();
-        //    open = true;
-        //}
-        //else
-        //{
-        //Transform transf = buttonBehind.transform.Find(name);
-        //transf.localScale = Vector3.one;
-        //RootCanvas.find("backGround").transform.localScale = Vector3.one;//显示阴影背景
-        //}
-        if (netConnect.instance.m_state == login_state.wechat)
-        {
-            lamada(name);
-            httpSend.instant.money_st();
-        }
-        if (netConnect.instance.m_state == login_state.visitor)
-        {
-            netConnect.instance.Ani(18);
-        }
+    void shop()
+    {        
+        httpSend.instant.money_st();
+      
     }
     bool rank;
     /// <summary>
@@ -514,6 +487,9 @@ public class gameContrall : MonoBehaviour
     public bool return_scene;
     void catchFish(int buyuGanme,GameObject obj)
     {
+        //Resources.UnloadUnusedAssets();
+
+        //Resources.FindObjectsOfTypeAll();
        
         GameObject middleLastObj = middleParent.transform.GetChild(middleParent.transform.childCount - 1).gameObject;
         if (middleLastObj == obj)
@@ -586,12 +562,13 @@ public class gameContrall : MonoBehaviour
         httpConnect.toggle_group[group2].alpha = 0;
         httpConnect.toggle_group[group2].blocksRaycasts = false;
     }
+    /// <summary>
+    /// 绑定切换提现界面
+    /// </summary>
     void close_()
-    {
-      
+    {     
         if (WithDraw_Sp.instance.return_blind == true)
-        {
-        
+        {    
            if(GameObject.Find("mobileBindle").transform.localScale == Vector3.one)
             {
                 GameObject.Find("Withdraw").transform.localScale = Vector3.one;
@@ -615,5 +592,21 @@ public class gameContrall : MonoBehaviour
         }   
     }
    
+    /// <summary>
+    /// 免费金币关闭按钮
+    /// </summary>
+    void Close_FreeMoney(GameObject obj)
+    {
+        if (httpSend.instant.Register == true)
+        {
+            hallHttp.instance.message();
+            closeContrall.instance.close(obj);
+        }
+        else
+        {
+            closeContrall.instance.close(obj);
+        }
+        httpSend.instant.Register = false;
+    }
 
 }

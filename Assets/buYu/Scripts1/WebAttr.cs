@@ -30,8 +30,10 @@ public class WebAttr : MonoBehaviour
 		//网碰到鱼
         if (collision.tag==skillFishTag)
         {
-            
+            if (FishMaker.SaveNet.ContainsKey(ziDanID))
+            {
                 FishMaker.SaveNet[ziDanID].Add(collision.transform.parent.GetComponent<FishAttr>().id);
+            }
            
         }
 

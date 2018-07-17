@@ -91,6 +91,30 @@ AnimationClip:
       - serializedVersion: 2
         time: 3
         value: {x: 0, y: 0, z: 4320}
+        inSlope: {x: 0, y: 0, z: 1440}
+        outSlope: {x: 0, y: 0, z: 1440}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 3.25
+        value: {x: 0, y: 0, z: 4680}
+        inSlope: {x: 0, y: 0, z: 1440}
+        outSlope: {x: 0, y: 0, z: 1440}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 3.5
+        value: {x: 0, y: 0, z: 5040}
+        inSlope: {x: 0, y: 0, z: 1440}
+        outSlope: {x: 0, y: 0, z: 1440}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 3.75
+        value: {x: 0, y: 0, z: 5400}
+        inSlope: {x: 0, y: 0, z: 1440}
+        outSlope: {x: 0, y: 0, z: 1440}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 4
+        value: {x: 0, y: 0, z: 5760}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -122,7 +146,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 3
+    m_StopTime: 4
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -219,6 +243,30 @@ AnimationClip:
         inSlope: 0
         outSlope: 0
         tangentMode: 136
+      - serializedVersion: 2
+        time: 3.25
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 3.5
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 3.75
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 4
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -303,6 +351,30 @@ AnimationClip:
         tangentMode: 136
       - serializedVersion: 2
         time: 3
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 3.25
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 3.5
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 3.75
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 4
         value: 0
         inSlope: 0
         outSlope: 0
@@ -392,6 +464,30 @@ AnimationClip:
       - serializedVersion: 2
         time: 3
         value: 4320
+        inSlope: 1440
+        outSlope: 1440
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 3.25
+        value: 4680
+        inSlope: 1440
+        outSlope: 1440
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 3.5
+        value: 5040
+        inSlope: 1440
+        outSlope: 1440
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 3.75
+        value: 5400
+        inSlope: 1440
+        outSlope: 1440
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 4
+        value: 5760
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -437,7 +533,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
-  - time: 3
+  - time: 4
     functionName: goldfin1
     data: 
     objectReferenceParameter: {fileID: 0}

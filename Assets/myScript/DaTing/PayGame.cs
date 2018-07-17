@@ -85,7 +85,7 @@ public class PayGame : MonoBehaviour
 
 #if UNITY_IPHONE
         appleID = go.transform.GetChild(1).GetComponent<Text>().text.Replace("¥","");
-        if(weiXinLoad.instance.ServerIdentifyStr.Contains("0"))
+        if(weiXinLoad.instance.AndroidFunction)
         {
             common(6, true, 1); 
         }else{
@@ -196,7 +196,6 @@ public class PayGame : MonoBehaviour
                 postBack(wWW.text);
             }
         }
-
     }
 
     void postBack(string str)

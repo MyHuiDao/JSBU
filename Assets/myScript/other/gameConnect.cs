@@ -20,7 +20,7 @@ public class gameConnect : MonoBehaviour {
         //contrall.instant().isLoadSceneOne =  
         Debug.Log("连接捕鱼");
         ClientSocket.instant().clientSocket(httpConnect.Web_URL+"/fishing/v1/game/", token);
-        //ClientSocket.instant().clientSocket("ws://hd.com/fishing/v1/game/", token);
+        //ClientSocket.instant().clientSocket("ws://192.168.31.238:8081/fishing/v1/game/", token);
        //ClientSocket.instant().clientSocket("ws://jinshayugang.com/fishing/v1/game/", token);//连接到服务器
 
 

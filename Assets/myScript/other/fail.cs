@@ -9,7 +9,7 @@ public class fail : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        transform.GetChild(0).GetComponent<Button>().onClick.AddListener(method);
+        GetComponent<Button>().onClick.AddListener(method);
 	}
 	
 	// Update is called once per frame

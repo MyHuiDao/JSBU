@@ -45,7 +45,7 @@ public class meiRenYuThreadDeal : MonoBehaviour
     public bool is20010 = false;
     public bool is20024 = false;
     public bool is20026 = false;
-
+    public bool is20007 = false;
 
     public bool bulletShowNotEnough = false;
     float bulletTime = 0;
@@ -120,7 +120,11 @@ public class meiRenYuThreadDeal : MonoBehaviour
             destroyBulletList.RemoveAt(0);
         }
 
-
+        if (is20007)
+        {
+            deal20007();
+            is20007 = false;
+        }
         if (is20012)
         {
             deal20012();
@@ -264,14 +268,14 @@ public class meiRenYuThreadDeal : MonoBehaviour
 
     public void deal20009(string fireID, object fishList, int gold, string sumgold)
     {
-        Debug.Log(1);
+    
         int target = -1;//代表是哪一个对象加金币
         for (int i = 0; i < 4; i++)
         {
-            Debug.Log(2);
+           
             if (GameController.Instance.bulletDict[i].ContainsKey(fireID))
             {
-                Debug.Log(3);
+               
                 GameController.Instance.bulletDict[i][fireID].GetComponent<BulletAttr>().destroyBullet();
                 GameController.Instance.bulletDict[i].Remove(fireID);
                 target = i;
@@ -279,15 +283,15 @@ public class meiRenYuThreadDeal : MonoBehaviour
             }
         }
 
-        Debug.Log(4);
+      
         if (target != -1)
         {
-            Debug.Log(5);
+           
             //开始销毁死去的鱼
 
             for (int i = 0; i < ((JsonData)fishList)["fishList"].Count; i++)
             {
-                Debug.Log(6);
+              
                 string str = ((JsonData)fishList)["fishList"][i].ToString();
 
                 if (contrall.instant().isCanClearFish)//鱼阵
@@ -309,11 +313,13 @@ public class meiRenYuThreadDeal : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log(7);
+                
                     if (FishMaker.fishTarget.ContainsKey(str))
                     {
                         if (FishMaker.fishTarget[str].GetComponent<FishAttr>().fishType == "20" || FishMaker.fishTarget[str].GetComponent<FishAttr>().fishType == "19")
                         {
+
+                            screenDouDong.instance.Shake();
                             buYuMusicContral.instant.allYinXiao[5].Play();
                             specialFish1Image = Instantiate(buYuMusicContral.instant.specialFish1Image, GameObject.Find("fishGroup").transform);
                             specialFish1Image.transform.position = FishMaker.fishTarget[str].transform.position;
@@ -322,8 +328,8 @@ public class meiRenYuThreadDeal : MonoBehaviour
                         else if (FishMaker.fishTarget[str].GetComponent<FishAttr>().fishType == "18")
                         {
                             buYuMusicContral.instant.allYinXiao[6].Play();
-                            specialFish2Image = Instantiate(buYuMusicContral.instant.specialFish2Image, GameObject.Find("fishGroup").transform);
-                            specialFish2Image.transform.position = FishMaker.fishTarget[str].transform.position;
+                            //specialFish2Image = Instantiate(buYuMusicContral.instant.specialFish2Image, GameObject.Find("fishGroup").transform);
+                            //specialFish2Image.transform.position = FishMaker.fishTarget[str].transform.position;
 
                         }
                         else if (FishMaker.fishTarget[str].GetComponent<FishAttr>().fishType == "17")
@@ -334,14 +340,17 @@ public class meiRenYuThreadDeal : MonoBehaviour
                         }
                         else if (getMeiRenYuArea.buyuGame == 0 && int.Parse(FishMaker.fishTarget[str].GetComponent<FishAttr>().fishType) > 5)
                         {
+                           
                             buYuMusicContral.instant.allYinXiao[24 - int.Parse(FishMaker.fishTarget[str].GetComponent<FishAttr>().fishType)].Play();
                         }
                         else if (getMeiRenYuArea.buyuGame == 1 && int.Parse(FishMaker.fishTarget[str].GetComponent<FishAttr>().fishType) > 5)
                         {
+                           
                             buYuMusicContral.instant.allYinXiao[26 - int.Parse(FishMaker.fishTarget[str].GetComponent<FishAttr>().fishType)].Play();
                         }
                         else if (getMeiRenYuArea.buyuGame == 2 && int.Parse(FishMaker.fishTarget[str].GetComponent<FishAttr>().fishType) > 5)
                         {
+                            
                             buYuMusicContral.instant.allYinXiao[28 - int.Parse(FishMaker.fishTarget[str].GetComponent<FishAttr>().fishType)].Play();
                         }
 
@@ -352,17 +361,17 @@ public class meiRenYuThreadDeal : MonoBehaviour
                 }
 
             }
-            Debug.Log(8);
+           
             if (FishMaker.SaveNet.ContainsKey(fireID))
             {
-                Debug.Log(9);
+                
                 FishMaker.SaveNet.Remove(fireID);//删除字典中的网
             }
 
 
             // Debug.Log("-><color=#FF4040>" + "打死鱼得到的金币" + "</color>"+ target+"对象：打死鱼所加金币："+gold);
             //Debug.Log("总金币数"+sumgold);
-            Debug.Log(10);
+          
             GameController.Instance.setGoldText(target, sumgold);
             //GameController.Instance.goldText[target].text = (int.Parse(GameController.Instance.goldText[target].text) + gold).ToString();//此处显示抓到鱼后的金币
             //GameController.Instance.setGoldText(target,gold);
@@ -576,6 +585,19 @@ public class meiRenYuThreadDeal : MonoBehaviour
         yuZhenJiShi = true;
     }
 
+    /// <summary>
+    /// 金币不足
+    /// </summary>
+    public void deal20007()
+    {
+        GameObject.Find("moneyNotEnough").transform.localScale = Vector3.one;
+        Invoke("show20007",2);
+
+    }
+    void show20007()
+    {
+        GameObject.Find("moneyNotEnough").transform.localScale = Vector3.zero;
+    }
 
 }
 

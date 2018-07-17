@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 222701986020373708}
   - component: {fileID: 114687121681234120}
   - component: {fileID: 114066790102573426}
+  - component: {fileID: 114332311517593068}
   m_Layer: 5
   m_Name: loadFail
   m_TagString: Untagged
@@ -56,7 +57,6 @@ GameObject:
   - component: {fileID: 224051976924949894}
   - component: {fileID: 222153667560882984}
   - component: {fileID: 114983219386447302}
-  - component: {fileID: 114106974869437568}
   m_Layer: 5
   m_Name: Image (1)
   m_TagString: Untagged
@@ -126,12 +126,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88c924bf24e72d74a9953ade49a5d89b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114106974869437568
+--- !u!114 &114332311517593068
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1364635940410780}
+  m_GameObject: {fileID: 1041414497094430}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -161,7 +161,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 114983219386447302}
+  m_TargetGraphic: {fileID: 114687121681234120}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []

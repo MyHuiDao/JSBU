@@ -8,7 +8,7 @@ public class WithDraw_Sp : MonoBehaviour {
     public InputField[] withdraw;
     public static WithDraw_Sp instance;
     public bool return_blind;
-   // public InputField withdraw1;
+    public InputField withdraw1;
     // Use this for initialization
     void Start ()
     {
@@ -40,37 +40,38 @@ public class WithDraw_Sp : MonoBehaviour {
     void mobile_yzm()
     {
         return_blind = true;
-        if (hallHttp.instance.mobilenumber == true)
+        if (netConnect.instance.m_state == login_state.visitor)
+        {
+           // netConnect.instance.Ani(24);
+        }
+        else if (hallHttp.instance.mobilenumber == true)
         {
             httpConnect.GET(this, httpConnect.URL + "/user/userMobileSendMsg?mobile=" + GameObject.Find("mobile_number").GetComponent<Text>().text, null, mobileSendMsg, httpError);
-            //httpConnect.GET(this, httpConnect.URL + "/user/userMobileSendMsg?mobile=15675681432", null, mobileSendMsg, httpError);
+       
         }
         else 
         {
             transform.localScale = Vector3.zero;
             GameObject.Find("mobileBindle").transform.localScale = Vector3.one;
         }
-        //if (netConnect.instance.m_state == login_state.visitor)
-        //{
-        //    netConnect.instance.Ani(15);
-        //}
+       
     }
     void mobileSendMsg(string str)
     {
         JsonData jso = JsonMapper.ToObject(str);
         if ((string)jso["code"] == "0")
         {
-            netConnect.instance.Ani(5);
+            //netConnect.instance.Ani(5);
         }
         else if ((string)jso["code"] == "-1")
         {
             if ((string)jso["msg"] == httpConnect.net[8].data)
             {
-                netConnect.instance.Ani(8);
+                //netConnect.instance.Ani(8);
             }
             else if ((string)jso["msg"] == httpConnect.net[9].data)
             {
-                netConnect.instance.Ani(9);
+               // netConnect.instance.Ani(9);
             }
         }
     }
@@ -93,35 +94,39 @@ public class WithDraw_Sp : MonoBehaviour {
         }
         else
         {
-            netConnect.instance.Ani(19);
+            //netConnect.instance.Ani(19);
 
         }
        
     }
     void STS(string str)
     {
-       // withdraw1.text = str;
+        withdraw1.text = str;
+        if (netConnect.instance.m_state == login_state.visitor)
+        {
+            //netConnect.instance.Ani(24);
+        }
+       // Debug.Log(str);
         JsonData jso = JsonMapper.ToObject(str);
         if ((string)jso["code"] == "0")
         {
-            netConnect.instance.Ani(22);
+           // netConnect.instance.Ani(22);
         }
         if ((string)jso["code"] == "-1")
         {
             if ((string)jso["msg"] == httpConnect.net[10].data)
             {
-                netConnect.instance.Ani(10);
+               // netConnect.instance.Ani(10);
             }
             if ((string)jso["msg"] == httpConnect.net[21].data)
             {
-                netConnect.instance.Ani(21);
+                //netConnect.instance.Ani(21);
             }
             if ((string)jso["msg"] == httpConnect.net[23].data)
             {
-                netConnect.instance.Ani(23);
+                //netConnect.instance.Ani(23);
             }
-            //Debug.Log(str);
-            // netConnect.instance.Ani(18);
+          
         }
         if ((string)jso["code"] == "-2")
         {

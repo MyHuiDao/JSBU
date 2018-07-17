@@ -34,9 +34,12 @@ public class httpSend : MonoBehaviour
     private Dictionary<string, string> rankDic = new Dictionary<string, string>();
     private string rankMessage;
     private Transform shops;
+    public  bool Register;
+    public bool hide_tx;
     private void Start()
     {
-        encoded = new Texture2D(700, 700);
+        encoded = new Texture2D(420, 420);
+
         instant = this;
         //shops = GameObject.Find("shop_Panel").transform;
         image_qr_code = GameObject.FindGameObjectWithTag("QR_code").GetComponent<Image>();
@@ -166,7 +169,7 @@ public class httpSend : MonoBehaviour
         }
         else if ((string)jso["code"] == "-1")
         {
-            netConnect.instance.Ani(4);
+            //netConnect.instance.Ani(4);
         }
 
     }
@@ -181,7 +184,7 @@ public class httpSend : MonoBehaviour
         }
         else if ((string)jso["code"] == "-1")
         {
-            netConnect.instance.Ani(3);
+            //netConnect.instance.Ani(3);
         }
     }
     /// <summary>
@@ -198,7 +201,7 @@ public class httpSend : MonoBehaviour
         if (jso["code"].ToString() == "0")
         {
             GameObject.Find("baoXianGui").GetComponent<Text>().text = jso["data"].ToString();
-            netConnect.instance.Ani(1);
+            netConnect.Ani(1);
         }
         if (jso["code"].ToString() == "-1")
         {
@@ -235,17 +238,17 @@ public class httpSend : MonoBehaviour
         JsonData jso = JsonMapper.ToObject(str);
         if ((string)jso["code"] == "0")
         {
-            netConnect.instance.Ani(5);
+            //netConnect.instance.Ani(5);
         }
         else if ((string)jso["code"] == "-1")
         {
             if ((string)jso["msg"] == httpConnect.net[8].data)
             {
-                netConnect.instance.Ani(8);
+                //netConnect.instance.Ani(8);
             }
             else if ((string)jso["msg"] == httpConnect.net[9].data)
             {
-                netConnect.instance.Ani(9);
+               // netConnect.instance.Ani(9);
             }
         }
     }
@@ -282,7 +285,7 @@ public class httpSend : MonoBehaviour
                 RootCanvas.canvas_group(GameObject.Find("mobile_InputField").GetComponent<CanvasGroup>(), false, 0);
                 RootCanvas.canvas_group(GameObject.Find("mobileBindleSure").GetComponent<CanvasGroup>(), false, 0);
                 isbind = true;
-                netConnect.instance.Ani(7);
+                //netConnect.instance.Ani(7);
                 GameObject.Find("mobile_number").GetComponent<Text>().text = GameObject.Find("mobile_InputField").GetComponent<InputField>().text;
                 hallHttp.instance.mobilenumber = true;
             }
@@ -293,7 +296,7 @@ public class httpSend : MonoBehaviour
                 RootCanvas.canvas_group(GameObject.Find("mobile_InputField").GetComponent<CanvasGroup>(), true, 1);
                 RootCanvas.canvas_group(GameObject.Find("mobileBindleSure").GetComponent<CanvasGroup>(), true, 1);
                 isbind = false;
-                netConnect.instance.Ani(6);
+                //netConnect.instance.Ani(6);
                 hallHttp.instance.mobilenumber = false;
             }
         }
@@ -301,11 +304,11 @@ public class httpSend : MonoBehaviour
         {
             if ((string)jso["msg"] == httpConnect.net[10].data)
             {
-                netConnect.instance.Ani(10);
+                //netConnect.instance.Ani(10);
             }
             if ((string)jso["msg"] == "参数不能为空")
             {
-                netConnect.instance.Ani(8);
+                //netConnect.instance.Ani(8);
             }
         }
     }
@@ -322,19 +325,19 @@ public class httpSend : MonoBehaviour
         ZXing.Common.BitMatrix matrix = new MultiFormatWriter().encode(textForEncoding,
                 BarcodeFormat.QR_CODE, width, height);
         Color32[] pixels = new Color32[width * height];
-        Color32 black = new Color32(255, 255, 255, 255);
-        Color32 white = new Color32(0, 0, 0, 255);
+        Color32 white = new Color32(255, 255, 255, 255);
+        Color32 black = new Color32(0, 0, 0, 255);
         for (int y = 0; y < height; y++)
         {
             for (int x = 0; x < width; x++)
             {
                 if (matrix[x, y])
                 {
-                    pixels[y * width + x] = white;// 0xff000000;
+                    pixels[y * width + x] = black;// 0xff000000;
                 }
                 else
                 {
-                    pixels[y * width + x] = black;// 0xffffffff;
+                    pixels[y * width +x] = white;// 0xffffffff;
                 }
             }
         }
@@ -353,14 +356,15 @@ public class httpSend : MonoBehaviour
         if (textForEncoding != null)
         {
             //二维码写入图片  
-            var color = Encode2(textForEncoding, encoded.width, encoded.height);
+            var color = Encode2(textForEncoding, encoded.height, encoded.width);
             encoded.SetPixels32(color);
             encoded.Apply();
             byte[] arr = encoded.EncodeToPNG();
             Texture2D texture2D = new Texture2D(encoded.width, encoded.height);
             texture2D.LoadImage(arr);
-            Sprite sprite = Sprite.Create(texture2D, new Rect(0, 0, texture2D.width, texture2D.height), new Vector2(0.5f, 0.5f));
+            Sprite sprite = Sprite.Create(texture2D, new Rect(0, 0, texture2D.height, texture2D.width), new Vector2(0.5f, 0.5f));
             image_qr_code.sprite = sprite;
+         
         }
     }
     /// <summary>
@@ -373,16 +377,24 @@ public class httpSend : MonoBehaviour
     public void sharepage()
     {
 
-#if UNITY_ANDROID
-        weiXinLoad.androidObject.Call("sharepage");
-#endif
-
-#if UNITY_IPHONE
-        if (UnitySendMessageToiOS.Instante().checkInstallWeChat() == 0)
+        if (netConnect.instance.m_state == login_state.visitor)
         {
-            UnitySendMessageToiOS.Instante().wxShareLink();
+           // netConnect.instance.Ani(25);
         }
-#endif
+        else
+        {
+            httpConnect.GET(this, httpConnect.URL + "/user/getRegisterLink", null, STS, httpError);
+        }
+        //#if UNITY_ANDROID
+        //        weiXinLoad.androidObject.Call("sharepage");
+        //#endif
+
+        //#if UNITY_IPHONE
+        //        if (UnitySendMessageToiOS.Instante().checkInstallWeChat() == 0)
+        //        {
+        //            UnitySendMessageToiOS.Instante().wxShareLink();
+        //        }
+        //#endif
     }
     /// <summary>
     /// 截图
@@ -560,19 +572,46 @@ public class httpSend : MonoBehaviour
         }
     }
     /// <summary>
-    /// 提现金额
+    /// 隐藏提现
     /// </summary>
-     public void money_st()
+    public void money_st()
     {
-        httpConnect.GET(this, httpConnect.URL + "/user/getUserGoldBalance", null, STS, httpError);
+        httpConnect.GET(this, httpConnect.URL + "/game/getSwitch", null, TX, httpError);
+
     }
     void STS(string str)
     {
-        JsonData jso = JsonMapper.ToObject(str);
-        Debug.Log(str);
+        JsonData jso = JsonMapper.ToObject(str);   
+        if ((string)jso["code"] == "0")
+        {
+            JsonData js = jso["data"];
+            Application.OpenURL(js.ToString());
+            Register=true;
+        }
+        if ((string)jso["code"] == "-1")
+        {
+            if ((string)jso["msg"] == httpConnect.net[26].data)
+            {
+                //netConnect.instance.Ani(26);
+            }
+            Register = false;
+        }
     }
 
-    bool isAndroidPlatform()
+    void TX(string str)
+    {
+        Debug.Log(str);
+        JsonData jso = JsonMapper.ToObject(str);
+        if ((string)jso["code"] == "0")
+        {
+            gameContrall.instant.lamada("Withdraw");
+        }
+        else
+        {
+            netConnect.Ani(11);
+        }
+    }
+        bool isAndroidPlatform()
     {
 #if UNITY_IOS
         return false;//Application.persistentDataPath;

@@ -10,8 +10,7 @@ using WebSocketSharp.Net;
 using LitJson;
 using System.Reflection;
 using System.Net;
-
-
+using System.Threading;
 
 public class messegeQueuePara
 {
@@ -26,7 +25,7 @@ namespace CClient
     /// </summary>
     public class ClientSocket
     {
-        public bool isYuerMatch=false;
+        public bool isYuerMatch = false;
         public List<messegeQueuePara> messegeQueue = new List<messegeQueuePara>();
         public WebSocket ws;//webSocket客户端对象
 
@@ -128,9 +127,9 @@ namespace CClient
 
         private void Ws_OnMessage(object sender, MessageEventArgs e)
         {
-              //Debug.Log(e.Data);
-            
-           
+            Debug.Log(e.Data);
+
+
 
             if (e.Data != "")
             {
@@ -153,6 +152,8 @@ namespace CClient
 
         private void Ws_OnClose(object sender, CloseEventArgs e)
         {
+            reConnectUI.isShowUi = true;
+            
             Debug.Log("连接已关闭：" + e);
             Debug.Log(e.Code);
             Debug.Log(e.Reason);
@@ -165,22 +166,26 @@ namespace CClient
 
                 Debug.Log("发生异常，网络中断");
             }
-            //Debug.Log("后面进行断线重连");
+
+            Thread.Sleep(3000); //停3秒
+            Debug.Log("后面进行断线重连");
             //进行断线重连
-            //if (!otherContral.instant.returnGameScene)
-            //{
-            //    Debug.Log("断线重连了");
-            //    ws.Close();
-            //    loadSelectArea.connectNet = true;
-            //}
+            if (!otherContral.instant.returnGameScene)
+            {
+                Debug.Log("断线重连了");
+                ws.Close();
+                loadSelectArea.connectNet = true;
+            }
 
-            //if (!gameContrall.instant.return_scene)
-            //{
+            if (!gameContrall.instant.return_scene)
+            {
 
 
-            //    break_line.hall_line = true;
+                break_line.hall_line = true;
 
-            //}
+            }
         }
+
+       
     }
 }

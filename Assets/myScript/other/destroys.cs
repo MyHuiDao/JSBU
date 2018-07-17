@@ -26,11 +26,12 @@ public class destroys : MonoBehaviour {
     }
     public void money_st()
     {
-        httpConnect.GET(this, httpConnect.URL+ "/user/getUserGoldBalance", null, STS, httpError);
+        httpConnect.GET(this, httpConnect.URL+ "/fsm/getLotteryResult?bet=大眼鱼:100", null, STS, httpError);
+        //http://hd.com/game/fsm/getLotteryResult
     }
     void STS(string str)
     {
-        JsonData jso = JsonMapper.ToObject(str);
+       // JsonData jso = JsonMapper.ToObject(str);
         Debug.Log(str);   
     }
     void httpError(string str)

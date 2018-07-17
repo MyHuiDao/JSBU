@@ -282,10 +282,10 @@ public class contrall
     /// <param name="o"></param>
     public void do20007(object o)
     {
-        Debug.Log("???");
+      
         GameController.lastBulletFire = true;
-
-        Debug.Log(o.ToString());
+        meiRenYuThreadDeal.instant.is20007 = true;
+       
     }
     /// <summary>
     /// 创建子弹体验币不足
@@ -293,9 +293,10 @@ public class contrall
     /// <param name="o"></param>
     public void do20008(object o)
     {
-        Debug.Log("???");
+       
         GameController.lastBulletFire = true;
-        Debug.Log(o.ToString());
+        meiRenYuThreadDeal.instant.is20007 = true;
+
 
     }
     /// <summary>
@@ -361,7 +362,7 @@ public class contrall
         {
             if (fishArrayContral.instant.yuzhenPrefab!=null)
             {
-                Debug.Log("销毁鱼阵");
+              
                 meiRenYuThreadDeal.instant.is20010 = true;
              
                 fishArrayContral.instant.yuzhenPrefab = null;
@@ -410,7 +411,7 @@ public class contrall
     /// <param name="o"></param>
     public void do20009(object o)
     {
-        Debug.Log(((JsonData)o)["fishList"].ToString());
+       
 
 
             //销毁子弹

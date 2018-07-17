@@ -9,16 +9,20 @@ using UnityEngine.SceneManagement;
 public class quitGame : MonoBehaviour
 {
     GameObject gundong;
+    public Sprite ios_TuCs;
 
     void Start()
     {
         gundong = GameObject.Find("gunDongGongGao");
         Button btn1 = this.transform.Find("tuiChu").GetComponent<Button>();
-        Button btn2 = this.transform.Find("zhuXiao").GetComponent<Button>();
+        Button btn2 = this.transform.Find("zhuXiao").GetComponent<Button>();//确定
         //if (Application.platform == RuntimePlatform.IPhonePlayer)
 #if UNITY_IOS
-        btn2.transform.localPosition = Vector3.Lerp(btn1.transform.localPosition, btn2.transform.localPosition, 0.5f);
-        btn1.gameObject.SetActive(false);
+        //btn2.transform.localPosition = Vector3.Lerp(btn1.transform.localPosition, btn2.transform.localPosition, 0.5f);
+        //btn1.gameObject.SetActive(false);
+        btn1.gameObject.GetComponent<Image>().sprite = ios_TuCs;
+        btn1.onClick.AddListener(shutdownWindow);
+        transform.GetChild(4).gameObject.SetActive(false);
 #endif
 #if UNITY_ANDROID
         btn1.onClick.AddListener(quit);
@@ -55,5 +59,11 @@ public class quitGame : MonoBehaviour
         {
             gundong.transform.position = new Vector3(11, gundong.transform.position.y, 0);
         }
+    }
+
+    void shutdownWindow()
+    {
+        transform.localScale = Vector3.zero;
+
     }
 }

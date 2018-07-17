@@ -21,7 +21,7 @@ public class buYuMusicContral : MonoBehaviour
     void Start()
     {
         instant = this;
-        allYinXiao = new AudioSource[23];
+        allYinXiao = new AudioSource[24];
        
       
 
@@ -49,7 +49,7 @@ public class buYuMusicContral : MonoBehaviour
         allYinXiao[20] = GameObject.Find("specialFish16").GetComponent<AudioSource>();
         allYinXiao[21] = GameObject.Find("specialFish17").GetComponent<AudioSource>();
         allYinXiao[22] = GameObject.Find("specialFish18").GetComponent<AudioSource>();
-
+        allYinXiao[23] = GameObject.Find("specialFish19").GetComponent<AudioSource>();
         openMusic();
 
     }
@@ -108,7 +108,7 @@ public class buYuMusicContral : MonoBehaviour
         }
         else
         {
-            for (int i = 0; i < 23; i++)
+            for (int i = 0; i < 2; i++)
             {
                 allYinXiao[i].mute = false;
                 if (i == 0)
