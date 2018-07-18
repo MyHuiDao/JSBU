@@ -28,6 +28,7 @@ public class FishAttr : MonoBehaviour
     public GameObject goldPrefab;
     public GameObject goldPrefab1;
     public GameObject goldPrefab2;
+    public GameObject goldPrefab21;
     public GameObject goldPrefab3;//大金币
     public GameObject goldPrefab4;//元宝
     public GameObject goldPrefab5;//大转盘
@@ -315,8 +316,16 @@ public class FishAttr : MonoBehaviour
         }
         else//最大特效
         {
-            goldGo = Instantiate(goldPrefab2);
-            goldGo.transform.Find("goldFly3Text").GetComponent<Text>().text = _gold.ToString();
+            if (UnityEngine.Random.Range(0, 2)<=1)
+            {
+                goldGo = Instantiate(goldPrefab2);
+                goldGo.transform.Find("goldFly3Text").GetComponent<Text>().text = _gold.ToString();
+            }
+            else
+            {
+                goldGo = Instantiate(goldPrefab21);
+            }
+           
             goldGo.transform.SetParent(GameObject.Find("specialEffect").transform, false);
             goldGo.transform.position = new Vector3(0, 0, 90);
         }
@@ -338,6 +347,7 @@ public class FishAttr : MonoBehaviour
         FishMaker.fishTarget.Remove(id);
         destroy();
 
+       
 
     }
     /// <summary>

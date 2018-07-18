@@ -43,6 +43,7 @@ public class m_slider : MonoBehaviour
         }
 
         load = operation.progress;
+
         if (operation.progress >= 0.9f)
         {
             load = 1f;
@@ -85,7 +86,9 @@ public class m_slider : MonoBehaviour
     {
         GameObject.Find("Main Camera").GetComponent<AudioSource>().mute = true;
 
+        //operation = ope;
 
+        //operation.allowSceneActivation = false;
         if (joinBuYu)
         {
            //switch (getMeiRenYuArea.buyuGame)
@@ -101,7 +104,7 @@ public class m_slider : MonoBehaviour
             //        break;
             //}
             buYuPrefab = Resources.Load("myPrefabs/meiRenYu/MainScene" + getMeiRenYuArea.buyuGame) as GameObject;//取决于点击哪款游戏
-            //Debug.Log("buYuPreFabName:" + buYuPrefab.name);
+            Debug.Log("buYuPreFabName:" + buYuPrefab.name);
            
         }
         if (joinYuEr)
@@ -125,9 +128,7 @@ public class m_slider : MonoBehaviour
             }
                
         }
-        operation = ope;
 
-        operation.allowSceneActivation = false;
 
     }
 }

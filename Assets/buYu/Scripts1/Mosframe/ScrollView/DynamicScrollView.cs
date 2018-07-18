@@ -139,6 +139,7 @@ namespace Mosframe
 
             GameObject.Find("ruler").GetComponent<Button>().onClick.AddListener(otherContral.instant.openRuler);
             GameObject.Find("rulerExit").GetComponent<Button>().onClick.AddListener(otherContral.instant.exitRuler);
+            Music_Control.music_effect(buYuMusicContral.instant.allYinXiao[23]);
         }
 
         private void Update()

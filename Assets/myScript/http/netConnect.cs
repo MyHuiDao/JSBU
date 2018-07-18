@@ -46,7 +46,7 @@ public class netConnect : MonoBehaviour
         if (isYouKe)
         {
             //httpConnect.GET(this, httpConnect.URL + "/user/loginByDeviceId?deviceId=8888", null, userLand, httpError);//实现游客登陆，得到token号，连接到服务器 + SystemInfo.deviceUniqueIdentifier
-            httpConnect.GET(this, httpConnect.URL + "/user/loginByDeviceId?deviceId=" + "000000000"/*SystemInfo.deviceUniqueIdentifier*/, null, userLand, httpError);//  实现游客登陆，得到token号，连接到服务器 + SystemInfo.deviceUniqueIdentifier
+            httpConnect.GET(this, httpConnect.URL + "/user/loginByDeviceId?deviceId=" +SystemInfo.deviceUniqueIdentifier, null, userLand, httpError);//  实现游客登陆，得到token号，连接到服务器 + SystemInfo.deviceUniqueIdentifier
             m_state = login_state.visitor;
         }
         if (isWeiXin)
@@ -91,7 +91,7 @@ public class netConnect : MonoBehaviour
         GameObject _notice = GameObject.Find("Notices");
         _notice.transform.GetChild(0).GetComponent<Text>().text = httpConnect.net[code].show;
         //_notice.GetComponent<RectTransform>().sizeDelta = _notice.transform.GetChild(0).GetComponent<RectTransform>().sizeDelta;
-        _notice.GetComponent<RectTransform>().sizeDelta=new Vector2(_notice.transform.GetChild(0).GetComponent<Text>().text.Length * 75.1f, 169.5f);
+        _notice.GetComponent<RectTransform>().sizeDelta=new Vector2(_notice.transform.GetChild(0).GetComponent<Text>().text.Length * 70.1f, 169.5f);
         // _notice.GetComponent<CanvasGroup>().alpha = 1;
         //_notice.transform.localScale = Vector3.one;
         //_notice.transform.GetChild(0).localScale = Vector3.one;

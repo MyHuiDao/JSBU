@@ -21,6 +21,13 @@ public class initialPrepare : MonoBehaviour
     public GameObject weizhongjiangPrefab;
 
 
+    //小地图
+    public GameObject background;
+    public GameObject litterBackground;
+    SpriteRenderer Bag_SpriteRenderer;
+    Image litBagImage;
+
+
 
 
 
@@ -47,6 +54,8 @@ public class initialPrepare : MonoBehaviour
         initialJieSuan();
 
         GameObject.Find("returnToStart").GetComponent<Button>().onClick.AddListener(returnToStart);
+
+        Bag_SpriteRenderer = GameObject.Find("background").GetComponent<SpriteRenderer>();
 
 
     }

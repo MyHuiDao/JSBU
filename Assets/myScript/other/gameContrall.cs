@@ -462,7 +462,15 @@ public class gameContrall : MonoBehaviour
     public void lamada(string name)
     {
         Transform transf = buttonBehind.transform.Find(name);
-        transf.localScale = Vector3.one;
+        if (name.Contains("customServe")) {
+            transf.localPosition = new Vector3(transf.localPosition.x, transf.localPosition.y, 0);
+
+        }else{
+            transf.localScale = Vector3.one;  
+        }
+
+
+
 #if UNITY_IOS
         if (transf.name.Contains("customServe"))
         {
@@ -487,10 +495,15 @@ public class gameContrall : MonoBehaviour
     public bool return_scene;
     void catchFish(int buyuGanme,GameObject obj)
     {
+        
+        StartCoroutine(_catchFish(buyuGanme, obj));
+      
+    }
+    IEnumerator _catchFish(int buyuGanme, GameObject obj)
+    {
         //Resources.UnloadUnusedAssets();
 
         //Resources.FindObjectsOfTypeAll();
-       
         GameObject middleLastObj = middleParent.transform.GetChild(middleParent.transform.childCount - 1).gameObject;
         if (middleLastObj == obj)
         {
@@ -498,9 +511,14 @@ public class gameContrall : MonoBehaviour
             getMeiRenYuArea.buyuGame = buyuGanme;
             return_scene = true;
             obj.GetComponent<Button>().enabled = true;
+            yield return load;
+            yield return new WaitForSeconds(2f);
+            yield return Resources.UnloadUnusedAssets();
             operation = SceneManager.LoadSceneAsync("MainMeiRenYu");
+
             if (operation != null)
             {
+                
                 ClientSocket.instance.ws.Close();
                 m_slider.instance.GetScene(operation, true, false);
 
@@ -509,8 +527,8 @@ public class gameContrall : MonoBehaviour
             {
                 Debug.Log("跳转场景为空");
             }
+
         }
-      
     }
 
     /// <summary>
@@ -518,14 +536,23 @@ public class gameContrall : MonoBehaviour
     /// </summary>
     void catchYuErMatch(GameObject obj)
     {
+        StartCoroutine(_catchYuErMatch(obj));
+    }
+
+    IEnumerator _catchYuErMatch(GameObject obj)
+    {
         GameObject middleLastObj = middleParent.transform.GetChild(middleParent.transform.childCount - 1).gameObject;
         if (middleLastObj == obj)
         {
             obj.GetComponent<Button>().enabled = true;
             return_scene = true;
+            GameObject load = Instantiate(Loading, GameObject.Find("Canvas").transform) as GameObject;
+            yield return load;
+            yield return new WaitForSeconds(2f);
+            yield return Resources.UnloadUnusedAssets();
             operation = SceneManager.LoadSceneAsync("yuerScene");
             //Debug.Log("实例化了");
-            GameObject load = Instantiate(Loading, GameObject.Find("Canvas").transform) as GameObject;
+
             if (operation != null)
             {
                 ClientSocket.instance.ws.Close();
@@ -537,7 +564,6 @@ public class gameContrall : MonoBehaviour
             }
 
         }
-
     }
     /// <summary>
     /// 复制文字
@@ -608,5 +634,7 @@ public class gameContrall : MonoBehaviour
         }
         httpSend.instant.Register = false;
     }
+
+
 
 }

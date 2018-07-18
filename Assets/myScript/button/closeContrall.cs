@@ -22,8 +22,14 @@ public class closeContrall : MonoBehaviour {
     /// <param name="g"></param>
     public void close(GameObject g)
     {
-
-        g.transform.parent.gameObject.transform.localScale = Vector3.zero;
+        if (g.name.Contains("cus_Close"))
+        {
+            g.transform.parent.transform.localPosition = new Vector3(g.transform.parent.transform.localPosition.x,g.transform.parent.transform.localPosition.y,-100000);
+        }
+        else
+        {
+            g.transform.parent.gameObject.transform.localScale = Vector3.zero;
+        }
        RootCanvas.find("backGround").transform.localScale=Vector3.zero;//把阴影背景缩放为零
        RootCanvas.canvas_group(GameObject.Find("Canvas_button").GetComponent<CanvasGroup>(), false, 0);
     }

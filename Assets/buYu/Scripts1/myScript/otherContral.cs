@@ -25,9 +25,6 @@ public class otherContral : MonoBehaviour
     void Start()
     {
         instant = this;
-        Music_Control.music_effect(buYuMusicContral.instant.allYinXiao[23]);
-
-
     }
 
     // Update is called once per frame

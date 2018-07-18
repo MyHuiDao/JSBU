@@ -215,12 +215,12 @@ public class meiRenYuThreadDeal : MonoBehaviour
 
 
         GameController.Instance.initialGold();
-        if (gosWeiZhi == 2 || gosWeiZhi == 3)
+        if (gosWeiZhi == 1 )
         {
             GameObject.Find("Main Camera").transform.Rotate(new Vector3(0, 0, 180));
             GameObject.Find("UIRotation").transform.Rotate(new Vector3(0, 0, 180));//使界面旋转180                  
             GameObject[] goldtext = GameObject.FindGameObjectsWithTag("goldText");
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 2; i++)
             {
                 goldtext[i].transform.Rotate(new Vector3(0, 0, 180));//让每个金币显示旋转180
             }
@@ -328,8 +328,8 @@ public class meiRenYuThreadDeal : MonoBehaviour
                         else if (FishMaker.fishTarget[str].GetComponent<FishAttr>().fishType == "18")
                         {
                             buYuMusicContral.instant.allYinXiao[6].Play();
-                            //specialFish2Image = Instantiate(buYuMusicContral.instant.specialFish2Image, GameObject.Find("fishGroup").transform);
-                            //specialFish2Image.transform.position = FishMaker.fishTarget[str].transform.position;
+                            specialFish2Image = Instantiate(buYuMusicContral.instant.specialFish2Image, GameObject.Find("fishGroup").transform);
+                            specialFish2Image.transform.position = FishMaker.fishTarget[str].transform.position;
 
                         }
                         else if (FishMaker.fishTarget[str].GetComponent<FishAttr>().fishType == "17")

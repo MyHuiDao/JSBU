@@ -199,7 +199,7 @@ public class GameController : MonoBehaviour
             }
 
         }
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 2; i++)
         {
             oneShootCostText[i].text = (int.Parse(contrall.instant().addFileGoldNum)).ToString();
         }
@@ -382,7 +382,7 @@ public class GameController : MonoBehaviour
      **/
     public void OnButtonUp()
     {
-        buYuMusicContral.instant.allYinXiao[1].Play();
+        //buYuMusicContral.instant.allYinXiao[1].Play();
         WebButtonSendMessege.instant().addButtleClass();//发送加炮等级     
     }
     /// <summary>

@@ -65,8 +65,6 @@ public class fishMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
         if (timeJiShi2.startGame)
         {
             if (myselfStart)
@@ -85,15 +83,11 @@ public class fishMove : MonoBehaviour
                         isStartSpurt = true;
                     }
 
-
                 }
                 else
                 {
                     transform.Translate(Vector3.right * laterSpeed * Time.deltaTime);
-
-
                 }
-
 
 
                 if (firstCry && this.transform.localPosition.x >= -50)
@@ -111,7 +105,6 @@ public class fishMove : MonoBehaviour
                     initialStart.instance.allYinXiao[2].Play();
                     thirdCry = false;
                 }
-
 
 
                 if (this.transform.localPosition.x >= trackLong)
@@ -157,15 +150,7 @@ public class fishMove : MonoBehaviour
 
             }
 
-
         }
-
-
-
-
-
-
-
 
     }
 

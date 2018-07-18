@@ -50,7 +50,7 @@ public class GunFollow : MonoBehaviour
             z = Vector3.Angle(Vector3.up, mousePos - transform.position);
             angle = z;
         }    
-        if (posWeizhi == 2 || posWeizhi == 3)
+        if (posWeizhi ==1)
         {
             if (z < -90 || z > 90)
             {
