@@ -51,7 +51,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1539070029098764}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 90}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -84,7 +84,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.28, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -95,7 +95,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 4.99, y: 1}
   m_EdgeRadius: 0
 --- !u!95 &95432246667692780
 Animator:
@@ -131,14 +131,21 @@ MonoBehaviour:
   id: 
   runPoint: 
   isBelongYuZhen: 0
-  diePrefab: {fileID: 0}
+  diePrefab: {fileID: 1231347320140800, guid: cda4e34ca35cf6347b1b4ac7a7742efe, type: 2}
   goldPrefab: {fileID: 1240878384639114, guid: c579cc6fab448714a9ea8d2a43072aca, type: 2}
-  goldPrefab1: {fileID: 1417881099834684, guid: a978486b1af3bda46b6d0398d4c2627e,
+  goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
+  goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
+    type: 2}
+  goldPrefab5: {fileID: 1942344038043870, guid: 8fdc991a0ef1b7c45be1564d9bc86e5e,
+    type: 2}
+  goldArt: {fileID: 1285214080780728, guid: 340f8106f78e02b47b41880f23a2df01, type: 2}
   Send20010One: 1
   judgeSpot: 0
   initialX: 0

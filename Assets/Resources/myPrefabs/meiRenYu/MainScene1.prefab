@@ -3848,7 +3848,8 @@ MonoBehaviour:
   yuzhen:
   - {fileID: 1849888397154128, guid: e78ea246ecf99f4409e34b91c241bf4a, type: 2}
   - {fileID: 1545674174825594, guid: 1842cc65203ed5445b1977eee67e62ea, type: 2}
-  - {fileID: 0}
+  - {fileID: 1207190481693372, guid: 5d8fe2f75ee0eef408b8e4021d9c84fb, type: 2}
+  - {fileID: 1537610960219388, guid: 45b393a033d394049b02a16cabe5cb22, type: 2}
   yuzhenCard: 0
   yuzhenPrefab: {fileID: 0}
   is20019: 0
@@ -22301,7 +22302,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.0000076293945}
+  m_AnchoredPosition: {x: -490, y: -89.7}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224753022200562148
@@ -22727,7 +22728,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.0000076293945}
+  m_AnchoredPosition: {x: -563.6, y: -89.91}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224997945149167354

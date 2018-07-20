@@ -19,7 +19,7 @@ public class yuerContrall : MonoBehaviour
     public static List<int> touzhuNum = new List<int>();
 
     public static yuerContrall instance = null;
-
+    public bool returnGameScene = false;
 
     public bool is10008 = false;
     public object o;
@@ -77,7 +77,7 @@ public class yuerContrall : MonoBehaviour
     /// </summary>
     void returnToHall()
     {
-        //otherContral.instant.returnGameScene = true;
+        returnGameScene = true;
 
         CClient.ClientSocket.instant().ws.Close();
         SceneManager.LoadSceneAsync("gameScene");

@@ -71,7 +71,7 @@ public class yuzhenThreeMove : MonoBehaviour
                 transform.rotation = Quaternion.Euler(-Mathf.Atan((y - this.transform.position.y) / moveSpeed) * 180 / Mathf.PI, 90, 0);
             }
 
-            transform.transform.position = Vector3.MoveTowards(this.transform.position, new Vector3(x, y, z), Time.deltaTime);
+             transform.position = Vector3.MoveTowards(this.transform.position, new Vector3(x, y, z), Time.deltaTime);
 
         }
     }

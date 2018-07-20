@@ -37,7 +37,7 @@ public class netConnect : MonoBehaviour
     }
     private void Start()
     {
-       
+      
     }
 
     public void connectnet(bool isAccountLand, bool isYouKe, bool isWeiXin)
@@ -78,6 +78,8 @@ public class netConnect : MonoBehaviour
         if ((string)js["code"] == "0")
         {
             token = (string)js["data"];
+
+            Debug.Log(token);
             sceneLoad.loadScene();
         }
         else if ((string)js["code"] == "-1")

@@ -45,6 +45,9 @@ public class fishMove : MonoBehaviour
     static bool secondCry;
     static bool thirdCry;
 
+    Transform brotherTransf;
+    //小地图
+    float bag_litScale;
 
     static float x=0;//判断游戏过程中的第一二名。
     // Use this for initialization
@@ -58,7 +61,8 @@ public class fishMove : MonoBehaviour
         this.transform.localPosition = initialPrepare.instance.trackDict[initialPrepare.instance.trackNum[this.name]];
         mingci = initialPrepare.nameAndNumdict[this.transform.name];  
         earlySpeed = (8 + aVar) + bSpeedVar * Mathf.Sin(angle * ((10 - cycleVar) / 10));
-        laterSpeed = 15 - mingci;       
+        laterSpeed = 15 - mingci;
+        brotherTransf = getBrotherTrasnf(gameObject.name);
 
     }
 
@@ -78,6 +82,10 @@ public class fishMove : MonoBehaviour
                         time = 0;
                     }
                     transform.Translate(Vector3.right * earlySpeed * Time.deltaTime);
+                    if(brotherTransf!=null)
+                    {
+                        brotherTransf.Translate(Vector3.right * earlySpeed*bag_litScale * Time.deltaTime);
+                    }
                     if (this.transform.position.x >= spurt)
                     {
                         isStartSpurt = true;
@@ -87,8 +95,11 @@ public class fishMove : MonoBehaviour
                 else
                 {
                     transform.Translate(Vector3.right * laterSpeed * Time.deltaTime);
+                    if(brotherTransf!=null)
+                    {
+                        brotherTransf.Translate(Vector3.right * laterSpeed *bag_litScale * Time.deltaTime);
+                    }
                 }
-
 
                 if (firstCry && this.transform.localPosition.x >= -50)
                 {
@@ -119,8 +130,9 @@ public class fishMove : MonoBehaviour
                     {
                         timeJiShi2.startGame = false;
 
-                        GameObject.Find("Canvas").transform.Find("jieSuan").localScale = Vector3.one;//以前结算界面
-                        GameObject.Find("Content").transform.localPosition = new Vector3(0, 0, 0);
+                        //GameObject.Find("Canvas").transform.Find("jieSuan").localScale = Vector3.one;//以前结算界面
+                        //GameObject.Find("Content").transform.localPosition = new Vector3(0, 0, 0);
+                        initialPrepare.instance.jiesuan();
                         GameObject.Find("moneyText1").GetComponent<Text>().text = (int.Parse(GameObject.Find("moneyText1").GetComponent<Text>().text) + int.Parse(saveDate.jiesuanGetGold)).ToString();
                         jiesuanToStart = true;
 
@@ -140,7 +152,8 @@ public class fishMove : MonoBehaviour
                 initialStart.instance.allYinXiao[6].Pause();
                 Destroy(GameObject.Find("prepareAndjieSuna(Clone)").gameObject);
                 Destroy(GameObject.Find("background(Clone)").gameObject);
-                Instantiate(m_slider.yuerStartPrefab);
+                Instantiate(/*m_slider.*/initialStart.yuerStartPrefab);
+                Music_Control.music_effect(initialStart.instance.allYinXiao[8]);
 
                 //在此处请求倒计时信息
                 yuerSendMSg.instant().getCountDown();
@@ -154,5 +167,71 @@ public class fishMove : MonoBehaviour
 
     }
 
+    Transform getBrotherTrasnf(string name)
+    {
 
+        SpriteRenderer Bag_SpriteRenderer = GameObject.Find("background(Clone)").GetComponent<SpriteRenderer>();
+        Image litBagImage = GameObject.Find("litterBackground").GetComponent<Image>();
+        //bag_litScale = Bag_SpriteRenderer.size.x / litBagImage.sprite.rect.width * (Screen.width / 2560.0f);// 2048/1284 = 1.6
+        bag_litScale = (litBagImage.sprite.rect.width / Bag_SpriteRenderer.size.x) * (Screen.width / 2560.0f);// 2048/1284 = 1.6
+        //float s = Screen.width / 2560.0f;
+        //bag_litScale *= s;
+        //Debug.LogError("ssss:"+bag_litScale);
+        //Debug.LogError("Bag_SpriteRendererW:"+Bag_SpriteRenderer.sprite.rect.width + "===:litBagImageW:"+litBagImage.sprite.rect.width);
+       
+        if(name.Contains("1"))
+        {
+            
+            Transform fish_Brother = GameObject.Find("fish_Brother1").transform;
+            setBrotherTransfPosition(fish_Brother,litBagImage);
+            return fish_Brother;
+        }
+
+        else if(name.Contains("2"))
+        {
+            Transform fish_Brother = GameObject.Find("fish_Brother2").transform;
+            setBrotherTransfPosition(fish_Brother, litBagImage);
+            return fish_Brother;
+        }
+        else if (name.Contains("3"))
+        {
+            Transform fish_Brother = GameObject.Find("fish_Brother3").transform;
+            setBrotherTransfPosition(fish_Brother, litBagImage);
+            return fish_Brother;
+        }
+        else if (name.Contains("4"))
+        {
+            Transform fish_Brother = GameObject.Find("fish_Brother4").transform;
+            setBrotherTransfPosition(fish_Brother, litBagImage);
+            return fish_Brother;
+        }
+
+        else
+        {
+            return null;
+        }
+    }
+
+    void setBrotherTransfPosition(Transform _transform,Image _image)
+    {
+        float fish_BrotherY = _image.rectTransform.rect.height / 4;//_image.rectTransform.rect.height / 4 * (initialPrepare.instance.trackNum[this.name] -1);
+        if(initialPrepare.instance.trackNum[this.name] == 1)
+        {
+            fish_BrotherY *= 1.5f;
+        }
+        else if(initialPrepare.instance.trackNum[this.name] == 2)
+        {
+            fish_BrotherY *= 0.5f;
+        }
+        else if (initialPrepare.instance.trackNum[this.name] == 3)
+        {
+            fish_BrotherY *= -0.5f;
+        }
+        else{
+            fish_BrotherY *= -1.5f;
+        }
+
+        Vector3 fish_BrotherP = new Vector3(_transform.localPosition.x, fish_BrotherY, _transform.localPosition.z);
+        _transform.localPosition = fish_BrotherP;
+    }
 }

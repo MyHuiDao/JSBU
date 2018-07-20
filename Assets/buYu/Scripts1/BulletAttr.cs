@@ -41,6 +41,7 @@ public class BulletAttr : MonoBehaviour
         {
             if (belongTarget == meiRenYuThreadDeal.gosWeiZhi)
             {
+                Debug.LogError("对象"+belongTarget+"id......................"+id);
                 WebButtonSendMessege.instant().bulletDie("20009", id, x.ToString(), y.ToString(), FishMaker.SaveNet[id]);
                 i = 0;
             }
@@ -202,6 +203,9 @@ public class BulletAttr : MonoBehaviour
     public void bulletSelfDestroy()
     {
         Debug.Log("发送20009");
-        CClient.ClientSocket.instant().send("20009", (object)("{\"fireId\":\"" + this.id + "\",\"x\":" + this.transform.localPosition.x.ToString() + ",\"y\":" + this.transform.localPosition.y.ToString() + ",\"fishList\":\"\"}"));
+        if (contrall.instance.isZhuJi)
+        {
+            CClient.ClientSocket.instant().send("20009", (object)("{\"fireId\":\"" + this.id + "\",\"x\":" + this.transform.localPosition.x.ToString() + ",\"y\":" + this.transform.localPosition.y.ToString() + ",\"fishList\":\"\"}"));
+        }
     }
 }

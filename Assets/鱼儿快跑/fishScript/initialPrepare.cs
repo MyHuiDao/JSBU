@@ -21,11 +21,7 @@ public class initialPrepare : MonoBehaviour
     public GameObject weizhongjiangPrefab;
 
 
-    //小地图
-    public GameObject background;
-    public GameObject litterBackground;
-    SpriteRenderer Bag_SpriteRenderer;
-    Image litBagImage;
+
 
 
 
@@ -55,8 +51,8 @@ public class initialPrepare : MonoBehaviour
 
         GameObject.Find("returnToStart").GetComponent<Button>().onClick.AddListener(returnToStart);
 
-        Bag_SpriteRenderer = GameObject.Find("background").GetComponent<SpriteRenderer>();
-
+       
+        //
 
     }
 
@@ -102,6 +98,11 @@ public class initialPrepare : MonoBehaviour
             GameObject g = Instantiate(fish[i], GameObject.Find("fish").transform);
             g.name = "fish" + (i + 1);
             g.transform.localPosition = trackDict[trackNum[g.name]];
+            ////鱼的位置转换成屏幕坐标
+            //Camera.main.WorldToScreenPoint(g.transform.localPosition);
+            //Debug.LogError(g.name + ":screenPoint:"+ Camera.main.WorldToScreenPoint(g.transform.localPosition));
+            ////屏幕坐标转换成世界坐标
+            //Debug.LogError(g.name + "世界坐标："+Camera.main.ScreenToWorldPoint(Camera.main.WorldToScreenPoint(g.transform.localPosition)));
         }
         fishCrown.fishAlreadyHave = true;
     }
@@ -166,61 +167,91 @@ public class initialPrepare : MonoBehaviour
     void initialJieSuan()
     {
         GameObject contentParent = GameObject.Find("Content");
-        if (!((IDictionary)((JsonData)do10003Msg)).Contains("bets"))
+       
+      
+
+        //JsonData j = ((JsonData)do10003Msg)["bets"];
+        //for (int i = 0; i < j.Count; i++)
+        //{
+        //    GameObject g;
+
+
+        //    if (j[i]["getGold"].ToString() == "0")
+        //    {
+
+        //        g = Instantiate(weizhongjiangPrefab, contentParent.transform);
+        //        g.name = "weiZhongJiang" + i;
+        //        Instantiate(fArray[initialStart.touzhuEquit[j[i]["betsNumber"].ToString()] - 1], GameObject.Find("weiZhongJiang" + i).transform.Find("touzhuKind"));
+        //        Transform t = GameObject.Find("weiZhongJiang" + i).transform.Find("suanshi");
+        //        t.Find("touzhuNum").GetComponent<Text>().text = j[i]["betsGold"].ToString();
+        //        t.Find("peilv").GetComponent<Text>().text = j[i]["odds"].ToString();
+        //        t.Find("jieguo").GetComponent<Text>().text = j[i]["getGold"].ToString();
+
+        //    }
+        //    else
+        //    {
+        //        g = Instantiate(zhongjiangPrefab, contentParent.transform);
+        //        g.name = "zhongJiang" + i;
+        //        Instantiate(fArray[initialStart.touzhuEquit[j[i]["betsNumber"].ToString()] - 1], GameObject.Find("zhongJiang" + i).transform.Find("touzhuKind"));
+        //        Transform t = GameObject.Find("zhongJiang" + i).transform.Find("suanshi");
+        //        t.Find("touzhuNum").GetComponent<Text>().text = j[i]["betsGold"].ToString();
+        //        t.Find("peilv").GetComponent<Text>().text = j[i]["odds"].ToString();
+        //        t.Find("jieguo").GetComponent<Text>().text = j[i]["getGold"].ToString();
+        //        g.transform.SetAsFirstSibling();
+
+        //    }       
+        //}
+
+        //for (int k = 0; k < contentParent.transform.childCount; k++)
+        //{
+        //    if (contentParent.transform.GetChild(k).name.Contains("weiZhongJiang"))
+        //    {
+
+        //        contentParent.transform.GetChild(k).SetSiblingIndex(20+ k);
+        //    }
+        //}
+
+
+
+
+
+
+    }
+
+
+
+    public void jiesuan()
+    {
+        if (!((IDictionary)((JsonData)do10003Msg)).Contains("bets"))//未投注
         {
-            GameObject g = Instantiate(weizhongjiangPrefab, contentParent.transform);
-            g.transform.Find("touzhuKind").transform.localScale = Vector3.zero;       
-            g.transform.Find("suanshi").transform.localScale = Vector3.zero;
+            //GameObject g = Instantiate(weizhongjiangPrefab, contentParent.transform);
+            //g.transform.Find("touzhuKind").transform.localScale = Vector3.zero;       
+            //g.transform.Find("suanshi").transform.localScale = Vector3.zero;
+            GameObject.Find("Canvas").transform.Find("jieSuanNewWeiZhongJiang").gameObject.SetActive(true);
+            GameObject.Find("Canvas").transform.Find("jieSuanNewWeiZhongJiang").Find("noBet").gameObject.SetActive(true);
             return;
         }
-       
-   
-        JsonData j = ((JsonData)do10003Msg)["bets"];
-        for (int i = 0; i < j.Count; i++)
+        if (((JsonData)do10003Msg)["gold"].ToString() == "0")//未中奖
         {
-            GameObject g;
-
-         
-            if (j[i]["getGold"].ToString() == "0")
-            {
-                
-                g = Instantiate(weizhongjiangPrefab, contentParent.transform);
-                g.name = "weiZhongJiang" + i;
-                Instantiate(fArray[initialStart.touzhuEquit[j[i]["betsNumber"].ToString()] - 1], GameObject.Find("weiZhongJiang" + i).transform.Find("touzhuKind"));
-                Transform t = GameObject.Find("weiZhongJiang" + i).transform.Find("suanshi");
-                t.Find("touzhuNum").GetComponent<Text>().text = j[i]["betsGold"].ToString();
-                t.Find("peilv").GetComponent<Text>().text = j[i]["odds"].ToString();
-                t.Find("jieguo").GetComponent<Text>().text = j[i]["getGold"].ToString();
-
-            }
-            else
-            {
-                g = Instantiate(zhongjiangPrefab, contentParent.transform);
-                g.name = "zhongJiang" + i;
-                Instantiate(fArray[initialStart.touzhuEquit[j[i]["betsNumber"].ToString()] - 1], GameObject.Find("zhongJiang" + i).transform.Find("touzhuKind"));
-                Transform t = GameObject.Find("zhongJiang" + i).transform.Find("suanshi");
-                t.Find("touzhuNum").GetComponent<Text>().text = j[i]["betsGold"].ToString();
-                t.Find("peilv").GetComponent<Text>().text = j[i]["odds"].ToString();
-                t.Find("jieguo").GetComponent<Text>().text = j[i]["getGold"].ToString();
-                g.transform.SetAsFirstSibling();
-
-            }       
+            GameObject.Find("Canvas").transform.Find("jieSuanNewWeiZhongJiang").gameObject.SetActive(true);
+            GameObject.Find("Canvas").transform.Find("jieSuanNewWeiZhongJiang").Find("noPrize").gameObject.SetActive(true);
         }
-     
-        for (int k = 0; k < contentParent.transform.childCount; k++)
+        else
         {
-            if (contentParent.transform.GetChild(k).name.Contains("weiZhongJiang"))
+            int z = int.Parse(((JsonData)do10003Msg)["gold"].ToString());
+            Debug.Log("........."+z);
+            GameObject.Find("Canvas").transform.Find("jieSuanNew").gameObject.SetActive(true);
+            for (int i = 0; i < 9; i++)
             {
-                
-                contentParent.transform.GetChild(k).SetSiblingIndex(20+ k);
+                int a = (int)Mathf.Pow(10,i);
+               
+                GameObject.Find("g"+(i+1).ToString()).transform.GetChild(0).GetChild(0).GetComponent<prizeGoldShow>().stopNum = z/a % 10;
+                Debug.Log(z+"俩数字"+a);
+                Debug.Log(i+1+",,,,,,,,,,"+ z / a % 10);
             }
+            prizeGoldShow.isStart = true;
+           
         }
-
-
-
-
-
-
     }
     void initialMingCi()
     {
@@ -245,7 +276,8 @@ public class initialPrepare : MonoBehaviour
         initialStart.instance.allYinXiao[6].Pause();
         Destroy(GameObject.Find("prepareAndjieSuna(Clone)").gameObject);
         Destroy(GameObject.Find("background(Clone)").gameObject);
-        Instantiate(m_slider.yuerStartPrefab);
+        Instantiate(/*m_slider.*/initialStart.yuerStartPrefab);
+        Music_Control.music_effect(initialStart.instance.allYinXiao[8]);
         yuerSendMSg.instant().getCountDown();
        
         //在此处请求倒计时信息

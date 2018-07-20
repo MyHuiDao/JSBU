@@ -19,13 +19,14 @@ public class m_slider : MonoBehaviour
     private string sceneName;
     private AsyncOperation operation;
     
-    public static GameObject buYuPrefab = null;//提前加载捕鱼预制体\
-    public static GameObject yuerStartPrefab = null;//鱼儿快跑预制体
-    public static GameObject yuerPrepareAndjieSunaPrefab = null;//鱼儿快跑预制体
-    public static GameObject yuerbackgroundPrefab = null;//鱼儿快跑预制体                                              
+    //public static GameObject buYuPrefab = null;//提前加载捕鱼预制体\
+    //public static GameObject yuerStartPrefab = null;//鱼儿快跑预制体
+    //public static GameObject yuerPrepareAndjieSunaPrefab = null;//鱼儿快跑预制体
+    //public static GameObject yuerbackgroundPrefab = null;//鱼儿快跑预制体                                              
     private void Awake()
     {
         instance = this;
+        //yuerPrepareAndjieSunaPrefab
     }
     void Start()
     {
@@ -85,7 +86,7 @@ public class m_slider : MonoBehaviour
     public void GetScene(AsyncOperation ope, bool joinBuYu, bool joinYuEr)
     {
         GameObject.Find("Main Camera").GetComponent<AudioSource>().mute = true;
-
+        Resources.UnloadUnusedAssets();
         //operation = ope;
 
         //operation.allowSceneActivation = false;
@@ -103,29 +104,29 @@ public class m_slider : MonoBehaviour
             //        buYuPrefab = netConnect.buyu2;
             //        break;
             //}
-            buYuPrefab = Resources.Load("myPrefabs/meiRenYu/MainScene" + getMeiRenYuArea.buyuGame) as GameObject;//取决于点击哪款游戏
-            Debug.Log("buYuPreFabName:" + buYuPrefab.name);
+            //buYuPrefab = Resources.Load("myPrefabs/meiRenYu/MainScene" + getMeiRenYuArea.buyuGame) as GameObject;//取决于点击哪款游戏
+            //Debug.Log("buYuPreFabName:" + buYuPrefab.name);
            
         }
         if (joinYuEr)
         {
-            if (yuerbackgroundPrefab == null)
-            {
-                Debug.Log("加载资源预制体");
-                yuerStartPrefab = Resources.Load("yuErKuaiPao/start") as GameObject;
-                //yuerStartPrefab = break_line.yuer0;
-            }
-            if (yuerPrepareAndjieSunaPrefab == null)
-            {
-                yuerPrepareAndjieSunaPrefab = Resources.Load("yuErKuaiPao/prepareAndjieSuna") as GameObject;
-                //yuerPrepareAndjieSunaPrefab= break_line.yuer1;
-            }
+            //if (yuerbackgroundPrefab == null)
+            //{
+            //    Debug.Log("加载资源预制体");
+            //    yuerStartPrefab = Resources.Load("yuErKuaiPao/start") as GameObject;
+            //    //yuerStartPrefab = break_line.yuer0;
+            //}
+            //if (yuerPrepareAndjieSunaPrefab == null)
+            //{
+            //    //yuerPrepareAndjieSunaPrefab = Resources.Load("yuErKuaiPao/prepareAndjieSuna") as GameObject;
+            //    //yuerPrepareAndjieSunaPrefab= break_line.yuer1;
+            //}
                
-            if (yuerbackgroundPrefab == null)
-            {
-                 yuerbackgroundPrefab = Resources.Load("yuErKuaiPao/background") as GameObject; 
-                //yuerbackgroundPrefab= break_line.yuer2;
-            }
+            //if (yuerbackgroundPrefab == null)
+            //{
+            //     yuerbackgroundPrefab = Resources.Load("yuErKuaiPao/background") as GameObject; 
+            //    //yuerbackgroundPrefab= break_line.yuer2;
+            //}
                
         }
 

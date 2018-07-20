@@ -215,7 +215,13 @@ public class meiRenYuThreadDeal : MonoBehaviour
 
 
         GameController.Instance.initialGold();
-        if (gosWeiZhi == 1 )
+        if (gosWeiZhi == 0)
+        {
+            buYuMusicContral.instant.specialFish1Image.transform.rotation = Quaternion.Euler(0, 0, 0);
+            buYuMusicContral.instant.specialFish2Image.transform.rotation = Quaternion.Euler(0, 0, 0);
+            buYuMusicContral.instant.specialFish3Image.transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        if (gosWeiZhi == 1)
         {
             GameObject.Find("Main Camera").transform.Rotate(new Vector3(0, 0, 180));
             GameObject.Find("UIRotation").transform.Rotate(new Vector3(0, 0, 180));//使界面旋转180                  
@@ -225,7 +231,7 @@ public class meiRenYuThreadDeal : MonoBehaviour
                 goldtext[i].transform.Rotate(new Vector3(0, 0, 180));//让每个金币显示旋转180
             }
 
-
+            Debug.Log("第二个人进来才能收到。。。。。。。。。。。。。。。。。。");
             //特效旋转180
             buYuMusicContral.instant.specialFish1Image.transform.rotation = Quaternion.Euler(0, 0, 180);
             buYuMusicContral.instant.specialFish2Image.transform.rotation = Quaternion.Euler(0, 0, 180);
@@ -268,14 +274,14 @@ public class meiRenYuThreadDeal : MonoBehaviour
 
     public void deal20009(string fireID, object fishList, int gold, string sumgold)
     {
-    
+
         int target = -1;//代表是哪一个对象加金币
         for (int i = 0; i < 4; i++)
         {
-           
+
             if (GameController.Instance.bulletDict[i].ContainsKey(fireID))
             {
-               
+
                 GameController.Instance.bulletDict[i][fireID].GetComponent<BulletAttr>().destroyBullet();
                 GameController.Instance.bulletDict[i].Remove(fireID);
                 target = i;
@@ -283,15 +289,15 @@ public class meiRenYuThreadDeal : MonoBehaviour
             }
         }
 
-      
+
         if (target != -1)
         {
-           
+
             //开始销毁死去的鱼
 
             for (int i = 0; i < ((JsonData)fishList)["fishList"].Count; i++)
             {
-              
+
                 string str = ((JsonData)fishList)["fishList"][i].ToString();
 
                 if (contrall.instant().isCanClearFish)//鱼阵
@@ -305,15 +311,18 @@ public class meiRenYuThreadDeal : MonoBehaviour
                         }
                     }
 
-                    if (fishArrayContral.listGroupYuzhen[0].Contains(((JsonData)fishList)["fishList"][i].ToString()))
+                    if (fishArrayContral.listGroupYuzhen.Count != 0)
                     {
-                        fishArrayContral.listGroupYuzhen[0].Remove(((JsonData)fishList)["fishList"][i].ToString());
+                        if (fishArrayContral.listGroupYuzhen[0].Contains(((JsonData)fishList)["fishList"][i].ToString()))
+                        {
+                            fishArrayContral.listGroupYuzhen[0].Remove(((JsonData)fishList)["fishList"][i].ToString());
+                        }
                     }
 
                 }
                 else
                 {
-                
+
                     if (FishMaker.fishTarget.ContainsKey(str))
                     {
                         if (FishMaker.fishTarget[str].GetComponent<FishAttr>().fishType == "20" || FishMaker.fishTarget[str].GetComponent<FishAttr>().fishType == "19")
@@ -340,17 +349,17 @@ public class meiRenYuThreadDeal : MonoBehaviour
                         }
                         else if (getMeiRenYuArea.buyuGame == 0 && int.Parse(FishMaker.fishTarget[str].GetComponent<FishAttr>().fishType) > 5)
                         {
-                           
+
                             buYuMusicContral.instant.allYinXiao[24 - int.Parse(FishMaker.fishTarget[str].GetComponent<FishAttr>().fishType)].Play();
                         }
                         else if (getMeiRenYuArea.buyuGame == 1 && int.Parse(FishMaker.fishTarget[str].GetComponent<FishAttr>().fishType) > 5)
                         {
-                           
+
                             buYuMusicContral.instant.allYinXiao[26 - int.Parse(FishMaker.fishTarget[str].GetComponent<FishAttr>().fishType)].Play();
                         }
                         else if (getMeiRenYuArea.buyuGame == 2 && int.Parse(FishMaker.fishTarget[str].GetComponent<FishAttr>().fishType) > 5)
                         {
-                            
+
                             buYuMusicContral.instant.allYinXiao[28 - int.Parse(FishMaker.fishTarget[str].GetComponent<FishAttr>().fishType)].Play();
                         }
 
@@ -361,17 +370,17 @@ public class meiRenYuThreadDeal : MonoBehaviour
                 }
 
             }
-           
+
             if (FishMaker.SaveNet.ContainsKey(fireID))
             {
-                
+
                 FishMaker.SaveNet.Remove(fireID);//删除字典中的网
             }
 
 
             // Debug.Log("-><color=#FF4040>" + "打死鱼得到的金币" + "</color>"+ target+"对象：打死鱼所加金币："+gold);
             //Debug.Log("总金币数"+sumgold);
-          
+
             GameController.Instance.setGoldText(target, sumgold);
             //GameController.Instance.goldText[target].text = (int.Parse(GameController.Instance.goldText[target].text) + gold).ToString();//此处显示抓到鱼后的金币
             //GameController.Instance.setGoldText(target,gold);
@@ -523,6 +532,10 @@ public class meiRenYuThreadDeal : MonoBehaviour
         {
             fishArrayContral.instant.yuzhenPrefab.transform.localPosition = yuzhen2Pos;
         }
+        else if (fishArrayContral.instant.yuzhenCard == 4)
+        {
+            fishArrayContral.instant.yuzhenPrefab.transform.localPosition = Vector3.zero;
+        }
 
         yuZhenValue = true;
 
@@ -551,6 +564,29 @@ public class meiRenYuThreadDeal : MonoBehaviour
         else if (fishArrayContral.instant.yuzhenCard == 3)
         {
             yuzhenThreeMove.isStartMove = true;
+        }
+        else if (fishArrayContral.instant.yuzhenCard == 4)
+        {
+            fishArrayFor1.isStartMove = false;
+            //if (getMeiRenYuArea.buyuGame == 0)
+            //{
+            //    GameObject.Find("yuzhenNew4(Clone)").transform.Find("fish18_1").gameObject.SetActive(true);
+            //}
+            //else if (getMeiRenYuArea.buyuGame == 1)
+            //{
+            //    GameObject.Find("yuzhenNew4(Clone)").transform.Find("fish21_1").gameObject.SetActive(true);
+            //}
+            //else if (getMeiRenYuArea.buyuGame == 2)
+            //{
+            //    GameObject.Find("yuzhenNew4(Clone)").transform.Find("龙").gameObject.SetActive(true);
+            //}
+            //if (fishArrayFor1.instance == null)
+            //{
+            //    while (true) { if (fishArrayFor1.instance != null) { break; } }
+            //}
+            GameObject.Find("yuzhenNew4(Clone)").transform.Find("龙").gameObject.SetActive(true);
+            fishArrayFor1.isStartMove = true;
+
         }
 
 
@@ -591,7 +627,7 @@ public class meiRenYuThreadDeal : MonoBehaviour
     public void deal20007()
     {
         GameObject.Find("moneyNotEnough").transform.localScale = Vector3.one;
-        Invoke("show20007",2);
+        //Invoke("show20007",2);
 
     }
     void show20007()

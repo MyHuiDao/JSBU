@@ -119,7 +119,7 @@ public class yuerMsgContrall
         }
         initialPrepare.do10003Msg = o;//结算内容
         saveDate.jiesuanGetGold = ((JsonData)o)["gold"].ToString();
-
+        Debug.Log("结算金币" + ((JsonData)o)["gold"].ToString());
         startTimeJiShi.instance.isToPrepare = true;
 
 

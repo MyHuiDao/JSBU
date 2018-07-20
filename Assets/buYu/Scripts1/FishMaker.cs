@@ -48,7 +48,7 @@ public class FishMaker : MonoBehaviour
     public int fishGroupNum = 1;//鱼群个数,此处不能乱改
 
     public static List<string> deadFish = new List<string>();//先保存要销毁的鱼
-    public  static List<string> moveFish = new List<string>();//保存需要游动的鱼
+    public static List<string> moveFish = new List<string>();//保存需要游动的鱼
     public static List<int> do20004Order = new List<int>();//保存需要游动的鱼
     public int listGroupOrder = 0;
 
@@ -85,7 +85,7 @@ public class FishMaker : MonoBehaviour
         is20011Scencod = true;
         fishOrderLay = 1;
     }
- 
+
     private void Update()
     {
         //if (issecondTimeStart)
@@ -104,23 +104,17 @@ public class FishMaker : MonoBehaviour
 
         if (do20004Order.Count != 0)//不考虑20004和20012的先后顺序，概率几乎为零
         {
+            
             if (fishGroupIsOver)//前一波产生完了
             {
-                try
-                {
-                    StartCoroutine(ie(listGroupOrder));
-                }
-                catch(Exception e)
-                {
-                    Debug.Log(e.Message);
-                }
-                finally
-                {
 
-                    listGroupOrder++;
-                    do20004Order.RemoveAt(0);
-                }
-               
+                StartCoroutine(ie(listGroupOrder));
+
+
+                listGroupOrder++;
+                do20004Order.RemoveAt(0);
+
+
 
             }
         }
@@ -138,7 +132,7 @@ public class FishMaker : MonoBehaviour
                     FishAttr f = fishTarget[moveFish[i]].GetComponent<FishAttr>();
                     f.nextDian = 0;
                     fishTarget[moveFish[i]].transform.localPosition = new Vector3(guiJi.instant().guiJiDict[f.runPoint][0].x, guiJi.instant().guiJiDict[f.runPoint][0].y, 90);//赋予出生点,不设置有一个闪的过程
-                                                                                                                                                                                        // Debug.Log("重赋予的值" + FishMaker.fishTarget[moveFish[i]].transform.localPosition);
+                                                                                                                                                                              // Debug.Log("重赋予的值" + FishMaker.fishTarget[moveFish[i]].transform.localPosition);
                     f.judgeSpot = 0;
                     f.initialX = 0;
                     f.initialY = 0;
@@ -243,7 +237,7 @@ public class FishMaker : MonoBehaviour
         }
         else if (!contrall.instant().isZhuJi)//不是主机直接产生
         {
-
+            Debug.Log("非主机生产鱼");
             for (int i = 0; i < listGroup[length].Count; i++)
             {
                 //Debug.Log(listGroup[length].Count);
@@ -265,8 +259,8 @@ public class FishMaker : MonoBehaviour
         }
         else//主机产生
         {
-           
-            if (listGroup.Count >length)
+
+            if (listGroup.Count > length)
             {
                 for (int i = 0; i < listGroup[length].Count; i++)
                 {
@@ -377,7 +371,7 @@ public class FishMaker : MonoBehaviour
         {
 
             WebButtonSendMessege.instant().fishStartMove(_id);//发送给服务器征求鱼的游动}
-          
+
 
         }
         if (_isHalfGoGame)//只有中途进的那个瞬间才会直接游动
@@ -388,7 +382,7 @@ public class FishMaker : MonoBehaviour
 
                 guiJi.instant().startMove(fishTarget[_id].GetComponent<FishAttr>().runPoint, fishTarget[_id].GetComponent<FishAttr>().nextDian);//传入所需要的轨迹  
                                                                                                                                                 //速度改变        
-               
+
                 iTween.MoveTo(fishTarget[_id].gameObject, iTween.Hash("path", guiJi.instant().waypoints, "speed", fishTarget[_id].gameObject.GetComponent<FishAttr>().Speed, "movetopath", false, "orienttopath", true, "looktime", 0.6, "easetype", "linear"));
             }
 
@@ -401,7 +395,7 @@ public class FishMaker : MonoBehaviour
     }
 
 
-    public   void  fishMove(string _id)
+    public void fishMove(string _id)
     {
         //Debug.Log("游" + _id);
         if (!fishTarget.ContainsKey(_id))

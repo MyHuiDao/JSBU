@@ -14,15 +14,19 @@ public class initialStart : MonoBehaviour
     public static Dictionary<string, int> touzhuEquit = new Dictionary<string, int>();
     public static initialStart instance = null;
     public static Camera maincamera = null;
-    
+    public static GameObject yuerStartPrefab = null;//鱼儿快跑预制体
     public AudioSource[] allYinXiao;
+    private void Awake()
+    {
+        yuerStartPrefab = Resources.Load("yuErKuaiPao/start") as GameObject;
+    }
     void Start()
     {
         instance = this;
         //yuerStartPrefab = Resources.Load("yuErKuaiPao/start") as GameObject;
         //prepareAndjieSunaPrefab= Resources.Load("yuErKuaiPao/prepareAndjieSuna") as GameObject;
         //backgroundPrefab = Resources.Load("yuErKuaiPao/background") as GameObject;
-        Instantiate(m_slider.yuerStartPrefab);
+        Instantiate(/*m_slider.*/yuerStartPrefab);
         saveDate.cameraPos= GameObject.Find("Camera").transform.position;
         saveDate.cameraFllowMePos = GameObject.Find("cameraFllowMe").transform.position;
 
@@ -44,7 +48,8 @@ public class initialStart : MonoBehaviour
             touzhuEquitAdd();
         }
       
-
+        //添加声音
+        Music_Control.music_effect(allYinXiao[8]);
 
     }
 
@@ -56,7 +61,7 @@ public class initialStart : MonoBehaviour
 
     void initialMusic()
     {
-        allYinXiao = new AudioSource[8];
+        allYinXiao = new AudioSource[9];
       
         allYinXiao[0] = GameObject.Find("fishCry1").GetComponent<AudioSource>();
         allYinXiao[1] = GameObject.Find("fishCry2").GetComponent<AudioSource>();
@@ -66,6 +71,7 @@ public class initialStart : MonoBehaviour
         allYinXiao[5] = GameObject.Find("startMusic").GetComponent<AudioSource>();
         allYinXiao[6] = GameObject.Find("gameStart1").GetComponent<AudioSource>();
         allYinXiao[7] = GameObject.Find("gameStart2").GetComponent<AudioSource>();
+        allYinXiao[8] = GameObject.Find("btnClickAudio").GetComponent<AudioSource>();
      
     }
 

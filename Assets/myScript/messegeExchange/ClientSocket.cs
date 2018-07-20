@@ -170,20 +170,20 @@ namespace CClient
             Thread.Sleep(3000); //停3秒
             Debug.Log("后面进行断线重连");
             //进行断线重连
-            if (!otherContral.instant.returnGameScene)
-            {
-                Debug.Log("断线重连了");
-                ws.Close();
-                loadSelectArea.connectNet = true;
-            }
+            //if (!otherContral.instant.returnGameScene||!yuerContrall.instance.returnGameScene)
+            //{
+            //    Debug.Log("断线重连了");
+            //    ws.Close();
+            //    loadSelectArea.connectNet = true;
+            //}
 
-            if (!gameContrall.instant.return_scene)
-            {
+            //if (!gameContrall.instant.return_scene)
+            //{
 
 
-                break_line.hall_line = true;
+            //    break_line.hall_line = true;
 
-            }
+            //}
         }
 
        

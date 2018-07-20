@@ -48,7 +48,7 @@ public class FishAttr : MonoBehaviour
     {
          goldArtNum= GameObject.Find("goldArtNum");
         //InvokeRepeating("timeLongTakeDamage", 60,1);
-        Invoke("timeLongTakeDamage", 200);//如果30内鱼没死亡，则自动让其消失
+        //Invoke("timeLongTakeDamage", 200);//如果30内鱼没死亡，则自动让其消失
         fishDeadGroup = GameObject.Find("fishDead");
         goldGroup = GameObject.Find("Gold");
 
@@ -65,6 +65,7 @@ public class FishAttr : MonoBehaviour
                 {
                     Debug.Log("鱼阵里的鱼发送死亡" + this.id);
                     ClientSocket.instant().send("20010", id);
+                   
                 }
               
 
@@ -94,8 +95,12 @@ public class FishAttr : MonoBehaviour
                     nextDian = 100;//只发一次
                     if (contrall.instant().isZhuJi)//如果是主机则请求
                     {
-                        Debug.Log(3);
-                        WebButtonSendMessege.instant().fishDead(this.id);//鱼自然死亡发送消息给服务器
+                        Debug.Log(fishArrayContral.instant.everyMakeOn);
+                        if (!fishArrayContral.instant.everyMakeOn)//鱼阵期间不让发
+                        {
+                            WebButtonSendMessege.instant().fishDead(this.id);//鱼自然死亡发送消息给服务器
+                        }
+                       
                     }
 
                 }
@@ -203,6 +208,11 @@ public class FishAttr : MonoBehaviour
     /// </summary>
     public void TakeDamage(int target, int _gold)
     {
+        if (this.name == "fish18_1"|| this.name == "龙" || this.name == "fish21_1")
+        {
+            Debug.Log("boss............................................................");
+            fishArrayTime.instance.isStartShow = true;
+        }
         GameObject goldArtColne= Instantiate(goldArt,goldArtNum.transform);
         goldArtColne.transform.position = this.transform.position;
         goldArtColne.transform.Find("goldShow").GetComponent<Text>().text = _gold.ToString();
@@ -242,12 +252,12 @@ public class FishAttr : MonoBehaviour
             }
             goldGo.transform.SetParent(goldGroup.transform, false);
             goldGo.transform.position = this.transform.position;
-            if (goldGo.transform.position.y < -1)
-            {
-                Vector3 v1 = goldGo.transform.position;
-                v1.y = 1;
-                goldGo.transform.position = v1;
-            }
+            //if (goldGo.transform.position.y < -1)
+            //{
+            //    Vector3 v1 = goldGo.transform.position;
+            //    v1.y = 1;
+            //    goldGo.transform.position = v1;
+            //}
         }
         //else if (goldCount <= 20)//大金币
         //{

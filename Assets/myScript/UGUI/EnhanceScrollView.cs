@@ -146,7 +146,7 @@ public class EnhanceScrollView : MonoBehaviour
             }
             else
             {
-                 xValue = GetXPosValue(fValue, itemScript.CenterOffSet) - 120 * listEnhanceItems.Count;//X轴位置变化
+                 xValue = GetXPosValue(fValue, itemScript.CenterOffSet) - 200 * listEnhanceItems.Count;//X轴位置变化
             }
          
             float scaleValue = GetScaleValue(fValue, itemScript.CenterOffSet);

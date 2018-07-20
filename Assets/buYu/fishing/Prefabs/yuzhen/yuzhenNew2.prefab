@@ -13478,6 +13478,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -13512,6 +13514,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -13548,6 +13552,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -13582,6 +13588,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -13618,6 +13626,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -13652,6 +13662,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -13688,6 +13700,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -13722,6 +13736,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -13758,6 +13774,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -13792,6 +13810,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -13828,6 +13848,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -13862,6 +13884,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -13898,6 +13922,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -13932,6 +13958,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -13968,6 +13996,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -14002,6 +14032,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -14038,6 +14070,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -14072,6 +14106,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -14108,6 +14144,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -14142,6 +14180,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -14178,6 +14218,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -14212,6 +14254,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -14248,6 +14292,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -14282,6 +14328,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -14318,6 +14366,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -14352,6 +14402,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -14388,6 +14440,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -14422,6 +14476,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -14458,6 +14514,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -14492,6 +14550,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -14528,6 +14588,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -14562,6 +14624,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -14598,6 +14662,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -14632,6 +14698,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -14668,6 +14736,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -14702,6 +14772,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -14738,6 +14810,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -14772,6 +14846,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -14808,6 +14884,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -14842,6 +14920,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -14878,6 +14958,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -14912,6 +14994,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -14948,6 +15032,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -14982,6 +15068,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -15018,6 +15106,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -15052,6 +15142,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -15088,6 +15180,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -15122,6 +15216,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -15158,6 +15254,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -15192,6 +15290,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -15228,6 +15328,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -15262,6 +15364,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -15298,6 +15402,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -15332,6 +15438,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -15368,6 +15476,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -15402,6 +15512,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -15438,6 +15550,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -15472,6 +15586,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -15508,6 +15624,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -15542,6 +15660,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -15578,6 +15698,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -15612,6 +15734,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -15648,6 +15772,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -15682,6 +15808,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -15718,6 +15846,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -15752,6 +15882,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -15788,6 +15920,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -15822,6 +15956,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -15858,6 +15994,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -15892,6 +16030,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -15928,6 +16068,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -15962,6 +16104,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -15998,6 +16142,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -16032,6 +16178,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -16068,6 +16216,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -16102,6 +16252,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -16138,6 +16290,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -16172,6 +16326,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -16208,6 +16364,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -16242,6 +16400,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -16278,6 +16438,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -16312,6 +16474,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -16348,6 +16512,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -16382,6 +16548,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -16418,6 +16586,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -16452,6 +16622,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -16488,6 +16660,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -16522,6 +16696,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -16558,6 +16734,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -16592,6 +16770,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -16628,6 +16808,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -16662,6 +16844,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -16698,6 +16882,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -16732,6 +16918,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -16768,6 +16956,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -16802,6 +16992,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -16838,6 +17030,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -16872,6 +17066,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -16908,6 +17104,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -16942,6 +17140,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -16978,6 +17178,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -17012,6 +17214,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -17048,6 +17252,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -17082,6 +17288,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -17118,6 +17326,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -17152,6 +17362,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -17188,6 +17400,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -17222,6 +17436,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -17258,6 +17474,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -17292,6 +17510,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -17328,6 +17548,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -17362,6 +17584,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -17398,6 +17622,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -17432,6 +17658,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -17468,6 +17696,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -17502,6 +17732,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -17538,6 +17770,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -17572,6 +17806,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -17608,6 +17844,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -17642,6 +17880,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -17678,6 +17918,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -17712,6 +17954,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -17748,6 +17992,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -17782,6 +18028,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -17818,6 +18066,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -17852,6 +18102,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
@@ -17888,6 +18140,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -17923,6 +18177,8 @@ MonoBehaviour:
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
     type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
+    type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}
   goldPrefab4: {fileID: 1272361596537976, guid: d9b61ec9c9df037498c3d222ae0358f0,
@@ -17957,6 +18213,8 @@ MonoBehaviour:
   goldPrefab1: {fileID: 1360088584721836, guid: 32ae416ccc1c8d543a12610be4602626,
     type: 2}
   goldPrefab2: {fileID: 1170400406325520, guid: fec732f2d3522de4db437460fd1833b5,
+    type: 2}
+  goldPrefab21: {fileID: 1240103422639502, guid: e344ada70b5c8094a97d2a8289ff58a7,
     type: 2}
   goldPrefab3: {fileID: 1121174339073332, guid: c8f7e76c0d8b33e44b3d9ec6fe1e191e,
     type: 2}

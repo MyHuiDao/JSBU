@@ -152,10 +152,12 @@ public class contrall
     /// </summary>
     public void do20017(object o)
     {
+        Debug.LogError("收到20017");
         joinUserId = ((JsonData)o)["userId"].ToString();
         //添加用户到字典中,如果进入的是我自己，则不添加
         if (((JsonData)o)["userId"].ToString() != httpView.id)
         {
+            Debug.LogError("收到200171");
             GameController.gunShapes.Add(((JsonData)o)["userId"].ToString(), 0);//添加枪
             for (int i = 0; i < userDict.Count; i++)
             {
@@ -178,8 +180,9 @@ public class contrall
                 }
             }
         }
-        if (isZhuJi && ((JsonData)o)["userId"].ToString() != httpView.id)//如果本机是主机并且进入房间的不是自己，则需要转发房间信息给进来的人
+        if (instant().isZhuJi && ((JsonData)o)["userId"].ToString() != httpView.id)//如果本机是主机并且进入房间的不是自己，则需要转发房间信息给进来的人
         {
+            Debug.LogError("收到200172");
             WebButtonSendMessege.instant().giveCurrentRoomMsg();
 
         }
@@ -217,6 +220,7 @@ public class contrall
             FishMaker.fish.Add(f.id, f);//把鱼保存到字典里
         }
         FishMaker.listGroup.Add(listID);
+        Debug.Log("listGroup长度"+FishMaker.listGroup.Count);
         FishMaker.do20004Order.Add(0);
         //FishMaker.instant.secondTimeStart();//产生鱼
     }
@@ -348,7 +352,7 @@ public class contrall
         FishMaker.listGroup.Clear();
         judgeIsMove.Clear();
         fishArrayContral.listGroupYuzhen.Clear();
-        contrall.instant().isCanClearFish = false;
+        isCanClearFish = false;
         meiRenYuThreadDeal.destroyBulletList.Clear();
     }
     /// <summary>
@@ -411,7 +415,7 @@ public class contrall
     /// <param name="o"></param>
     public void do20009(object o)
     {
-       
+        Debug.LogError("收到20009:"+((JsonData)o)["fireId"].ToString());
 
 
             //销毁子弹
@@ -596,18 +600,20 @@ public class contrall
     /// </summary>
     public void do20021(object o)
     {
-        if (GameController.Instance == null)
-        {
-            while (true)
-            {
-                if (GameController.Instance != null)
-                {
-                    break;
-                }
-            }
-        }
-        isCanClearFish = true;
+        Debug.Log("20021清除所有鱼。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。");
+        //if (GameController.Instance == null)
+        //{
+        //    while (true)
+        //    {
+        //        if (GameController.Instance != null)
+        //        {
+        //            break;
+        //        }
+        //    }
+        //}
         fishArrayContral.instant.everyMakeOn = true;
+        isCanClearFish = true;
+        
         GameController.Instance.ChangeBg();
     }
 
@@ -617,8 +623,9 @@ public class contrall
     /// <param name="o"></param>
     public void do20023(object o)
     {
+        Debug.Log("20023鱼阵生成。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。");
         yuZhenGroupCard = int.Parse(((JsonData)o)[0]["group"].ToString());
-        Debug.Log(1);
+        Debug.Log(((JsonData)o).Count);
         List<string> listID = new List<string>(); //代表一波鱼   
         Debug.Log(2);
         for (int i = 0; i < ((JsonData)o).Count; i++)
@@ -642,6 +649,7 @@ public class contrall
     /// <param name="o"></param>
     public void do20022(object o)
     {
+        Debug.Log("20022鱼阵开始游动。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。");
         meiRenYuThreadDeal.instant.is20022 = true;
     }
     /// <summary>
