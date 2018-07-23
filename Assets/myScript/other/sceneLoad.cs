@@ -60,11 +60,11 @@ public class sceneLoad : MonoBehaviour
             netConnect.instance.connectnet(isAccountLand, isYouKe, isWeiXin);//游客或账号登陆 
         }
         else{
-            if(weiXinLoad.instance.UserAgreeProtocol())
-            {
-                weiXinLoad.instance.USERPROTOCOL = "true";
-                netConnect.instance.connectnet(isAccountLand, isYouKe, isWeiXin);//游客或账号登陆 
-            }
+            //if(weiXinLoad.instance.UserAgreeProtocol())
+            //{
+            //    weiXinLoad.instance.USERPROTOCOL = "true";
+            //    netConnect.instance.connectnet(isAccountLand, isYouKe, isWeiXin);//游客或账号登陆 
+            //}
         }
 #endif
 

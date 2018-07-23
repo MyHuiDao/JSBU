@@ -26,7 +26,7 @@ public class Nose : MonoBehaviour {
     public Transform liKuiPiYuLightTrans;
 
     public Transform DaNaoTianGongLightTrans;
-    public Transform DouzhuanLightTrans;
+  //  public Transform DouzhuanLightTrans;
     public GameObject SWK;
 
     public GameObject blue_fish;
@@ -123,7 +123,7 @@ public class Nose : MonoBehaviour {
         meiRenYuLightTrans.Rotate(new Vector3(0, 0, 1));
         liKuiPiYuLightTrans.Rotate(new Vector3(0, 0, 1));
         DaNaoTianGongLightTrans.Rotate(new Vector3(0, 0, 1));
-        DouzhuanLightTrans.Rotate(new Vector3(0, 0, 1));
+        //DouzhuanLightTrans.Rotate(new Vector3(0, 0, 1));
         //       if(paopaoList.Count > 0)
         //       {
         //           for (int i = 0; i < paopaoList.Count; ++i)

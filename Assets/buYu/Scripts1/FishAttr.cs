@@ -57,22 +57,23 @@ public class FishAttr : MonoBehaviour
     {
         if (isBelongYuZhen)//属于鱼阵
         {
-            if (fishArrayContral.instant.yuzhenFinish && yuzhenOne)
-            {
+            //if (fishArrayContral.instant.yuzhenFinish && yuzhenOne)
+            //{
                
 
-                if (contrall.instance.isZhuJi)
-                {
-                    Debug.Log("鱼阵里的鱼发送死亡" + this.id);
-                    ClientSocket.instant().send("20010", id);
+            //    if (contrall.instance.isZhuJi)
+            //    {
+
+            //        Debug.LogError("鱼阵里的鱼发送死亡" + this.id);
+            //        ClientSocket.instant().send("20010", id);
                    
-                }
+            //    }
               
 
-                //WebButtonSendMessege.instant().fishDead(this.id);//鱼自然死亡发送消息给服务器
-                yuzhenOne = false;
+            //    //WebButtonSendMessege.instant().fishDead(this.id);//鱼自然死亡发送消息给服务器
+            //    yuzhenOne = false;
 
-            }
+            //}
 
         }
         else
@@ -95,7 +96,7 @@ public class FishAttr : MonoBehaviour
                     nextDian = 100;//只发一次
                     if (contrall.instant().isZhuJi)//如果是主机则请求
                     {
-                        Debug.Log(fishArrayContral.instant.everyMakeOn);
+                        //Debug.Log(fishArrayContral.instant.everyMakeOn);
                         if (!fishArrayContral.instant.everyMakeOn)//鱼阵期间不让发
                         {
                             WebButtonSendMessege.instant().fishDead(this.id);//鱼自然死亡发送消息给服务器

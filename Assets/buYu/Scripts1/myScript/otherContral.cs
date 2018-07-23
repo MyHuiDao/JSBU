@@ -24,6 +24,7 @@ public class otherContral : MonoBehaviour
 
     void Start()
     {
+        GameObject.Find("Main Camera").transform.rotation = Quaternion.Euler(Vector3.zero);//在选择分区把摄像机摆正
         instant = this;
     }
 
@@ -39,7 +40,9 @@ public class otherContral : MonoBehaviour
         //sheltObj.SetActive(true);
         returnGameScene = true;
 
-        CClient.ClientSocket.instant().ws.Close();
+        //CClient.ClientSocket.instant().ws.Close();
+
+        Instantiate(weiXinLoad.instance.loadP/*load*/, GameObject.Find("Canvas").transform); 
 
         SceneManager.LoadScene("gameScene");//返回到大厅
 

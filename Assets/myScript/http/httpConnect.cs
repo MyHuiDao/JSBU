@@ -20,12 +20,12 @@ public class httpConnect
     public static bool isLand = false;//是否登陆
     public static bool isRegister = false;//是否注册
 
-    //public static string URL = "https://jinshayugang.com/game";
-    public static string URL = "http://hd.com/game";//内网
+    public static string URL = "https://jinshayugang.com/game";
+    //public static string URL = "http://hd.com/game";//内网
     //public static string URL = "http://192.168.31.214/game";//手机上测试地址
 
-    public static string Web_URL = "ws://hd.com";
-    //public static string Web_URL = "ws://jinshayugang.com";
+    //public static string Web_URL = "ws://hd.com";
+    public static string Web_URL = "ws://jinshayugang.com";
     //public static string Web_URL = "ws://192.168.31.214";//手机上测试地址
 
     private static string versionCheckURL = "";
@@ -138,8 +138,8 @@ public class httpConnect
         {
             //www = UnityWebRequest.Get(url);
             www = new WWW(url);
-            GameObject load = (GameObject)Resources.Load("Rank/load");
-            jiazai = UnityEngine.Object.Instantiate(load, GameObject.Find("Canvas").transform) as GameObject;
+            //GameObject load = (GameObject)Resources.Load("Rank/load");
+            jiazai = UnityEngine.Object.Instantiate(weiXinLoad.instance.loadP/*load*/, GameObject.Find("Canvas").transform) as GameObject;
         }
 
         //  Debug.Log("url0:" + url);
@@ -171,8 +171,8 @@ public class httpConnect
             if (errCallBack != null)
             {
                 errCallBack(www.error);
-                GameObject fail = (GameObject)Resources.Load("Rank/loadFail");
-                GameObject jiazais = UnityEngine.Object.Instantiate(fail, GameObject.Find("Canvas").transform) as GameObject;
+                //GameObject fail = (GameObject)Resources.Load("Rank/loadFail");
+                GameObject jiazais = UnityEngine.Object.Instantiate(weiXinLoad.instance.loadFailP/*fail*/, GameObject.Find("Canvas").transform) as GameObject;
 
             }
         }

@@ -7,7 +7,7 @@ PlayerSettings:
   productGUID: e8122532cb097994286ba5ef47577291
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
-  defaultScreenOrientation: 4
+  defaultScreenOrientation: 3
   targetDevice: 0
   useOnDemandResources: 0
   accelerometerFrequency: 60
@@ -16,7 +16,7 @@ PlayerSettings:
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
-  m_ShowUnitySplashScreen: 1
+  m_ShowUnitySplashScreen: 0
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
   m_SplashScreenAnimation: 1
@@ -162,7 +162,7 @@ PlayerSettings:
     iOS: com.jinshayugang.huidao
   buildNumber:
     iOS: 1.0.6
-  AndroidBundleVersionCode: 11
+  AndroidBundleVersionCode: 12
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
@@ -190,13 +190,19 @@ PlayerSettings:
   uIStatusBarHidden: 1
   uIExitOnSuspend: 0
   uIStatusBarStyle: 0
-  iPhoneSplashScreen: {fileID: 0}
-  iPhoneHighResSplashScreen: {fileID: 0}
-  iPhoneTallHighResSplashScreen: {fileID: 0}
-  iPhone47inSplashScreen: {fileID: 0}
-  iPhone55inPortraitSplashScreen: {fileID: 0}
-  iPhone55inLandscapeSplashScreen: {fileID: 0}
-  iPhone58inPortraitSplashScreen: {fileID: 0}
+  iPhoneSplashScreen: {fileID: 2800000, guid: c503e2177ccd3734d836be00f0466290, type: 3}
+  iPhoneHighResSplashScreen: {fileID: 2800000, guid: c503e2177ccd3734d836be00f0466290,
+    type: 3}
+  iPhoneTallHighResSplashScreen: {fileID: 2800000, guid: c503e2177ccd3734d836be00f0466290,
+    type: 3}
+  iPhone47inSplashScreen: {fileID: 2800000, guid: c503e2177ccd3734d836be00f0466290,
+    type: 3}
+  iPhone55inPortraitSplashScreen: {fileID: 2800000, guid: c503e2177ccd3734d836be00f0466290,
+    type: 3}
+  iPhone55inLandscapeSplashScreen: {fileID: 2800000, guid: c503e2177ccd3734d836be00f0466290,
+    type: 3}
+  iPhone58inPortraitSplashScreen: {fileID: 2800000, guid: c503e2177ccd3734d836be00f0466290,
+    type: 3}
   iPhone58inLandscapeSplashScreen: {fileID: 0}
   iPadPortraitSplashScreen: {fileID: 0}
   iPadHighResPortraitSplashScreen: {fileID: 0}
@@ -244,7 +250,7 @@ PlayerSettings:
   clonedFromGUID: 00000000000000000000000000000000
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
-  androidSplashScreen: {fileID: 0}
+  androidSplashScreen: {fileID: 2800000, guid: c503e2177ccd3734d836be00f0466290, type: 3}
   AndroidKeystoreName: 
   AndroidKeyaliasName: 
   AndroidTVCompatibility: 1
@@ -258,7 +264,14 @@ PlayerSettings:
     banner: {fileID: 0}
   androidGamepadSupportLevel: 0
   resolutionDialogBanner: {fileID: 0}
-  m_BuildTargetIcons: []
+  m_BuildTargetIcons:
+  - m_BuildTarget: 
+    m_Icons:
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 5afca79a246f74c16826dd7f6d3f526b, type: 3}
+      m_Width: 128
+      m_Height: 128
+      m_Kind: 0
   m_BuildTargetBatching: []
   m_BuildTargetGraphicsAPIs: []
   m_BuildTargetVRSettings: []

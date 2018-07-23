@@ -12,7 +12,7 @@ public class httpView : MonoBehaviour {
     private Text nameText;
     private Text centenText;
     public static string id;//本机唯一识别符
-    public static Sprite touXiang;
+    //public static Sprite touXiang;
     public static  Sprite head_sprite;
     private Sprite Guize_sprite;
     private GameObject Guize;
@@ -24,29 +24,33 @@ public class httpView : MonoBehaviour {
     public GameObject email;
     public static  string head_;
     private Sprite[] Pay = new Sprite[8];
-    private Sprite[] Shops = new Sprite[4];
-    private Sprite[] Ranks = new Sprite[3];
+    //private Sprite[] Shops = new Sprite[4];
+    //private Sprite[] Ranks = new Sprite[3];
     private Dictionary<int, GameObject> generateDic = new Dictionary<int, GameObject>();
   
 
     void Start() {
-        touXiang = Resources.Load<Sprite>("Rank/cat");
+        //touXiang = Resources.Load<Sprite>("Rank/cat");
+        //if(weiXinLoad.instance.headSprite == null)
+        //{
+        //    Debug.LogError("=========================");
+        //}
         Guize = GameObject.Find("guize_parent");
         instant = this;
         nameText = GameObject.Find("nameText").GetComponent<Text>();
         centenText = GameObject.Find("gunDongGongGao").GetComponent<Text>();
-        for (int i = 0; i < Pay.Length; i++)
-        {
-            Pay[i] = Resources.Load<Sprite>("Pay_image/bi_" + (i + 1).ToString());
-        }
-        for (int i = 0; i < Shops.Length; i++)
-        {
-            Shops[i] = Resources.Load<Sprite>("Pay_image/" + ((i + 1) * 100).ToString());
-        }
-        for (int i = 0; i < Ranks.Length; i++)
-        {
-            Ranks[i] = Resources.Load<Sprite>("Pay_image/rank_" + (i + 1).ToString());
-        }
+        //for (int i = 0; i < Pay.Length; i++)
+        //{
+        //    Pay[i] = Resources.Load<Sprite>("Pay_image/bi_" + (i + 1).ToString());
+        //}
+        //for (int i = 0; i < Shops.Length; i++)
+        //{
+        //    Shops[i] = Resources.Load<Sprite>("Pay_image/" + ((i + 1) * 100).ToString());
+        //}
+        //for (int i = 0; i < Ranks.Length; i++)
+        //{
+        //    Ranks[i] = Resources.Load<Sprite>("Pay_image/rank_" + (i + 1).ToString());
+        //}
     }
 
     // Update is called once per frame
@@ -130,7 +134,7 @@ public class httpView : MonoBehaviour {
         GameObject obj = Instantiate(shop, GameObject.Find("shop_Panel").transform) as GameObject;
         obj.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = _name;
         obj.transform.GetChild(2).GetChild(1).GetComponent<Text>().text = price.ToString();
-        obj.transform.GetChild(3).GetComponent<Image>().sprite = Shops[_seq - 1];
+        obj.transform.GetChild(3).GetComponent<Image>().sprite = weiXinLoad.instance.huafeiSprites[_seq - 1];//Shops[_seq - 1];
     }
     /// <summary>
     /// 获得人民币与金币的转化
@@ -188,7 +192,7 @@ public class httpView : MonoBehaviour {
     }
     public void head_photo(string name)
     {
-        GameObject.Find(name).GetComponent<Image>().sprite = touXiang;
+        GameObject.Find(name).GetComponent<Image>().sprite = weiXinLoad.instance.headSprite;//touXiang;
     }
   
     /// <summary>
@@ -301,7 +305,7 @@ public class httpView : MonoBehaviour {
 
                 if (a < 3)
             {
-                obj.transform.GetChild(0).GetComponent<Image>().sprite = Ranks[a];
+                obj.transform.GetChild(0).GetComponent<Image>().sprite = weiXinLoad.instance.rankSprites[a];//Ranks[a];
                 obj.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "";
             }
             else
@@ -314,7 +318,7 @@ public class httpView : MonoBehaviour {
             }
             else
             {
-                obj.transform.GetChild(4).GetComponent<Image>().sprite = touXiang;
+                obj.transform.GetChild(4).GetComponent<Image>().sprite = weiXinLoad.instance.headSprite;//touXiang;
 
             }
         }
@@ -382,7 +386,7 @@ public class httpView : MonoBehaviour {
         }
         trans.GetChild(5).GetComponent<Text>().text = _gold.ToString() + "金币";
         trans.GetChild(4).GetComponent<Text>().text = _goldId;
-        trans.GetChild(3).GetComponent<Image>().sprite = Pay[_req];
+        trans.GetChild(3).GetComponent<Image>().sprite =weiXinLoad.instance.jinbiSprites[_req];//Pay[_req];
    
     }
 }

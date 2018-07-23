@@ -52,6 +52,7 @@ public class WebButtonSendMessege
 
     }
 
+
     /// <summary>
     /// 退出房间
     /// </summary>
@@ -105,7 +106,7 @@ public class WebButtonSendMessege
             {
                 if (GameController.Instance.bulletDict[i].ContainsKey(bulletID))
                 {
-                    Debug.Log("发送20009" + bulletID);
+                    Debug.Log("发送20009" + bulletID);                
                     ClientSocket.instant().send("20009", (object)("{\"fireId\":\"" + bulletID + "\",\"x\":" + bulletX + ",\"y\":" + bulletY + ",\"fishList\":\"\"}"));                  
 
                     break;
@@ -120,8 +121,8 @@ public class WebButtonSendMessege
         {
             if (GameController.Instance.bulletDict[i].ContainsKey(bulletID))
             {
-                Debug.Log(i);
-                Debug.Log("发送20009" + bulletID);
+                
+               
                 ClientSocket.instant().send("20009", (object)("{\"fireId\":\"" + bulletID + "\",\"x\":" + bulletX + ",\"y\":" + bulletY + ",\"fishList\":\"" + fishID + "\"}"));
 
                 break;

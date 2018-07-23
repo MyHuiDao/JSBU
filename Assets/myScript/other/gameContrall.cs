@@ -310,7 +310,7 @@ public class gameContrall : MonoBehaviour
         }
         else
         {
-            //netConnect.instance.Ani(15);
+            netConnect.Ani(15);
         }
     }
     /// <summary>
@@ -519,7 +519,7 @@ public class gameContrall : MonoBehaviour
             if (operation != null)
             {
                 
-                ClientSocket.instance.ws.Close();
+                //ClientSocket.instance.ws.Close();
                 m_slider.instance.GetScene(operation, true, false);
 
             }
@@ -555,7 +555,7 @@ public class gameContrall : MonoBehaviour
 
             if (operation != null)
             {
-                ClientSocket.instance.ws.Close();
+                //ClientSocket.instance.ws.Close();
                 m_slider.instance.GetScene(operation, false, true);
             }
             else

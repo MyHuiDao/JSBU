@@ -155,8 +155,8 @@ namespace Mosframe
                 //Debug.Log(1);
                 Destroy(GameObject.Find("selectArea" + getMeiRenYuArea.buyuGame + "(Clone)").gameObject);
                 //Debug.Log("先销毁分区，下一步实例化捕鱼");
-                GameObject buYuPrefab = Resources.Load("myPrefabs/meiRenYu/MainScene" + getMeiRenYuArea.buyuGame) as GameObject;//取决于点击哪款游戏
-                Instantiate(/*m_slider.*/buYuPrefab, GameObject.Find("main").transform);
+                //GameObject buYuPrefab = Resources.Load("myPrefabs/meiRenYu/MainScene" + getMeiRenYuArea.buyuGame) as GameObject;//取决于点击哪款游戏
+                Instantiate(/*m_slider.*//*buYuPrefab*/weiXinLoad.instance.MainScenes[getMeiRenYuArea.buyuGame], GameObject.Find("main").transform);
                 //Debug.Log("场景加载。。。。。。。。。。");
 
                 GameObject.Find("Order0Canvas").GetComponent<Canvas>().worldCamera = Camera.main;

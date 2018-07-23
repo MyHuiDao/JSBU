@@ -72,14 +72,14 @@ public class netConnect : MonoBehaviour
     /// <param name="str"></param>
     void userLand(string str)
     {
-        Debug.Log(str);
+        
         JsonData js = JsonMapper.ToObject(str);
         //Debug.Log((string)js["code"]);
         if ((string)js["code"] == "0")
         {
             token = (string)js["data"];
 
-            Debug.Log(token);
+           
             sceneLoad.loadScene();
         }
         else if ((string)js["code"] == "-1")
@@ -93,7 +93,7 @@ public class netConnect : MonoBehaviour
         GameObject _notice = GameObject.Find("Notices");
         _notice.transform.GetChild(0).GetComponent<Text>().text = httpConnect.net[code].show;
         //_notice.GetComponent<RectTransform>().sizeDelta = _notice.transform.GetChild(0).GetComponent<RectTransform>().sizeDelta;
-        _notice.GetComponent<RectTransform>().sizeDelta=new Vector2(_notice.transform.GetChild(0).GetComponent<Text>().text.Length * 70.1f, 169.5f);
+        _notice.GetComponent<RectTransform>().sizeDelta=new Vector2(_notice.transform.GetChild(0).GetComponent<Text>().text.Length * 90.1f, 169.5f);
         // _notice.GetComponent<CanvasGroup>().alpha = 1;
         //_notice.transform.localScale = Vector3.one;
         //_notice.transform.GetChild(0).localScale = Vector3.one;

@@ -9,7 +9,7 @@ public class fishMove : MonoBehaviour
 
 
 
-    float jieSuanJiShi = 5;//结算倒计时
+    float jieSuanJiShi = 10;//结算倒计时
     bool jiesuanToStart = false;
     float jiesuantime = 0;
 
@@ -152,7 +152,7 @@ public class fishMove : MonoBehaviour
                 initialStart.instance.allYinXiao[6].Pause();
                 Destroy(GameObject.Find("prepareAndjieSuna(Clone)").gameObject);
                 Destroy(GameObject.Find("background(Clone)").gameObject);
-                Instantiate(/*m_slider.*/initialStart.yuerStartPrefab);
+                Instantiate(/*m_slider.*//*initialStart.yuerStartPrefab*/weiXinLoad.instance.kp_startP);
                 Music_Control.music_effect(initialStart.instance.allYinXiao[8]);
 
                 //在此处请求倒计时信息

@@ -8,6 +8,8 @@ using CClient;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
 using System;
+using System.Threading;
+using WebSocketSharp.Net;
 
 public class destroyBullet
 {
@@ -139,7 +141,8 @@ public class meiRenYuThreadDeal : MonoBehaviour
         }
         if (is200051)
         {
-            deal200051();
+            //StartCoroutine(_deal20005());
+            deal20005();
             is200051 = false;
         }
         if (is20017)
@@ -177,6 +180,25 @@ public class meiRenYuThreadDeal : MonoBehaviour
             deal20026();
             is20026 = false;
         }
+
+        if (fishArrayContral.instant.yuzhenFinish)
+        {
+            Debug.Log("发送鱼阵");
+            if (contrall.instant().isZhuJi)
+            {
+                //在此发送销毁鱼阵的方法
+
+                Debug.Log("发送销毁鱼阵20027.。。。。。。。。。。。。。。。。。。。。。。。");
+                ClientSocket.instant().send("20027");
+                
+               
+            }
+            is20010 = true;
+            fishArrayContral.instant.yuzhenFinish = false;
+
+        }
+
+
         if (yuZhenJiShi)
         {
             yuzhenjishi += Time.deltaTime;
@@ -251,6 +273,7 @@ public class meiRenYuThreadDeal : MonoBehaviour
     {
 
         List<Transform> list = new List<Transform>();//把需要转发所有鱼的信息保存起来
+       
         Transform[] fishGroup = GameObject.Find("fishGroup").GetComponentsInChildren<Transform>();
         Debug.Log("zhuanfa" + fishGroup.Length);
         for (int i = 0; i < fishGroup.Length; i++)
@@ -262,6 +285,12 @@ public class meiRenYuThreadDeal : MonoBehaviour
         }
         StringBuilder messege = new StringBuilder();
         messege.Append("[");
+        //if (list.Count == 0)
+        //{
+        //    messege.Append("]");
+        //    ClientSocket.instant().send("20012", (object)messege);
+        //    return;
+        //}
         for (int j = 0; j < list.Count; j++)
         {
             messege.Append("{\"id\":\"" + list[j].GetComponent<FishAttr>().id + "\",\"x\":" + (int)list[j].transform.position.x + ",\"y\":" + (int)list[j].transform.position.y + ",\"n\":" + list[j].GetComponent<FishAttr>().nextDian + "},");
@@ -405,17 +434,47 @@ public class meiRenYuThreadDeal : MonoBehaviour
         is20005 = true;
 
     }
-    public void deal20005()
+    IEnumerator _deal20005()
     {
+        GameObject _obj = Instantiate(weiXinLoad.instance.loadP/*load*/, GameObject.Find("Order90Canvas").transform) as GameObject;
+        yield return _obj;
         otherContral.instant.returnGameScene = true;
-        ClientSocket.instant().ws.Close();//断开网络连接
+
         contrall.instant().clearAll();
         if (GameObject.Find("MainScene" + getMeiRenYuArea.buyuGame + "(Clone)") != null)
         {
             Destroy(GameObject.Find("MainScene" + getMeiRenYuArea.buyuGame + "(Clone)").gameObject);
 
         }
-        Instantiate(loadSelectArea.areaPrefabs, GameObject.Find("main").transform);
+        yield return new WaitForEndOfFrame();
+        Destroy(_obj);
+        yield return new WaitForEndOfFrame();
+        GameObject _obj1 = Instantiate(weiXinLoad.instance.selectAreas[getMeiRenYuArea.buyuGame]/*loadSelectArea.areaPrefabs*/, GameObject.Find("main").transform);
+        yield return _obj1;
+        ClientSocket.instant().ws.Close();//断开网络连接
+    }
+    public void deal20005()
+    {
+        Debug.Log("退出");
+        otherContral.instant.returnGameScene = true;
+        //ClientSocket.instant().ws.Close();//断开网络连接
+        //Thread th = new Thread(new ParameterizedThreadStart(disConetc));
+        //th.Start(ClientSocket.instant().ws);
+        contrall.instant().clearAll();
+
+        if (GameObject.Find("MainScene" + getMeiRenYuArea.buyuGame + "(Clone)") != null)
+        {
+            Destroy(GameObject.Find("MainScene" + getMeiRenYuArea.buyuGame + "(Clone)").gameObject);
+
+        }
+        Instantiate(weiXinLoad.instance.selectAreas[getMeiRenYuArea.buyuGame]/*loadSelectArea.areaPrefabs*/, GameObject.Find("main").transform);
+    }
+
+    void disConetc(System.Object _ws)
+    {
+        Debug.LogError("cccccccccccccc");
+        WebSocketSharp.WebSocket _socket = (WebSocketSharp.WebSocket)_ws;
+        _socket.Close();
     }
     /// <summary>
     /// 设置金币显示
@@ -430,7 +489,7 @@ public class meiRenYuThreadDeal : MonoBehaviour
     {
         GameController.Instance.goldText[target].text = "等待玩家加入";
         Transform g = GameObject.Find("GunPanel" + target).transform.Find("GunPosGroup");
-        if (target == 2 || target == 3)
+        if (target == 1)
         {
             g.transform.Find("1Gun").rotation = Quaternion.Euler(new Vector3(0, 0, 180));
             g.transform.Find("2Gun").rotation = Quaternion.Euler(new Vector3(0, 0, 180));
@@ -594,18 +653,23 @@ public class meiRenYuThreadDeal : MonoBehaviour
     public void deal20010()
     {
 
-        Invoke("destroyYuZhen", 5);
+        //Invoke("destroyYuZhen", 5);
         FishMaker.instant.fishGenWaitTime = 0.7f;
         changeFishMakeTime = true;
-    }
-    void destroyYuZhen()
-    {
         fishArrayContral.listGroupYuzhen.Clear();
         fishArrayContral.instant.yuZhenTarget.Clear();
-        fishArrayContral.instant.yuzhenFinish = false;
+       
         Debug.Log("销毁鱼阵");
         Destroy(GameObject.FindGameObjectWithTag("yuzhen").gameObject);
     }
+    //void destroyYuZhen()
+    //{
+    //    fishArrayContral.listGroupYuzhen.Clear();
+    //    fishArrayContral.instant.yuZhenTarget.Clear();
+    //    fishArrayContral.instant.yuzhenFinish = false;
+    //    Debug.Log("销毁鱼阵");
+    //    Destroy(GameObject.FindGameObjectWithTag("yuzhen").gameObject);
+    //}
 
 
     public void deal20024()

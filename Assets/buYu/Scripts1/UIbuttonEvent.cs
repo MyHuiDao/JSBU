@@ -1,10 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-using WebSocketSharp;
-using CClient;
+
 
 //此类是用来控制美人鱼中的UIbutton事件
 public class UIbuttonEvent : MonoBehaviour {
@@ -28,8 +25,8 @@ public class UIbuttonEvent : MonoBehaviour {
     /// </summary>
     void returnToMeiRenYuArea()
     {
-        meiRenYuThreadDeal.instant.exitRoom();
-        //WebButtonSendMessege.instant().exitRoom();//告诉服务器，退出房间
+        //meiRenYuThreadDeal.instant.exitRoom();
+        WebButtonSendMessege.instant().exitRoom();//告诉服务器，退出房间
 
 
 

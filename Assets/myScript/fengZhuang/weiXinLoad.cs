@@ -3,9 +3,42 @@ using System.Collections.Generic;
 using UnityEngine;
 using LitJson;
 using UnityEngine.UI;
+using System;
 
 public class weiXinLoad : MonoBehaviour
 {
+    //版本更新资源
+    UnityEngine.Object VersionUpdateP;
+    //用户协议
+    //GameObject UserProtocolP;
+    //加载中
+    public GameObject loadP;
+    //加载失败
+    public GameObject loadFailP;
+    //大厅Hall
+    //GameObject Hall;
+
+    //资源捕鱼加载
+    public GameObject[] selectAreas = new GameObject[3];//0美人鱼  1李逵鱼   2大闹天宫
+    public GameObject[] MainScenes = new GameObject[3];
+    //比赛rank
+    public Sprite[] rankSprites = new Sprite[3];
+
+    //加载鱼儿快跑资源
+    public GameObject kp_startP;
+    public GameObject kp_prepareAndjieSunaP;
+    public GameObject kp_backgroundP;
+   
+    //话费充值卡Sprite
+    public Sprite[] huafeiSprites = new Sprite[4];
+    //金币图标Sprite
+    public Sprite[] jinbiSprites = new Sprite[8];
+    //默认头像Sprite
+    public Sprite headSprite;
+    //water资源
+    public Texture[] waterTextures = new Texture[32];
+
+
 #if UNITY_ANDROID
     AndroidJavaClass androidClass;
     public static AndroidJavaObject androidObject;
@@ -24,6 +57,9 @@ public class weiXinLoad : MonoBehaviour
     void Start()
     {
         instance = this;
+
+
+
 #if UNITY_ANDROID
         androidObject.Call("getVersionCode");
 #endif
@@ -33,13 +69,40 @@ public class weiXinLoad : MonoBehaviour
 
 #endif
 
+        VersionUpdateP = LoadAesset("myPrefabs/Fish/LoadRes/VersionUpdateUI") as GameObject;
+        loadP = LoadAesset("Rank/load") as GameObject;
+        loadFailP = LoadAesset("Rank/loadFail") as GameObject;
+        for (int i = 0; i < 3;++i)
+        {
+            selectAreas[i] = LoadAesset("myPrefabs/meiRenYu/selectArea"+i) as GameObject;
+            MainScenes[i] = LoadAesset("myPrefabs/meiRenYu/MainScene"+i) as GameObject;
+            rankSprites[i] = LoadAesset("Pay_image/rank_"+(i+1)) as Sprite;
+        }
+
+        kp_startP = LoadAesset("yuErKuaiPao/start") as GameObject;
+        kp_prepareAndjieSunaP = LoadAesset("yuErKuaiPao/prepareAndjieSuna") as GameObject;
+        kp_backgroundP = LoadAesset("yuErKuaiPao/background") as GameObject;
+
+        for (int j = 0; j < huafeiSprites.Length;++j)
+        {
+            huafeiSprites[j] = LoadSprite("Pay_image/"+((j+1)*100).ToString()) as Sprite;
+        }
+        for (int k = 0; k < jinbiSprites.Length;++k)
+        {
+            jinbiSprites[k] = LoadSprite("Pay_image/bi_"+(k+1).ToString())as Sprite;
+        }
+
+        headSprite = LoadSprite("Rank/cat");;
+
+        for (int w = 0; w < waterTextures.Length;++w)
+        {
+            waterTextures[w] = LoadAesset("Water/waterWaveItem_"+w) as Texture;
+        }
     }
     WWW _www = null;
     string url;
     int version = 0;
     string downApkUrl;
-    GameObject obj;
-    Transform[] transforms = new Transform[2];
     private void Awake()
     {
         DontDestroyOnLoad(transform.gameObject);
@@ -147,7 +210,7 @@ public class weiXinLoad : MonoBehaviour
 #if UNITY_IOS
                 if (AndroidFunction == false)//使用安卓端功能
                 {
-                    showUserProtocol();
+                    //showUserProtocol();
                 }
 #endif
             }
@@ -163,37 +226,39 @@ public class weiXinLoad : MonoBehaviour
     void showVersionUpdate()
     {
         
-        GameObject versionObj = (GameObject)Resources.Load("myPrefabs/Fish/LoadRes/VersionUpdateUI");
-        obj = Instantiate(versionObj, GameObject.Find("Canvas").transform) as GameObject;
+        //GameObject versionObj = (GameObject)Resources.Load("myPrefabs/Fish/LoadRes/VersionUpdateUI");
+        GameObject versionObj = Instantiate(VersionUpdateP, GameObject.Find("Canvas").transform) as GameObject;
 
         for (int i = 0; i < 2; ++i)
         {
-            transforms[i] = obj.transform.GetChild(i);
             if (i == 0)
-                transforms[0].GetComponent<Button>().onClick.AddListener(delegate
+                versionObj.transform.GetChild(i).GetComponent<Button>().onClick.AddListener(delegate
                 {
-                    OnBtnClick(0);
+                OnBtnClick(0,versionObj);
                 });
             else
-                transforms[1].GetComponent<Button>().onClick.AddListener(delegate
+                versionObj.transform.GetChild(i).GetComponent<Button>().onClick.AddListener(delegate
                 {
-                    OnBtnClick(1);
+                OnBtnClick(1,null);
                 });
         }
 
+        //UnLoadObj(VersionUpdateP);
+
     }
 
-    void OnBtnClick(int i)
+    void OnBtnClick(int i,UnityEngine.Object obj)
     {
         //Debug.Log("===i:" + i);
 
         if (i == 0)
         {
             Destroy(obj);
+            //UnLoadObj(obj);
 #if UNITY_IOS
             if (AndroidFunction == false)
             {
-                showUserProtocol();
+                //showUserProtocol();
             }
 #endif
 
@@ -218,29 +283,29 @@ public class weiXinLoad : MonoBehaviour
     }
 
 #if UNITY_IOS
-    public void showUserProtocol()
-    {
-        GameObject UserProtocol = (GameObject)Resources.Load("myPrefabs/Fish/LoadRes/UserProtocol");
-        obj = Instantiate(UserProtocol, GameObject.Find("Canvas").transform) as GameObject;
-        GameObject toggleObj = obj.transform.GetChild(1).GetChild(0).gameObject;
-        UserProtocolToggle = toggleObj.transform.GetComponent<Toggle>();
+    //public void showUserProtocol()
+    //{
+    //    GameObject UserProtocol = (GameObject)Resources.Load("myPrefabs/Fish/LoadRes/UserProtocol");
+    //    obj = Instantiate(UserProtocol, GameObject.Find("Canvas").transform) as GameObject;
+    //    GameObject toggleObj = obj.transform.GetChild(1).GetChild(0).gameObject;
+    //    UserProtocolToggle = toggleObj.transform.GetComponent<Toggle>();
 
-        UserProtocolObj = obj.transform.GetChild(0).gameObject;
-        if (USERPROTOCOL == "true")
-        {
-            UserProtocolObj.transform.localScale = Vector3.zero;
-            UserProtocolObj.SetActive(false);
-            UserProtocolToggle.isOn = true;
-        }
+    //    UserProtocolObj = obj.transform.GetChild(0).gameObject;
+    //    if (USERPROTOCOL == "true")
+    //    {
+    //        UserProtocolObj.transform.localScale = Vector3.zero;
+    //        UserProtocolObj.SetActive(false);
+    //        UserProtocolToggle.isOn = true;
+    //    }
 
-        GameObject btn0 = obj.transform.GetChild(1).GetChild(1).gameObject;
-        EventTriggerListener.Get(btn0).onClick = OnUserProtocolBtnClick;
+    //    GameObject btn0 = obj.transform.GetChild(1).GetChild(1).gameObject;
+    //    EventTriggerListener.Get(btn0).onClick = OnUserProtocolBtnClick;
 
-        GameObject btn1 = obj.transform.GetChild(0).GetChild(0).GetChild(1).gameObject;
-        GameObject btn2 = obj.transform.GetChild(0).GetChild(0).GetChild(2).gameObject;
-        EventTriggerListener.Get(btn1).onClick = OnUserProtocolBtnClick;
-        EventTriggerListener.Get(btn2).onClick = OnUserProtocolBtnClick;
-    }
+    //    GameObject btn1 = obj.transform.GetChild(0).GetChild(0).GetChild(1).gameObject;
+    //    GameObject btn2 = obj.transform.GetChild(0).GetChild(0).GetChild(2).gameObject;
+    //    EventTriggerListener.Get(btn1).onClick = OnUserProtocolBtnClick;
+    //    EventTriggerListener.Get(btn2).onClick = OnUserProtocolBtnClick;
+    //}
 
 
     void OnUserProtocolBtnClick(GameObject obj)
@@ -264,21 +329,21 @@ public class weiXinLoad : MonoBehaviour
     }
 
 
-    public bool UserAgreeProtocol()
-    {
-        if (!UserProtocolToggle.isOn)
-        {
-            obj.transform.GetChild(2).gameObject.SetActive(true);
-            StartCoroutine(hideObj());
-        }
-        return UserProtocolToggle.isOn;
-    }
-    IEnumerator hideObj()
-    {
-        yield return new WaitForSeconds(2.0f);
-        obj.transform.GetChild(2).gameObject.SetActive(false);
+    //public bool UserAgreeProtocol()
+    //{
+    //    if (!UserProtocolToggle.isOn)
+    //    {
+    //        obj.transform.GetChild(2).gameObject.SetActive(true);
+    //        StartCoroutine(hideObj());
+    //    }
+    //    return UserProtocolToggle.isOn;
+    //}
+    //IEnumerator hideObj()
+    //{
+    //    yield return new WaitForSeconds(2.0f);
+    //    obj.transform.GetChild(2).gameObject.SetActive(false);
 
-    }
+    //}
 
     public string USERPROTOCOL
     {
@@ -309,4 +374,34 @@ public class weiXinLoad : MonoBehaviour
         }
     }
 #endif
+
+    UnityEngine.Object LoadAesset(string path)
+    {
+        try{
+            UnityEngine.Object _obj = Resources.Load(path);
+            //Debug.LogError(_obj.name);
+            return _obj; 
+        }catch(Exception e)
+        {
+            Debug.LogError(e);
+
+        }
+        return null;
+    }
+
+    Sprite LoadSprite(string path)
+    {
+        return Resources.Load<Sprite>(path);
+    }
+
+
+    public void UnLoadObj(UnityEngine.Object _obj)
+    {
+        Resources.UnloadAsset(_obj);
+
+        Resources.UnloadUnusedAssets();
+    }
+
+
+
 }

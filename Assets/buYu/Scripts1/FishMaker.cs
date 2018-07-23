@@ -145,7 +145,7 @@ public class FishMaker : MonoBehaviour
                 guiJi.instant().startMove(transformID.GetComponent<FishAttr>().runPoint, transformID.GetComponent<FishAttr>().nextDian);//传入所需要的轨迹  
                                                                                                                                         //速度改变        
 
-                iTween.MoveTo(transformID.gameObject, iTween.Hash("path", guiJi.instant().waypoints, "speed", transformID.GetComponent<FishAttr>().Speed, "movetopath", false, "orienttopath", true, "looktime", 0.6, "easetype", "linear"));
+                iTween.MoveTo(transformID.gameObject, iTween.Hash("path", guiJi.instant().waypoints, "speed", transformID.GetComponent<FishAttr>().Speed, "movetopath", true, "orienttopath", true, "looktime", 0.6, "easetype", "linear"));
 
 
 
@@ -323,6 +323,11 @@ public class FishMaker : MonoBehaviour
         }
         //生成鱼的种类
         GameObject fishObj = Instantiate(fishPrefabsDict[_fishType]);
+        //if (meiRenYuThreadDeal.gosWeiZhi == 1)
+        //{
+        //    fishObj.transform.rotation = Quaternion.Euler(0,0,180);
+
+        //}
         fishObj.transform.GetChild(0).GetComponent<SpriteRenderer>().sortingOrder = fishOrderLay;
         fishOrderLay++;
         if (fishOrderLay >= 90)
@@ -373,7 +378,7 @@ public class FishMaker : MonoBehaviour
             WebButtonSendMessege.instant().fishStartMove(_id);//发送给服务器征求鱼的游动}
 
 
-        }
+        } 
         if (_isHalfGoGame)//只有中途进的那个瞬间才会直接游动
         {
 
@@ -382,8 +387,7 @@ public class FishMaker : MonoBehaviour
 
                 guiJi.instant().startMove(fishTarget[_id].GetComponent<FishAttr>().runPoint, fishTarget[_id].GetComponent<FishAttr>().nextDian);//传入所需要的轨迹  
                                                                                                                                                 //速度改变        
-
-                iTween.MoveTo(fishTarget[_id].gameObject, iTween.Hash("path", guiJi.instant().waypoints, "speed", fishTarget[_id].gameObject.GetComponent<FishAttr>().Speed, "movetopath", false, "orienttopath", true, "looktime", 0.6, "easetype", "linear"));
+                iTween.MoveTo(fishTarget[_id].gameObject, iTween.Hash("path", guiJi.instant().waypoints, "speed", fishTarget[_id].gameObject.GetComponent<FishAttr>().Speed, "movetopath", true, "orienttopath", true, "looktime", 0.6, "easetype", "linear"));
             }
 
         }

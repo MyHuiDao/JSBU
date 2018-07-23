@@ -31,7 +31,14 @@ public class hallHttp : MonoBehaviour
         contrall.instant().contrallAddMethod();//websocket
 
         token = netConnect.token;
-        ClientSocket.instant().clientSocket(httpConnect.Web_URL+"/game/game/hall/1/", token);//连接到服务器
+       
+        if ( ClientSocket.instant().connectWhichNet != -1)
+        {
+            ClientSocket.instant().ws.Close();
+           
+        }
+        ClientSocket.instant().clientSocket(httpConnect.Web_URL + "/game/game/hall/1/", token);//连接到服务器
+        ClientSocket.instant().connectWhichNet = 1;
 
     }
     // Update is called once per frame

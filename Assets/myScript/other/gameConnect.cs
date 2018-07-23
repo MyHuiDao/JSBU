@@ -19,9 +19,16 @@ public class gameConnect : MonoBehaviour {
         token = netConnect.token;
         //contrall.instant().isLoadSceneOne =  
         Debug.Log("连接捕鱼");
-        ClientSocket.instant().clientSocket(httpConnect.Web_URL+"/fishing/v1/game/", token);
-       // ClientSocket.instant().clientSocket("ws://192.168.31.238:8081/fishing/v1/game/", token);
-       //ClientSocket.instant().clientSocket("ws://jinshayugang.com/fishing/v1/game/", token);//连接到服务器
+
+        if (ClientSocket.instant().connectWhichNet != 2)
+        {
+            ClientSocket.instant().ws.Close();
+            ClientSocket.instant().clientSocket(httpConnect.Web_URL + "/fishing/v1/game/", token);
+            ClientSocket.instant().connectWhichNet = 2;
+        }
+       
+        // ClientSocket.instant().clientSocket("ws://192.168.31.238:8081/fishing/v1/game/", token);
+        //ClientSocket.instant().clientSocket("ws://jinshayugang.com/fishing/v1/game/", token);//连接到服务器
 
 
     }

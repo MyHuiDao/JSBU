@@ -25,6 +25,8 @@ namespace CClient
     /// </summary>
     public class ClientSocket
     {
+        public int connectWhichNet=-1;//判断连接的是哪一个网址,1大厅，2捕鱼，3赛鱼
+
         public bool isYuerMatch = false;
         public List<messegeQueuePara> messegeQueue = new List<messegeQueuePara>();
         public WebSocket ws;//webSocket客户端对象
@@ -47,7 +49,7 @@ namespace CClient
 
         public void clientSocket(string url, string token)
         {
-            //cilentConnectServe("ws://192.168.31.238:8081/fishing/v1/game/" + token);//连接到服务器
+            
             cilentConnectServe(url + token);//连接到服务器http://jinshayugang.com/fishing  
 
         }
@@ -61,6 +63,7 @@ namespace CClient
             ws.OnError += Ws_OnError;//出现异常触发
             ws.OnOpen += Ws_OnOpen;//一旦服务器响应了WebSocket连接请求，open事件触发并建立一个连接。
             ws.Connect();
+            
             //ws.Send(js.jsonMessege(1000));//实际上还是发的字符串，只是该字符串格式要像json格式的
             //可以随处调用该方法，随处发送消息
             //System.Net.Sockets.Worker:Receive()
@@ -169,23 +172,30 @@ namespace CClient
 
             Thread.Sleep(3000); //停3秒
             Debug.Log("后面进行断线重连");
-            //进行断线重连
-            //if (!otherContral.instant.returnGameScene||!yuerContrall.instance.returnGameScene)
-            //{
-            //    Debug.Log("断线重连了");
-            //    ws.Close();
-            //    loadSelectArea.connectNet = true;
-            //}
-
-            //if (!gameContrall.instant.return_scene)
-            //{
-
-
-            //    break_line.hall_line = true;
-
-            //}
+            Thread.Sleep(2);
+            connect();
         }
 
        
+
+        void connect()
+        {
+            //进行断线重连
+            if (!otherContral.instant.returnGameScene || !yuerContrall.instance.returnGameScene)
+            {
+                Debug.Log("断线重连了");
+               
+                ws.Close();
+                loadSelectArea.connectNet = true;
+            }
+
+            if (!gameContrall.instant.return_scene)
+            {
+
+
+                break_line.hall_line = true;
+
+            }
+        }
     }
 }

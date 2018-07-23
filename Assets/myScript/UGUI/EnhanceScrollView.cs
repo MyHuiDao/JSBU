@@ -8,13 +8,13 @@ public class EnhanceScrollView : MonoBehaviour
     {
         UGUIInput,         // use UDragEnhanceView for each item to get drag event
     }
- 
-    private  InputSystemType inputType = InputSystemType.UGUIInput;// 枚举（暂时没用）
+
+    private InputSystemType inputType = InputSystemType.UGUIInput;// 枚举（暂时没用）
 
     public AnimationCurve scaleCurve;    // 大小曲线
-   
+
     public AnimationCurve positionCurve; // 位置曲线
-    
+
     public AnimationCurve depthCurve = new AnimationCurve(new Keyframe(0, 0), new Keyframe(0.5f, 1), new Keyframe(1, 0));//透明度曲线
 
     [Tooltip("The Start center index")]
@@ -69,7 +69,7 @@ public class EnhanceScrollView : MonoBehaviour
     void Start()
     {
         canChangeItem = true;
-        for(int i = 0; i < transform.childCount; i++)
+        for (int i = 0; i < transform.childCount; i++)
         {
             listEnhanceItems.Add(transform.GetChild(i).GetComponent<EnhanceItem>());
         }
@@ -140,15 +140,15 @@ public class EnhanceScrollView : MonoBehaviour
         {
             EnhanceItem itemScript = listEnhanceItems[i];
             float xValue;
-            if (this.name== "areaScrollView")
+            if (this.name == "areaScrollView")
             {
-                xValue= GetXPosValue(fValue, itemScript.CenterOffSet) - 250 * listEnhanceItems.Count;//X轴位置变化
+                xValue = GetXPosValue(fValue, itemScript.CenterOffSet) - 250 * listEnhanceItems.Count;//X轴位置变化
             }
             else
             {
-                 xValue = GetXPosValue(fValue, itemScript.CenterOffSet) - 200 * listEnhanceItems.Count;//X轴位置变化
+                xValue = GetXPosValue(fValue, itemScript.CenterOffSet) - 200 * listEnhanceItems.Count;//X轴位置变化
             }
-         
+
             float scaleValue = GetScaleValue(fValue, itemScript.CenterOffSet);
             float depthCurveValue = depthCurve.Evaluate(fValue + itemScript.CenterOffSet);
             itemScript.UpdateScrollViewItems(xValue, depthCurveValue, depthFactor, listEnhanceItems.Count, yFixedPositionValue, scaleValue);
@@ -220,11 +220,11 @@ public class EnhanceScrollView : MonoBehaviour
     // On Drag Move
     public void OnDragEnhanceViewMove(Vector2 delta)//滑动增量控制
     {
-        if(this.name== "areaScrollView")
+        if (this.name == "areaScrollView")
         {
             if (Mathf.Abs(delta.x) > 0.0f)
             {
-                curHorizontalValue += delta.x * factor*0.3f ;
+                curHorizontalValue += delta.x * factor * 0.4f;
                 LerpTweenToTarget(0.0f, curHorizontalValue, false);
             }
         }
@@ -236,7 +236,7 @@ public class EnhanceScrollView : MonoBehaviour
                 LerpTweenToTarget(0.0f, curHorizontalValue, false);
             }
         }
-       
+
     }
     // On Drag End
     public void OnDragEnhanceViewEnd()//结束拖拽
@@ -260,13 +260,15 @@ public class EnhanceScrollView : MonoBehaviour
         curCenterItem = listEnhanceItems[closestIndex];
         LerpTweenToTarget(originHorizontalValue, target, true);
         canChangeItem = false;
-        if(this.name!= "areaScrollView")
+        if (this.name != "areaScrollView")
         {
             Music_Control.effect_music.Play();
 
-        }else{
+        }
+        else
+        {
             buYuMusicContral.instant.allYinXiao[23].Play();
         }
-      
+
     }
 }

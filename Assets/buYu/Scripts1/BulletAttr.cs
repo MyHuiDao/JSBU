@@ -41,12 +41,17 @@ public class BulletAttr : MonoBehaviour
         {
             if (belongTarget == meiRenYuThreadDeal.gosWeiZhi)
             {
-                Debug.LogError("对象"+belongTarget+"id......................"+id);
+                //Debug.Log("对象"+belongTarget+"id......................"+id);
                 WebButtonSendMessege.instant().bulletDie("20009", id, x.ToString(), y.ToString(), FishMaker.SaveNet[id]);
                 i = 0;
             }
 
 
+        }
+
+        if (this.transform.localScale == Vector3.zero)//碰到鱼后，没收到返回信息，自动消除
+        {
+            Invoke("bulletSelfDestroy", 2);
         }
     }
     //border身上挂了刚体，子弹上没有挂刚体，只有boxcollider2d,
@@ -202,10 +207,28 @@ public class BulletAttr : MonoBehaviour
 
     public void bulletSelfDestroy()
     {
-        Debug.Log("发送20009");
-        if (contrall.instance.isZhuJi)
+
+        for (int i = 0; i < 4; i++)
         {
-            CClient.ClientSocket.instant().send("20009", (object)("{\"fireId\":\"" + this.id + "\",\"x\":" + this.transform.localPosition.x.ToString() + ",\"y\":" + this.transform.localPosition.y.ToString() + ",\"fishList\":\"\"}"));
+
+            if (GameController.Instance.bulletDict[i].ContainsKey(this.id))
+            {
+
+                GameController.Instance.bulletDict[i][this.id].GetComponent<BulletAttr>().destroyBullet();
+                GameController.Instance.bulletDict[i].Remove(this.id);
+                
+                break;
+            }
         }
+        if (FishMaker.SaveNet.ContainsKey(this.id))
+        {
+
+            FishMaker.SaveNet.Remove(this.id);//删除字典中的网
+        }
+        //Debug.Log("发送20009");
+        //if (contrall.instance.isZhuJi)
+        //{
+        //    CClient.ClientSocket.instant().send("20009", (object)("{\"fireId\":\"" + this.id + "\",\"x\":" + this.transform.localPosition.x.ToString() + ",\"y\":" + this.transform.localPosition.y.ToString() + ",\"fishList\":\"\"}"));
+        //}
     }
 }

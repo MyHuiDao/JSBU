@@ -79,6 +79,8 @@ public class contrall
 
             if (httpView.id == (((JsonData)o)["userList"][i].ToString()))//自己
             {
+
+                Debug.Log("自己的位置"+i);
                 meiRenYuThreadDeal.gosWeiZhi = i;
                 GunFollow.posWeizhi = i;
                 GameController.gosWeiZhi = i;
@@ -152,12 +154,12 @@ public class contrall
     /// </summary>
     public void do20017(object o)
     {
-        Debug.LogError("收到20017");
+        Debug.Log("收到20017");
         joinUserId = ((JsonData)o)["userId"].ToString();
         //添加用户到字典中,如果进入的是我自己，则不添加
         if (((JsonData)o)["userId"].ToString() != httpView.id)
         {
-            Debug.LogError("收到200171");
+            Debug.Log("收到200171");
             GameController.gunShapes.Add(((JsonData)o)["userId"].ToString(), 0);//添加枪
             for (int i = 0; i < userDict.Count; i++)
             {
@@ -182,7 +184,7 @@ public class contrall
         }
         if (instant().isZhuJi && ((JsonData)o)["userId"].ToString() != httpView.id)//如果本机是主机并且进入房间的不是自己，则需要转发房间信息给进来的人
         {
-            Debug.LogError("收到200172");
+            Debug.Log("收到200172");
             WebButtonSendMessege.instant().giveCurrentRoomMsg();
 
         }
@@ -220,7 +222,7 @@ public class contrall
             FishMaker.fish.Add(f.id, f);//把鱼保存到字典里
         }
         FishMaker.listGroup.Add(listID);
-        Debug.Log("listGroup长度"+FishMaker.listGroup.Count);
+        
         FishMaker.do20004Order.Add(0);
         //FishMaker.instant.secondTimeStart();//产生鱼
     }
@@ -354,6 +356,8 @@ public class contrall
         fishArrayContral.listGroupYuzhen.Clear();
         isCanClearFish = false;
         meiRenYuThreadDeal.destroyBulletList.Clear();
+      
+
     }
     /// <summary>
     /// 鱼自然消失
@@ -362,33 +366,33 @@ public class contrall
     public void do20010(object o)
     {
 
-        if (fishArrayContral.listGroupYuzhen.Count == 1)//如果处于鱼阵状态
-        {
-            if (fishArrayContral.instant.yuzhenPrefab!=null)
-            {
+        //if (fishArrayContral.listGroupYuzhen.Count == 1)//如果处于鱼阵状态
+        //{
+        //    if (fishArrayContral.instant.yuzhenPrefab!=null)
+        //    {
               
-                meiRenYuThreadDeal.instant.is20010 = true;
+        //        meiRenYuThreadDeal.instant.is20010 = true;
              
-                fishArrayContral.instant.yuzhenPrefab = null;
-            }
+        //        fishArrayContral.instant.yuzhenPrefab = null;
+        //    }
 
-            //if (fishArrayContral.listGroupYuzhen[0].Count > 0)
-            //{
-            //    if (fishArrayContral.listGroupYuzhen[0].Contains(o.ToString()))
-            //    {
-            //        fishArrayContral.listGroupYuzhen[0].Remove(o.ToString());
-            //    }
-            //    if (fishArrayContral.listGroupYuzhen[0].Count == 0)
-            //    {
-            //        meiRenYuThreadDeal.instant.is20010 = true;
-            //        fishArrayContral.listGroupYuzhen.Clear();
-            //        fishArrayContral.instant.yuZhenTarget.Clear();
-            //        fishArrayContral.instant.yuzhenFinish = false;
-            //    }
-            //}
-        }
-        else
-        {
+        //    //if (fishArrayContral.listGroupYuzhen[0].Count > 0)
+        //    //{
+        //    //    if (fishArrayContral.listGroupYuzhen[0].Contains(o.ToString()))
+        //    //    {
+        //    //        fishArrayContral.listGroupYuzhen[0].Remove(o.ToString());
+        //    //    }
+        //    //    if (fishArrayContral.listGroupYuzhen[0].Count == 0)
+        //    //    {
+        //    //        meiRenYuThreadDeal.instant.is20010 = true;
+        //    //        fishArrayContral.listGroupYuzhen.Clear();
+        //    //        fishArrayContral.instant.yuZhenTarget.Clear();
+        //    //        fishArrayContral.instant.yuzhenFinish = false;
+        //    //    }
+        //    //}
+        //}
+        //else
+        //{
             for (int i = 0; i < FishMaker.listGroup.Count; i++)
             {
 
@@ -399,7 +403,7 @@ public class contrall
                 }
             }
 
-        }
+        //}
         FishMaker.fish.Remove(o.ToString());//删除fish类
         FishMaker.deadFish.Add(o.ToString());
     }
@@ -415,7 +419,8 @@ public class contrall
     /// <param name="o"></param>
     public void do20009(object o)
     {
-        Debug.LogError("收到20009:"+((JsonData)o)["fireId"].ToString());
+       
+
 
 
             //销毁子弹

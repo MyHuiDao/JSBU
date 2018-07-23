@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class startTimeJiShi : MonoBehaviour
 {
-    public static GameObject yuerbackgroundPrefab = null;//鱼儿快跑预制体  
-    public static GameObject yuerPrepareAndjieSunaPrefab = null;//鱼儿快跑预制体
+    //public static GameObject yuerbackgroundPrefab = null;//鱼儿快跑预制体  
+    //public static GameObject yuerPrepareAndjieSunaPrefab = null;//鱼儿快跑预制体
     public static startTimeJiShi instance = null;
     public static string[] fishRank;
     public   bool isStartJiShi = false;
@@ -17,8 +17,8 @@ public class startTimeJiShi : MonoBehaviour
 
     private void Awake()
     {
-        yuerPrepareAndjieSunaPrefab = Resources.Load("yuErKuaiPao/prepareAndjieSuna") as GameObject;
-        yuerbackgroundPrefab = Resources.Load("yuErKuaiPao/background") as GameObject; 
+        //yuerPrepareAndjieSunaPrefab = Resources.Load("yuErKuaiPao/prepareAndjieSuna") as GameObject;
+        //yuerbackgroundPrefab = Resources.Load("yuErKuaiPao/background") as GameObject; 
     }
 
     public bool isToPrepare = false;
@@ -96,9 +96,9 @@ public class startTimeJiShi : MonoBehaviour
             if (!isStartJiShi)
             {
                 Destroy(GameObject.Find("start(Clone)").gameObject);
-                Instantiate(/*m_slider.*/yuerPrepareAndjieSunaPrefab);
+                Instantiate(/*m_slider.*//*yuerPrepareAndjieSunaPrefab*/weiXinLoad.instance.kp_prepareAndjieSunaP);
                 Music_Control.music_effect(initialStart.instance.allYinXiao[8]);
-                Instantiate(/*m_slider.*/yuerbackgroundPrefab);
+                Instantiate(/*m_slider.*//*yuerbackgroundPrefab*/weiXinLoad.instance.kp_backgroundP);
                 isToPrepare = false;
             }
         }
