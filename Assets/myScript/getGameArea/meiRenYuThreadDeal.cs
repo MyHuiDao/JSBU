@@ -142,7 +142,7 @@ public class meiRenYuThreadDeal : MonoBehaviour
         if (is200051)
         {
             //StartCoroutine(_deal20005());
-            deal20005();
+            deal200051();
             is200051 = false;
         }
         if (is20017)
@@ -436,7 +436,7 @@ public class meiRenYuThreadDeal : MonoBehaviour
     }
     IEnumerator _deal20005()
     {
-        GameObject _obj = Instantiate(weiXinLoad.instance.loadP/*load*/, GameObject.Find("Order90Canvas").transform) as GameObject;
+        GameObject _obj = Instantiate(ResouseManager.Instance.LOADP/*load*/, GameObject.Find("Order90Canvas").transform) as GameObject;
         yield return _obj;
         otherContral.instant.returnGameScene = true;
 
@@ -449,14 +449,16 @@ public class meiRenYuThreadDeal : MonoBehaviour
         yield return new WaitForEndOfFrame();
         Destroy(_obj);
         yield return new WaitForEndOfFrame();
-        GameObject _obj1 = Instantiate(weiXinLoad.instance.selectAreas[getMeiRenYuArea.buyuGame]/*loadSelectArea.areaPrefabs*/, GameObject.Find("main").transform);
+        GameObject _obj1 = Instantiate(ResouseManager.Instance.SELECTAREA/*loadSelectArea.areaPrefabs*/, GameObject.Find("main").transform);
         yield return _obj1;
         ClientSocket.instant().ws.Close();//断开网络连接
+        Debug.Log("断开");
     }
     public void deal20005()
     {
         Debug.Log("退出");
         otherContral.instant.returnGameScene = true;
+        Debug.Log("断开");
         //ClientSocket.instant().ws.Close();//断开网络连接
         //Thread th = new Thread(new ParameterizedThreadStart(disConetc));
         //th.Start(ClientSocket.instant().ws);
@@ -467,13 +469,14 @@ public class meiRenYuThreadDeal : MonoBehaviour
             Destroy(GameObject.Find("MainScene" + getMeiRenYuArea.buyuGame + "(Clone)").gameObject);
 
         }
-        Instantiate(weiXinLoad.instance.selectAreas[getMeiRenYuArea.buyuGame]/*loadSelectArea.areaPrefabs*/, GameObject.Find("main").transform);
+        Instantiate(ResouseManager.Instance.SELECTAREA/*loadSelectArea.areaPrefabs*/, GameObject.Find("main").transform);
     }
 
     void disConetc(System.Object _ws)
     {
         Debug.LogError("cccccccccccccc");
         WebSocketSharp.WebSocket _socket = (WebSocketSharp.WebSocket)_ws;
+        Debug.Log("断开");
         _socket.Close();
     }
     /// <summary>

@@ -26,7 +26,7 @@ public class initialStart : MonoBehaviour
         //yuerStartPrefab = Resources.Load("yuErKuaiPao/start") as GameObject;
         //prepareAndjieSunaPrefab= Resources.Load("yuErKuaiPao/prepareAndjieSuna") as GameObject;
         //backgroundPrefab = Resources.Load("yuErKuaiPao/background") as GameObject;
-        Instantiate(/*m_slider.*//*yuerStartPrefab*/weiXinLoad.instance.kp_startP);
+        Instantiate(/*m_slider.*//*yuerStartPrefab*/ResouseManager.Instance.KPSTARP);
         saveDate.cameraPos= GameObject.Find("Camera").transform.position;
         saveDate.cameraFllowMePos = GameObject.Find("cameraFllowMe").transform.position;
 

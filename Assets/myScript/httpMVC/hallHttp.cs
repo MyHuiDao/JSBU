@@ -18,6 +18,8 @@ public class hallHttp : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+      
+
         GetComponent<Canvas>().worldCamera = Camera.main;
         GameObject.Find("Canvas_button").GetComponent<Canvas>().worldCamera = Camera.main;
         instance = this;
@@ -31,11 +33,12 @@ public class hallHttp : MonoBehaviour
         contrall.instant().contrallAddMethod();//websocket
 
         token = netConnect.token;
-       
-        if ( ClientSocket.instant().connectWhichNet != -1)
+
+        if (ClientSocket.instant().connectWhichNet != -1)
         {
             ClientSocket.instant().ws.Close();
-           
+            Debug.Log("断开");
+
         }
         ClientSocket.instant().clientSocket(httpConnect.Web_URL + "/game/game/hall/1/", token);//连接到服务器
         ClientSocket.instant().connectWhichNet = 1;

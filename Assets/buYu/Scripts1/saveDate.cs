@@ -42,4 +42,7 @@ public class saveDate
 
     public static string[] fishRank;
 
+
+    public static int startCenterPos=0;//保存滑动位置
+
 }

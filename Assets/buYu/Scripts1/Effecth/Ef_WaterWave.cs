@@ -15,7 +15,7 @@ public class Ef_ : MonoBehaviour
 
     void ChangeTexture()
     {
-        material.mainTexture = weiXinLoad.instance.waterTextures[index];//textures[index];
-        index = (index + 1) % weiXinLoad.instance.waterTextures.Length;
+        material.mainTexture = ResouseManager.Instance.WATERTEXTURES[index];//textures[index];
+        index = (index + 1) % ResouseManager.Instance.WATERTEXTURES.Length;
     }
 }

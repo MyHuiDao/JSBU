@@ -19,6 +19,10 @@ public class cameraFlow : MonoBehaviour
     void Awake()
     {
         Instance = this;
+        if(weiXinLoad.instance == null)
+        {
+            Debug.Log("uuuuuuuuuuuuuuuuuuuu");
+        }
     }
 
     void Start()

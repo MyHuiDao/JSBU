@@ -108,14 +108,17 @@ public class contrall
                 GameController.bulletLevel.Add(userDict[i], (int)(((JsonData)o)["userFireLevelMap"][userDict[i]]));//添加每个人子弹的级别
                 if ((int)(((JsonData)o)["userFireLevelMap"][userDict[i]]) >= 0 && (int)(((JsonData)o)["userFireLevelMap"][userDict[i]]) <= 2)
                 {
+                    Debug.Log(1);
                     GameController.gunShapes.Add(userDict[i], 0);
                 }
                 else if ((int)(((JsonData)o)["userFireLevelMap"][userDict[i]]) >= 3 && (int)(((JsonData)o)["userFireLevelMap"][userDict[i]]) <= 5)
                 {
+                    Debug.Log(2);
                     GameController.gunShapes.Add(userDict[i], 1);
                 }
                 else
                 {
+                    Debug.Log(3);
                     GameController.gunShapes.Add(userDict[i], 2);
 
                 }
@@ -311,10 +314,11 @@ public class contrall
     /// <param name="o"></param>
     public void do20005(object o)
     {
-        Debug.Log((JsonData)o + "离开了房间");
+       
         if (o.ToString() == httpView.id)
         {
             //退出房间时，保存的字典数据应该全部清零,看看是否需要清零fishmaker等字典
+            Debug.Log("我自己退出");
             meiRenYuThreadDeal.instant.exitRoom();
             return;
         }
@@ -322,6 +326,7 @@ public class contrall
         {
             if (userDict[i] == o.ToString())
             {
+                Debug.Log((JsonData)o + "离开了房间");
                 GameController.gunShapes.Remove(userDict[i]);//删除             
                 meiRenYuThreadDeal.instant.setGoldText(i);
                 userDict[i] = null;

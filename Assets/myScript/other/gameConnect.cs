@@ -23,6 +23,7 @@ public class gameConnect : MonoBehaviour {
         if (ClientSocket.instant().connectWhichNet != 2)
         {
             ClientSocket.instant().ws.Close();
+            Debug.Log("断开");
             ClientSocket.instant().clientSocket(httpConnect.Web_URL + "/fishing/v1/game/", token);
             ClientSocket.instant().connectWhichNet = 2;
         }

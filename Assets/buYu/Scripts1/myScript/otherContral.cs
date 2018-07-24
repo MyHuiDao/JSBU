@@ -13,18 +13,17 @@ public struct buttonAll
 public class otherContral : MonoBehaviour
 {
 
-    Vector2 first;
-    Vector2 second;
-
-    bool rulerIsOPen = false;
+   
     public bool returnGameScene = false;
     public static otherContral instant = null;
     // Use this for initialization
     public List<buttonAll[]> btns = new List<buttonAll[]>();
+   
 
     void Start()
     {
         GameObject.Find("Main Camera").transform.rotation = Quaternion.Euler(Vector3.zero);//在选择分区把摄像机摆正
+
         instant = this;
     }
 
@@ -39,10 +38,10 @@ public class otherContral : MonoBehaviour
         //canvasGroup.blocksRaycasts = true;
         //sheltObj.SetActive(true);
         returnGameScene = true;
-
+        saveDate.startCenterPos = 0;
         //CClient.ClientSocket.instant().ws.Close();
 
-        Instantiate(weiXinLoad.instance.loadP/*load*/, GameObject.Find("Canvas").transform); 
+        Instantiate(ResouseManager.Instance.LOADP/*load*/, GameObject.Find("Canvas").transform); 
 
         SceneManager.LoadScene("gameScene");//返回到大厅
 

@@ -31,7 +31,7 @@ public class touxiang : MonoBehaviour {
     {
         if (netConnect.instance.m_state == login_state.visitor)
         {
-            transform.GetChild(0).GetChild(0).GetComponent<Image>().sprite = weiXinLoad.instance.headSprite;//httpView.touXiang;
+            transform.GetChild(0).GetChild(0).GetComponent<Image>().sprite = ResouseManager.Instance.HEADSPRITE;//httpView.touXiang;
         }
         if (netConnect.instance.m_state == login_state.wechat)
         {

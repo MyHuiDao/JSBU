@@ -22,6 +22,7 @@ public class sceneLoad : MonoBehaviour
     //}
     void Start()
     {
+        ResouseManager.Instance.Start();
         Screen.sleepTimeout = (int)SleepTimeout.NeverSleep;
         instance = this;
         login_effect = GameObject.Find("Main Camera").GetComponent<AudioSource>();

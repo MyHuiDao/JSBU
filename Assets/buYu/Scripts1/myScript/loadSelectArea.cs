@@ -18,11 +18,10 @@ public class loadSelectArea : MonoBehaviour
         instant = this;
         Screen.sleepTimeout = (int)SleepTimeout.NeverSleep;
         //if (buyugameBiaoShi == getMeiRenYuArea.buyuGame)
-        //{
-
+        //{      
 
         //areaPrefabs = weiXinLoad.instance.selectAreas[getMeiRenYuArea.buyuGame];// Resources.Load("myPrefabs/meiRenYu/selectArea" + getMeiRenYuArea.buyuGame) as GameObject;
-        Instantiate(weiXinLoad.instance.selectAreas[getMeiRenYuArea.buyuGame]/*areaPrefabs*/, GameObject.Find("main").transform);
+        Instantiate(ResouseManager.Instance.SELECTAREA/*areaPrefabs*/, GameObject.Find("main").transform);
 
         //areaPrefabs = Test.obj[ getMeiRenYuArea.buyuGame+4];
         //Instantiate(areaPrefabs, GameObject.Find("main").transform);
@@ -57,7 +56,7 @@ public class loadSelectArea : MonoBehaviour
         {
             Destroy(GameObject.Find("selectArea" + getMeiRenYuArea.buyuGame + "(Clone)").gameObject);
 
-            Instantiate(weiXinLoad.instance.selectAreas[getMeiRenYuArea.buyuGame]/*loadSelectArea.areaPrefabs*/, GameObject.Find("main").transform);
+            Instantiate(ResouseManager.Instance.SELECTAREA/*loadSelectArea.areaPrefabs*/, GameObject.Find("main").transform);
         }
         else
         {
@@ -67,7 +66,7 @@ public class loadSelectArea : MonoBehaviour
                 Destroy(GameObject.Find("MainScene" + getMeiRenYuArea.buyuGame + "(Clone)").gameObject);
 
             }
-            Instantiate(weiXinLoad.instance.selectAreas[getMeiRenYuArea.buyuGame]/*loadSelectArea.areaPrefabs*/, GameObject.Find("main").transform);
+            Instantiate(ResouseManager.Instance.SELECTAREA/*loadSelectArea.areaPrefabs*/, GameObject.Find("main").transform);
         }
     }
 }

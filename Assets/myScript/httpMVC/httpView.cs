@@ -134,7 +134,7 @@ public class httpView : MonoBehaviour {
         GameObject obj = Instantiate(shop, GameObject.Find("shop_Panel").transform) as GameObject;
         obj.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = _name;
         obj.transform.GetChild(2).GetChild(1).GetComponent<Text>().text = price.ToString();
-        obj.transform.GetChild(3).GetComponent<Image>().sprite = weiXinLoad.instance.huafeiSprites[_seq - 1];//Shops[_seq - 1];
+        obj.transform.GetChild(3).GetComponent<Image>().sprite = ResouseManager.Instance.HUAFEISPRITES[_seq - 1];//Shops[_seq - 1];
     }
     /// <summary>
     /// 获得人民币与金币的转化
@@ -192,7 +192,7 @@ public class httpView : MonoBehaviour {
     }
     public void head_photo(string name)
     {
-        GameObject.Find(name).GetComponent<Image>().sprite = weiXinLoad.instance.headSprite;//touXiang;
+        GameObject.Find(name).GetComponent<Image>().sprite = ResouseManager.Instance.HEADSPRITE;//touXiang;
     }
   
     /// <summary>
@@ -305,7 +305,7 @@ public class httpView : MonoBehaviour {
 
                 if (a < 3)
             {
-                obj.transform.GetChild(0).GetComponent<Image>().sprite = weiXinLoad.instance.rankSprites[a];//Ranks[a];
+                obj.transform.GetChild(0).GetComponent<Image>().sprite = ResouseManager.Instance.RANKSPRITES[a];//Ranks[a];
                 obj.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "";
             }
             else
@@ -318,7 +318,7 @@ public class httpView : MonoBehaviour {
             }
             else
             {
-                obj.transform.GetChild(4).GetComponent<Image>().sprite = weiXinLoad.instance.headSprite;//touXiang;
+                obj.transform.GetChild(4).GetComponent<Image>().sprite = ResouseManager.Instance.HEADSPRITE;//touXiang;
 
             }
         }
@@ -386,7 +386,7 @@ public class httpView : MonoBehaviour {
         }
         trans.GetChild(5).GetComponent<Text>().text = _gold.ToString() + "金币";
         trans.GetChild(4).GetComponent<Text>().text = _goldId;
-        trans.GetChild(3).GetComponent<Image>().sprite =weiXinLoad.instance.jinbiSprites[_req];//Pay[_req];
+        trans.GetChild(3).GetComponent<Image>().sprite =ResouseManager.Instance.JINBISPRITES[_req];//Pay[_req];
    
     }
 }

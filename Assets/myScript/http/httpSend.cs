@@ -553,7 +553,7 @@ public class httpSend : MonoBehaviour
     void httpError(string str)
     {
         //GameObject load = (GameObject)Resources.Load("Rank/loadFail");
-        GameObject jiazai = Instantiate(weiXinLoad.instance.loadFailP/*load*/, GameObject.Find("Canvas").transform) as GameObject;
+        GameObject jiazai = Instantiate(ResouseManager.Instance.LOADFAILP/*load*/, GameObject.Find("Canvas").transform) as GameObject;
         Debug.Log(str);
     }
 

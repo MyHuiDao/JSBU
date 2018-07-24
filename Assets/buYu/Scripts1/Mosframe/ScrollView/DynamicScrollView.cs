@@ -156,7 +156,7 @@ namespace Mosframe
                 Destroy(GameObject.Find("selectArea" + getMeiRenYuArea.buyuGame + "(Clone)").gameObject);
                 //Debug.Log("先销毁分区，下一步实例化捕鱼");
                 //GameObject buYuPrefab = Resources.Load("myPrefabs/meiRenYu/MainScene" + getMeiRenYuArea.buyuGame) as GameObject;//取决于点击哪款游戏
-                Instantiate(/*m_slider.*//*buYuPrefab*/weiXinLoad.instance.MainScenes[getMeiRenYuArea.buyuGame], GameObject.Find("main").transform);
+                Instantiate(/*m_slider.*//*buYuPrefab*/ResouseManager.Instance.MAINSCENE, GameObject.Find("main").transform);
                 //Debug.Log("场景加载。。。。。。。。。。");
 
                 GameObject.Find("Order0Canvas").GetComponent<Canvas>().worldCamera = Camera.main;
@@ -177,22 +177,22 @@ namespace Mosframe
             switch (sender.name)
             {
                 case "0":
-                    format(getMeiRenYuArea.intstant.listID[0],sender);
+                    format(getMeiRenYuArea.intstant.listID[0],sender,0);
                     break;
                 case "1":
-                    format(getMeiRenYuArea.intstant.listID[1],sender);
+                    format(getMeiRenYuArea.intstant.listID[1],sender,1);
                     break;
                 case "2":
-                    format(getMeiRenYuArea.intstant.listID[2],sender);
+                    format(getMeiRenYuArea.intstant.listID[2],sender,2);
                     break;
                 case "3":
-                    format(getMeiRenYuArea.intstant.listID[3],sender);
+                    format(getMeiRenYuArea.intstant.listID[3],sender,3);
                     break;
                 case "4":
-                    format(getMeiRenYuArea.intstant.listID[4],sender);
+                    format(getMeiRenYuArea.intstant.listID[4],sender,4);
                     break;
                 case "5":
-                    format(getMeiRenYuArea.intstant.listID[5],sender);
+                    format(getMeiRenYuArea.intstant.listID[5],sender,5);
                     break;
                 default:
                     Debug.Log("none");
@@ -203,8 +203,9 @@ namespace Mosframe
         /// 进入选择房间
         /// </summary>
         /// <param name="index_c"></param>
-        public void format(string _id,GameObject sender)
+        public void format(string _id,GameObject sender,int clickNum)
         {
+            saveDate.startCenterPos = clickNum;
             GameObject areaScrollviewChild = areaScrollViewTransf.GetChild(areaScrollViewTransf.childCount - 1).gameObject;
             if (sender == areaScrollviewChild)
             {

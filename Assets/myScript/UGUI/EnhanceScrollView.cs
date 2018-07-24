@@ -68,6 +68,9 @@ public class EnhanceScrollView : MonoBehaviour
 
     void Start()
     {
+        
+        startCenterIndex = saveDate.startCenterPos;
+        Debug.Log("开始位置。。。。。。。。。。。。"+startCenterIndex);
         canChangeItem = true;
         for (int i = 0; i < transform.childCount; i++)
         {

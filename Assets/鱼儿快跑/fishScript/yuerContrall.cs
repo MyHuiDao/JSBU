@@ -60,7 +60,7 @@ public class yuerContrall : MonoBehaviour
         GameObject.Find("nickNameText").GetComponent<Text>().text = saveDate.nickname;
         GameObject.Find("codeText").GetComponent<Text>().text = saveDate.code;
         GameObject.Find("moneyText").GetComponent<Text>().text = saveDate.gold.ToString();
-        GameObject.Find("selftouxiang").GetComponent<Image>().sprite = weiXinLoad.instance.headSprite;//httpView.touXiang;
+        GameObject.Find("selftouxiang").GetComponent<Image>().sprite = ResouseManager.Instance.HEADSPRITE;//httpView.touXiang;
 
     }
     void initialTouZhuNum()
@@ -77,8 +77,11 @@ public class yuerContrall : MonoBehaviour
     /// </summary>
     void returnToHall()
     {
+        
         returnGameScene = true;
-        GameObject _obj = Instantiate(weiXinLoad.instance.loadP, GameObject.Find("Canvas").transform);
+      
+
+        GameObject _obj = Instantiate(ResouseManager.Instance.LOADP, GameObject.Find("Canvas").transform);
         _obj.transform.localScale = new Vector3(0.5f,0.5f,1);
         //CClient.ClientSocket.instant().ws.Close();
         SceneManager.LoadSceneAsync("gameScene");

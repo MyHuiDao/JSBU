@@ -96,9 +96,9 @@ public class startTimeJiShi : MonoBehaviour
             if (!isStartJiShi)
             {
                 Destroy(GameObject.Find("start(Clone)").gameObject);
-                Instantiate(/*m_slider.*//*yuerPrepareAndjieSunaPrefab*/weiXinLoad.instance.kp_prepareAndjieSunaP);
+                Instantiate(/*m_slider.*//*yuerPrepareAndjieSunaPrefab*/ResouseManager.Instance.KPPREPAREANDJIESUNAP);
                 Music_Control.music_effect(initialStart.instance.allYinXiao[8]);
-                Instantiate(/*m_slider.*//*yuerbackgroundPrefab*/weiXinLoad.instance.kp_backgroundP);
+                Instantiate(/*m_slider.*//*yuerbackgroundPrefab*/ResouseManager.Instance.KPBACKGROUNDP);
                 isToPrepare = false;
             }
         }

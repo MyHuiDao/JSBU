@@ -276,7 +276,7 @@ public class initialPrepare : MonoBehaviour
         initialStart.instance.allYinXiao[6].Pause();
         Destroy(GameObject.Find("prepareAndjieSuna(Clone)").gameObject);
         Destroy(GameObject.Find("background(Clone)").gameObject);
-        Instantiate(/*m_slider.*//*initialStart.yuerStartPrefab*/weiXinLoad.instance.kp_startP);
+        Instantiate(/*m_slider.*//*initialStart.yuerStartPrefab*/ResouseManager.Instance.KPSTARP);
         Music_Control.music_effect(initialStart.instance.allYinXiao[8]);
         yuerSendMSg.instant().getCountDown();
        

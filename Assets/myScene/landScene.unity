@@ -3464,71 +3464,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f4800273cb9bd429353558ee166dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadP: {fileID: 0}
-  loadFailP: {fileID: 0}
-  selectAreas:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  MainScenes:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  rankSprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  kp_startP: {fileID: 0}
-  kp_prepareAndjieSunaP: {fileID: 0}
-  kp_backgroundP: {fileID: 0}
-  huafeiSprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  jinbiSprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  headSprite: {fileID: 0}
-  waterTextures:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   m_text: {fileID: 554212456}
   AndroidFunction: 1
 --- !u!1 &2122098864
@@ -3542,6 +3477,7 @@ GameObject:
   - component: {fileID: 2122098867}
   - component: {fileID: 2122098866}
   - component: {fileID: 2122098865}
+  - component: {fileID: 2122098871}
   - component: {fileID: 2122098870}
   - component: {fileID: 2122098869}
   m_Layer: 5
@@ -3652,5 +3588,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd1a3163585a548ce8aee72d27dff903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2122098871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2122098864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cda52fb0cace452db8b9e2f1458e6f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

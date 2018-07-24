@@ -3,41 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using LitJson;
 using UnityEngine.UI;
-using System;
 
 public class weiXinLoad : MonoBehaviour
 {
-    //版本更新资源
-    UnityEngine.Object VersionUpdateP;
-    //用户协议
-    //GameObject UserProtocolP;
-    //加载中
-    public GameObject loadP;
-    //加载失败
-    public GameObject loadFailP;
-    //大厅Hall
-    //GameObject Hall;
-
-    //资源捕鱼加载
-    public GameObject[] selectAreas = new GameObject[3];//0美人鱼  1李逵鱼   2大闹天宫
-    public GameObject[] MainScenes = new GameObject[3];
-    //比赛rank
-    public Sprite[] rankSprites = new Sprite[3];
-
-    //加载鱼儿快跑资源
-    public GameObject kp_startP;
-    public GameObject kp_prepareAndjieSunaP;
-    public GameObject kp_backgroundP;
-   
-    //话费充值卡Sprite
-    public Sprite[] huafeiSprites = new Sprite[4];
-    //金币图标Sprite
-    public Sprite[] jinbiSprites = new Sprite[8];
-    //默认头像Sprite
-    public Sprite headSprite;
-    //water资源
-    public Texture[] waterTextures = new Texture[32];
-
+    
 
 #if UNITY_ANDROID
     AndroidJavaClass androidClass;
@@ -59,7 +28,6 @@ public class weiXinLoad : MonoBehaviour
         instance = this;
 
 
-
 #if UNITY_ANDROID
         androidObject.Call("getVersionCode");
 #endif
@@ -69,35 +37,7 @@ public class weiXinLoad : MonoBehaviour
 
 #endif
 
-        VersionUpdateP = LoadAesset("myPrefabs/Fish/LoadRes/VersionUpdateUI") as GameObject;
-        loadP = LoadAesset("Rank/load") as GameObject;
-        loadFailP = LoadAesset("Rank/loadFail") as GameObject;
-        for (int i = 0; i < 3;++i)
-        {
-            selectAreas[i] = LoadAesset("myPrefabs/meiRenYu/selectArea"+i) as GameObject;
-            MainScenes[i] = LoadAesset("myPrefabs/meiRenYu/MainScene"+i) as GameObject;
-            rankSprites[i] = LoadAesset("Pay_image/rank_"+(i+1)) as Sprite;
-        }
-
-        kp_startP = LoadAesset("yuErKuaiPao/start") as GameObject;
-        kp_prepareAndjieSunaP = LoadAesset("yuErKuaiPao/prepareAndjieSuna") as GameObject;
-        kp_backgroundP = LoadAesset("yuErKuaiPao/background") as GameObject;
-
-        for (int j = 0; j < huafeiSprites.Length;++j)
-        {
-            huafeiSprites[j] = LoadSprite("Pay_image/"+((j+1)*100).ToString()) as Sprite;
-        }
-        for (int k = 0; k < jinbiSprites.Length;++k)
-        {
-            jinbiSprites[k] = LoadSprite("Pay_image/bi_"+(k+1).ToString())as Sprite;
-        }
-
-        headSprite = LoadSprite("Rank/cat");;
-
-        for (int w = 0; w < waterTextures.Length;++w)
-        {
-            waterTextures[w] = LoadAesset("Water/waterWaveItem_"+w) as Texture;
-        }
+       
     }
     WWW _www = null;
     string url;
@@ -227,7 +167,7 @@ public class weiXinLoad : MonoBehaviour
     {
         
         //GameObject versionObj = (GameObject)Resources.Load("myPrefabs/Fish/LoadRes/VersionUpdateUI");
-        GameObject versionObj = Instantiate(VersionUpdateP, GameObject.Find("Canvas").transform) as GameObject;
+        GameObject versionObj = Instantiate(ResouseManager.Instance.VESIONUPDATEP, GameObject.Find("Canvas").transform) as GameObject;
 
         for (int i = 0; i < 2; ++i)
         {
@@ -375,32 +315,6 @@ public class weiXinLoad : MonoBehaviour
     }
 #endif
 
-    UnityEngine.Object LoadAesset(string path)
-    {
-        try{
-            UnityEngine.Object _obj = Resources.Load(path);
-            //Debug.LogError(_obj.name);
-            return _obj; 
-        }catch(Exception e)
-        {
-            Debug.LogError(e);
-
-        }
-        return null;
-    }
-
-    Sprite LoadSprite(string path)
-    {
-        return Resources.Load<Sprite>(path);
-    }
-
-
-    public void UnLoadObj(UnityEngine.Object _obj)
-    {
-        Resources.UnloadAsset(_obj);
-
-        Resources.UnloadUnusedAssets();
-    }
 
 
 

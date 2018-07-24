@@ -186,13 +186,14 @@ namespace CClient
                 Debug.Log("断线重连了");
                
                 ws.Close();
+                connectWhichNet = -2;
                 loadSelectArea.connectNet = true;
             }
 
             if (!gameContrall.instant.return_scene)
             {
 
-
+                connectWhichNet = -1;
                 break_line.hall_line = true;
 
             }

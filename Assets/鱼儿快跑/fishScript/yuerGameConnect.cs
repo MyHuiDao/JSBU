@@ -22,6 +22,7 @@ public class yuerGameConnect : MonoBehaviour
         //  ClientSocket.instant().clientSocket("ws://hd.com/match-fish/v1/game/", token);
 
         ClientSocket.instant().ws.Close();
+        Debug.Log("断开");
         ClientSocket.instant().clientSocket(httpConnect.Web_URL + "/match-fish/v1/game/", token);
         ClientSocket.instant().connectWhichNet = 3;
 

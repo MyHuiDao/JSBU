@@ -139,7 +139,7 @@ public class httpConnect
             //www = UnityWebRequest.Get(url);
             www = new WWW(url);
             //GameObject load = (GameObject)Resources.Load("Rank/load");
-            jiazai = UnityEngine.Object.Instantiate(weiXinLoad.instance.loadP/*load*/, GameObject.Find("Canvas").transform) as GameObject;
+            jiazai = UnityEngine.Object.Instantiate(ResouseManager.Instance.LOADP/*load*/, GameObject.Find("Canvas").transform) as GameObject;
         }
 
         //  Debug.Log("url0:" + url);
@@ -172,7 +172,7 @@ public class httpConnect
             {
                 errCallBack(www.error);
                 //GameObject fail = (GameObject)Resources.Load("Rank/loadFail");
-                GameObject jiazais = UnityEngine.Object.Instantiate(weiXinLoad.instance.loadFailP/*fail*/, GameObject.Find("Canvas").transform) as GameObject;
+                GameObject jiazais = UnityEngine.Object.Instantiate(ResouseManager.Instance.LOADFAILP/*fail*/, GameObject.Find("Canvas").transform) as GameObject;
 
             }
         }
