@@ -53,6 +53,10 @@ public class BulletAttr : MonoBehaviour
         {
             Invoke("bulletSelfDestroy", 2);
         }
+        if(this.transform.localPosition.x<-12|| this.transform.localPosition.x > 12|| this.transform.localPosition.y < -7 || this.transform.localPosition.y >7)//子弹出界
+        {
+            Invoke("bulletSelfDestroy", 1);
+        }
     }
     //border身上挂了刚体，子弹上没有挂刚体，只有boxcollider2d,
     private void OnTriggerEnter2D(Collider2D collision)

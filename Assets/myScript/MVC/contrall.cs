@@ -89,6 +89,7 @@ public class contrall
         //Debug.Log("2");
         if ((httpView.id == ((JsonData)o)["userId"].ToString()))//如果自己是主机ID，做个记录
         {
+            Debug.Log("我是主机");
             isZhuJi = true;
         }
        // Debug.Log("3");
