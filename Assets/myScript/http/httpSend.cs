@@ -169,7 +169,7 @@ public class httpSend : MonoBehaviour
         }
         else if ((string)jso["code"] == "-1")
         {
-            //netConnect.instance.Ani(4);
+            netConnect.Ani(4);
         }
 
     }
@@ -184,7 +184,7 @@ public class httpSend : MonoBehaviour
         }
         else if ((string)jso["code"] == "-1")
         {
-            //netConnect.instance.Ani(3);
+            netConnect.Ani(3);
         }
     }
     /// <summary>
@@ -238,17 +238,17 @@ public class httpSend : MonoBehaviour
         JsonData jso = JsonMapper.ToObject(str);
         if ((string)jso["code"] == "0")
         {
-            //netConnect.instance.Ani(5);
+            netConnect.Ani(5);
         }
         else if ((string)jso["code"] == "-1")
         {
             if ((string)jso["msg"] == httpConnect.net[8].data)
             {
-                //netConnect.instance.Ani(8);
+                netConnect.Ani(8);
             }
             else if ((string)jso["msg"] == httpConnect.net[9].data)
             {
-               // netConnect.instance.Ani(9);
+                netConnect.Ani(9);
             }
         }
     }
@@ -285,7 +285,7 @@ public class httpSend : MonoBehaviour
                 RootCanvas.canvas_group(GameObject.Find("mobile_InputField").GetComponent<CanvasGroup>(), false, 0);
                 RootCanvas.canvas_group(GameObject.Find("mobileBindleSure").GetComponent<CanvasGroup>(), false, 0);
                 isbind = true;
-                //netConnect.instance.Ani(7);
+                netConnect.Ani(7);
                 GameObject.Find("mobile_number").GetComponent<Text>().text = GameObject.Find("mobile_InputField").GetComponent<InputField>().text;
                 hallHttp.instance.mobilenumber = true;
             }
@@ -296,7 +296,7 @@ public class httpSend : MonoBehaviour
                 RootCanvas.canvas_group(GameObject.Find("mobile_InputField").GetComponent<CanvasGroup>(), true, 1);
                 RootCanvas.canvas_group(GameObject.Find("mobileBindleSure").GetComponent<CanvasGroup>(), true, 1);
                 isbind = false;
-                //netConnect.instance.Ani(6);
+                netConnect.Ani(6);
                 hallHttp.instance.mobilenumber = false;
             }
         }
@@ -304,11 +304,11 @@ public class httpSend : MonoBehaviour
         {
             if ((string)jso["msg"] == httpConnect.net[10].data)
             {
-                //netConnect.instance.Ani(10);
+                netConnect.Ani(10);
             }
             if ((string)jso["msg"] == "参数不能为空")
             {
-                //netConnect.instance.Ani(8);
+                netConnect.Ani(8);
             }
         }
     }
@@ -379,7 +379,7 @@ public class httpSend : MonoBehaviour
 
         if (netConnect.instance.m_state == login_state.visitor)
         {
-           // netConnect.instance.Ani(25);
+            netConnect.Ani(25);
         }
         else
         {
@@ -592,7 +592,7 @@ public class httpSend : MonoBehaviour
         {
             if ((string)jso["msg"] == httpConnect.net[26].data)
             {
-                //netConnect.instance.Ani(26);
+                netConnect.Ani(26);
             }
             Register = false;
         }

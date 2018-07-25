@@ -180,7 +180,7 @@ public class gameContrall : MonoBehaviour
     }
     void tishi()
     {
-        //netConnect.instance.Ani(12);
+        netConnect.Ani(12);
     }
     
     /// <summary>
@@ -209,7 +209,7 @@ public class gameContrall : MonoBehaviour
         }
         else
         {
-            //netConnect.instance.Ani(13);
+            netConnect.Ani(13);
             return;
         }
         chat.text = null;
@@ -493,7 +493,7 @@ public class gameContrall : MonoBehaviour
     /// 进入捕鱼游戏
     /// </summary> 
     public bool return_scene;
-    void catchFish(int buyuGanme,GameObject obj)
+    public void catchFish(int buyuGanme,GameObject obj)
     {
         
         StartCoroutine(_catchFish(buyuGanme, obj));
@@ -513,7 +513,7 @@ public class gameContrall : MonoBehaviour
             obj.GetComponent<Button>().enabled = true;
             yield return load;
             yield return new WaitForSeconds(2f);
-            yield return Resources.UnloadUnusedAssets();
+            //yield return Resources.UnloadUnusedAssets();
             operation = SceneManager.LoadSceneAsync("MainMeiRenYu");
 
             if (operation != null)
@@ -534,7 +534,7 @@ public class gameContrall : MonoBehaviour
     /// <summary>
     /// 进入鱼儿赛跑
     /// </summary>
-    void catchYuErMatch(GameObject obj)
+   public  void catchYuErMatch(GameObject obj)
     {
         StartCoroutine(_catchYuErMatch(obj));
     }
@@ -549,7 +549,7 @@ public class gameContrall : MonoBehaviour
             GameObject load = Instantiate(Loading, GameObject.Find("Canvas").transform) as GameObject;
             yield return load;
             yield return new WaitForSeconds(2f);
-            yield return Resources.UnloadUnusedAssets();
+           // yield return Resources.UnloadUnusedAssets();
             operation = SceneManager.LoadSceneAsync("yuerScene");
             //Debug.Log("实例化了");
 

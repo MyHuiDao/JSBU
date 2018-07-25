@@ -265,23 +265,18 @@ public class contrall
 
         if (((JsonData)o)["fire"]["userId"].ToString() == httpView.id)
         {
-           // Debug.Log("???");
+          
             GameController.lastBulletFire = true;
         }
         returnBulletMsg r = new returnBulletMsg();
-        r._id = ((JsonData)o)["fire"]["id"].ToString();
-        //Debug.Log(1);
-        r._gold = (int)(((JsonData)o)["useGold"]);
-      //  Debug.Log(1);
-        r._angle = double.Parse((((JsonData)o)["fire"]["angle"].ToString()));
-       // Debug.Log(1);
-        r._bulletLevel = (int)(((JsonData)o)["fire"]["level"]);
-       // Debug.Log(1);
+        r._id = ((JsonData)o)["fire"]["id"].ToString();     
+        r._gold = (int)(((JsonData)o)["useGold"]);    
+        r._angle = double.Parse((((JsonData)o)["fire"]["angle"].ToString()));       
+        r._bulletLevel = (int)(((JsonData)o)["fire"]["level"]);    
         r.user = ((JsonData)o)["fire"]["userId"].ToString();
-        r._SumGold = ((JsonData)o)["sumGold"].ToString();
-       // Debug.Log(1);
+        r._SumGold = ((JsonData)o)["sumGold"].ToString();    
         GameController.returnBullet.Add(r);
-      //  Debug.Log(1);
+     
 
         //GameController.Instance.openFire(((JsonData)o)["fire"]["id"].ToString(), (int)(((JsonData)o)["useGold"]), double.Parse((((JsonData)o)["fire"]["angle"].ToString())), ((JsonData)o)["fire"]["userId"].ToString(), (int)(((JsonData)o)["fire"]["level"]));//返回子弹信息，并告诉可以发射
     }

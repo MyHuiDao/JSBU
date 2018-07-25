@@ -42,7 +42,7 @@ public class WithDraw_Sp : MonoBehaviour {
         return_blind = true;
         if (netConnect.instance.m_state == login_state.visitor)
         {
-           // netConnect.instance.Ani(24);
+            netConnect.Ani(24);
         }
         else if (hallHttp.instance.mobilenumber == true)
         {
@@ -61,17 +61,17 @@ public class WithDraw_Sp : MonoBehaviour {
         JsonData jso = JsonMapper.ToObject(str);
         if ((string)jso["code"] == "0")
         {
-            //netConnect.instance.Ani(5);
+            netConnect.Ani(5);
         }
         else if ((string)jso["code"] == "-1")
         {
             if ((string)jso["msg"] == httpConnect.net[8].data)
             {
-                //netConnect.instance.Ani(8);
+                netConnect.Ani(8);
             }
             else if ((string)jso["msg"] == httpConnect.net[9].data)
             {
-               // netConnect.instance.Ani(9);
+                netConnect.Ani(9);
             }
         }
     }
@@ -94,7 +94,7 @@ public class WithDraw_Sp : MonoBehaviour {
         }
         else
         {
-            //netConnect.instance.Ani(19);
+            netConnect.Ani(19);
 
         }
        
@@ -104,27 +104,27 @@ public class WithDraw_Sp : MonoBehaviour {
         withdraw1.text = str;
         if (netConnect.instance.m_state == login_state.visitor)
         {
-            //netConnect.instance.Ani(24);
+            netConnect.Ani(24);
         }
        // Debug.Log(str);
         JsonData jso = JsonMapper.ToObject(str);
         if ((string)jso["code"] == "0")
         {
-           // netConnect.instance.Ani(22);
+            netConnect.Ani(22);
         }
         if ((string)jso["code"] == "-1")
         {
             if ((string)jso["msg"] == httpConnect.net[10].data)
             {
-               // netConnect.instance.Ani(10);
+                netConnect.Ani(10);
             }
             if ((string)jso["msg"] == httpConnect.net[21].data)
             {
-                //netConnect.instance.Ani(21);
+                netConnect.Ani(21);
             }
             if ((string)jso["msg"] == httpConnect.net[23].data)
             {
-                //netConnect.instance.Ani(23);
+                netConnect.Ani(23);
             }
           
         }

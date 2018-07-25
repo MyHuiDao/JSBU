@@ -20,7 +20,7 @@ public class jiazaiScene : MonoBehaviour
     {
         Screen.sleepTimeout = (int)SleepTimeout.NeverSleep;
         loadingSlider.value = 0.0f;
-        scene = Resources.Load("Halls/Hall") as GameObject;
+        //scene = Resources.Load("Halls/Hall") as GameObject;
         if (SceneManager.GetActiveScene().name == "jiaZaiScene")
         {
             StartCoroutine(AsyncLoading());  //启动协程  

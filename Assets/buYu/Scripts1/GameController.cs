@@ -209,7 +209,28 @@ public class GameController : MonoBehaviour
 
             if (bulletLevel.ContainsKey(contrall.instant().userDict[i]))
             {
+                Transform g = GameObject.Find("GunPanel" + i).transform.Find("GunPosGroup");
+                if (bulletLevel[contrall.instant().userDict[i]] >= 6)
+                {
 
+                    g.GetChild(2).gameObject.SetActive(true);
+                    g.GetChild(1).gameObject.SetActive(false);
+                    g.GetChild(0).gameObject.SetActive(false);
+                }
+                else if (bulletLevel[contrall.instant().userDict[i]] >= 3)
+                {
+                    g.GetChild(2).gameObject.SetActive(false);
+                    g.GetChild(1).gameObject.SetActive(true);
+                    g.GetChild(0).gameObject.SetActive(false);
+                }
+                else
+                {
+                    g.GetChild(2).gameObject.SetActive(false);
+                    g.GetChild(1).gameObject.SetActive(false);
+                    g.GetChild(0).gameObject.SetActive(true);
+                }
+
+               
                 oneShootCostText[i].text = ((bulletLevel[contrall.instant().userDict[i]]) * int.Parse(contrall.instant().addFileGoldNum)).ToString();
             }
 
@@ -276,7 +297,7 @@ public class GameController : MonoBehaviour
 
                     else
 
-                    {                    
+                    {
                         //Debug.Log("实例化波纹");
                         //GameObject g = Instantiate(waveFinger, waveFingerParent.transform);
                         //g.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);

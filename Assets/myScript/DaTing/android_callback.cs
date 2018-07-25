@@ -27,7 +27,7 @@ public class android_callback : MonoBehaviour {
             if(((IDictionary)js).Contains("data"))
             {
                 hallHttp.instance.message();
-               // netConnect.instance.Ani(14);
+                netConnect.Ani(14);
             }
         }
     }

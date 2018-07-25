@@ -47,7 +47,7 @@ public class coin : MonoBehaviour {
         if (int.Parse(transform.parent.GetChild(3).GetChild(5).GetComponent<Text>().text) < 0)
         {
             GameObject.Find("pusNum").GetComponent<InputField>().text = "0";
-            //netConnect.instance.Ani(17);
+            netConnect.Ani(17);
         }
         if (int.Parse(transform.parent.GetChild(3).GetChild(6).GetComponent<Text>().text) > money)//取出
         {

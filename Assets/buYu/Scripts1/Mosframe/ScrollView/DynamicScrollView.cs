@@ -116,15 +116,15 @@ namespace Mosframe
             GameObject.Find("returnToHall").GetComponent<Button>().onClick.AddListener(delegate ()
             {
 
-                for (int i = 0; i < otherContral.instant.btns.Count; i++)
+            for (int i = 0; i < otherContral.instant.btns.Count; i++)
+            {
+                if (otherContral.instant.btns[i][0].btn == GameObject.Find("returnToHall").GetComponent<Button>())
                 {
-                    if (otherContral.instant.btns[i][0].btn == GameObject.Find("returnToHall").GetComponent<Button>())
+                    if (!otherContral.instant.btns[i][1].click)
                     {
-                        if (!otherContral.instant.btns[i][1].click)
-                        {
 
-                            otherContral.instant.returnToHall();
-                            otherContral.instant.btns[i][1].click = true;
+                        otherContral.instant.returnToHall();
+                        otherContral.instant.btns[i][1].click = true;
 
                         }
                         else
@@ -134,9 +134,7 @@ namespace Mosframe
                         }
                     }
                 }
-
             });
-
             GameObject.Find("ruler").GetComponent<Button>().onClick.AddListener(otherContral.instant.openRuler);
             GameObject.Find("rulerExit").GetComponent<Button>().onClick.AddListener(otherContral.instant.exitRuler);
             Music_Control.music_effect(buYuMusicContral.instant.allYinXiao[23]);
