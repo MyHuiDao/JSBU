@@ -111,7 +111,7 @@ public class prizeGoldShow : MonoBehaviour {
                 }
                 transform.Translate(distance);
 
-                if (this.name == "content" && (Mathf.Abs(this.transform.localPosition.y - stopNum * 91) <= 5))
+                if (this.name == "content" && (Mathf.Abs(this.transform.localPosition.y - stopNum * 91) <= 10))
                 {
 
                     Vector3 v = this.transform.localPosition;

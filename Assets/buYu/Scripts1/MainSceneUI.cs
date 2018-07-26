@@ -66,7 +66,7 @@ public class MainSceneUI : MonoBehaviour
         {
             skillButton.transform.localScale = Vector3.one;
             skillFrame.transform.DOLocalMoveX(727.8f, 0.2f);
-            isMoveSkill = true;
+            isMoveSkill = true; 
         }
     }
     /// <summary>
