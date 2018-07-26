@@ -165,9 +165,5 @@ public class UnitySendMessageToiOS
     }
 
 
-    void test()
-    {
-        Debug.Log("========");
-    }
 
 }
